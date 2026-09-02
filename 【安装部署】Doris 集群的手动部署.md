@@ -1,5 +1,7 @@
 【安装部署】Doris 集群的手动部署
 
+https://kb.fit2cloud.com/?p=60
+
 Apache Doris 简介：
 Apache Doris 是一个现代化的 MPP 分析型数据库产品，仅需要亚秒级响应时间即可获得查询结果，可有效的支持实时数据分析。
 
