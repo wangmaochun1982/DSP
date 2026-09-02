@@ -748,3 +748,396 @@ Query OK, 0 rows affected (0.01 sec)
 
 mysql> 
 ```
+
+
+# 8. 分发程序包(doris402)并启动 Follower 服务
+1.全量分发安装包 将 Master 节点（bigdata-1）上解压并配置完成的 doris402 目录分发至所有 Follower 节点，确保集群配置文件的绝对一致性。
+
+```shell
+## 在 bigdata-1 执行
+[root@bigdata-1 data]# scp -r /data/doris402 bigdata-2:/data/
+[root@bigdata-1 data]# scp -r /data/doris402 bigdata-3:/data/
+
+```
+
+2.启动 Follower 节点 (首次启动需指定 Helper) 在 bigdata-2 和 bigdata-3 上分别启动 FE 服务。
+
+```shell
+## 节点2 bigdata-2 操作
+[root@bigdata-2 doris402]# /data/doris402/fe/bin/start_fe.sh --helper 192.168.221.62:9010 --daemon
+[root@bigdata-2 doris402]# jps
+55050 Jps
+54925 DorisFE
+
+## 节点3 bigdata-3 操作
+[root@bigdata-3 ~]# /data/doris402/fe/bin/start_fe.sh --helper 192.168.221.62:9010 --daemon
+[root@bigdata-3 ~]# jps
+53906 DorisFE
+54034 Jps
+```
+
+
+💡 技术贴士： --helper 参数仅在 FE 第一次启动（元数据目录为空）时需要。一旦从节点成功加入集群并同步了元数据，以后重启服务只需直接运行 start_fe.sh --daemon 即可，无需再加 helper 参数。
+
+返回主节点通过 SQL 命令检查集群拓扑，确认所有 FE 节点均已加入集群且心跳状态正常。
+
+
+返回 Master 节点执行检查 在 bigdata-1 上执行以下命令。该命令使用 -e 参数直接执行 SQL 并退出，使用 -t 参数以表格形式输出，方便查看。
+
+```shell
+mysql -h 127.0.0.1 -P 9030 -uroot -t -e "SHOW FRONTENDS"
+
+```
+至此，FE 高可用集群已成功组建并验证无误。
+
+
+接下来，我们将进入核心存储层——BE（Backend）节点的配置与部署阶段。
+
+
+
+# 9. BE (数据节点) 配置文件be.conf调优
+
+.1.配置优化清单：
+
+```text
+类别	                                                     配置项 (Property)	                          修改值 (Value)	                                        修改原因与说明 (Rationale)
+1. 路径配置	                                                  LOG_DIR	                              /data/doris/be_log	                                     日志目录分离。 将 BE 运行日志移出安装目录，防止升级误删。
+                                                              storage_root_path	                     /data/doris/storage,medium:HDD                           	数据存储目录。  指定数据存储在数据盘，并显式标记介质类型为 HDD（机械硬盘）或 SSD。这是 BE 最核心的配置。
+                                                              jdbc_drivers_dir	                 /data/doris/jdbc_drivers	                                      驱动目录分离。  存放连接外部数据库（如 JDBC Catalog）所需的 Jar 包。
+2. 网络配置	                                              priority_networks	                    192.168.221.0/24	                                       强制绑定内网网段。 防止 BE 错误绑定到 Docker 或虚拟网卡，导致与 FE 心跳失联。和FE配置一样
+3. Java 环境	                                          JAVA_HOME	                                    /usr/java/jdk-17.0.12	                   指定 JDK 路径。 确保 BE 能够加载 Java 环境（用于 JDBC 外表查询等功能）。
+                                                         JAVA_OPTS_FOR_JDK_17	                ... -Xmx2048m ...	限制 BE 的 Java 堆内存。 BE 是 C++ 程序，但部分功能（如 JDBC）需用到 JVM。在 32GB 机器上，将 JVM 限制为 2GB，把更多内存留给 C++ 核心计算引擎。
+4. 内存管理	                                                  mem_limit                        	80%	           BE 进程总内存限制。 限制 Doris BE 进程最大占用物理内存的 80%（约 25.6GB），预留 20% 给操作系统和内核，防止机器死机。
+5. 性能优化	                                            enable_vertical_compaction	                true	开启垂直 Compaction。 显著减少数据合并时的内存消耗，对内存有限（32GB）的机器非常关键。
+                                                        enable_segcompaction	                    true	开启 Segment Compaction。 在写入过程中进行小文件合并，减少小文件数量，提升查询性能。
+6. 导入与并发
+                                             routine_load_thread_pool_size	                     10	                提升 Kafka 导入并发。 增加 Kafka 导入的线程池大小，允许单个 BE 节点并行处理更多 Kafka 分区。
+                                           streaming_load_max_mb	4096	提升单次导入上限。 允许 Stream Load 单次导入最大 4GB 的数据（默认通常较小），适合大批量数据同步。
+                                           fragment_pool_thread_num_max	512	提升查询并行度。 增加查询执行线程池上限，提升高并发场景下的查询吞吐量。
+
+```
+
+
+9.2.完整 be.conf 如下：
+```conf
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+CUR_DATE=`date +%Y%m%d-%H%M%S`
+
+# 日志目录分离
+LOG_DIR = /data/doris/be_log
+
+# 限制 BE 的 Java 堆内存
+# For jdk 17, this JAVA_OPTS will be used as default JVM options
+JAVA_OPTS_FOR_JDK_17="-Dfile.encoding=UTF-8 -Djol.skipHotspotSAAttach=true -Xmx2048m -DlogPath=$LOG_DIR/jni.log -Xlog:gc*:$LOG_DIR/be.gc.log.$CUR_DATE:time,uptime:filecount=10,filesize=50M -Djavax.security.auth.useSubjectCredsOnly=false -Dsun.security.krb5.debug=true -Dsun.java.command=DorisBE -XX:-Critical
+JNINatives -XX:+IgnoreUnrecognizedVMOptions --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.cs=ALL-UNNAMED --add-opens=java.base/sun.security.action=ALL-
+UNNAMED --add-opens=java.base/sun.util.calendar=ALL-UNNAMED --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED -Darrow.enable_null_check_for_get=false"
+
+# 指定 JDK 路径
+JAVA_HOME = /usr/java/jdk-17.0.12
+
+# https://github.com/apache/doris/blob/master/docs/zh-CN/community/developer-guide/debug-tool.md#jemalloc-heap-profile
+# https://jemalloc.net/jemalloc.3.html
+JEMALLOC_CONF="percpu_arena:percpu,background_thread:true,metadata_thp:auto,muzzy_decay_ms:5000,dirty_decay_ms:5000,oversize_threshold:0,prof:true,prof_active:false,lg_prof_interval:-1,lg_extent_max_active_fit:8"
+JEMALLOC_PROF_PRFIX="jemalloc_heap_profile_"
+
+# ports for admin, web, heartbeat service 
+# 业务管控端口
+be_port = 9060
+# 数据导入与监控端口。
+webserver_port = 8040
+# 心跳存活检测端口。
+heartbeat_service_port = 9050
+# 内部数据传输端口。
+brpc_port = 8060
+# 极速数据读取端口 (4.0 新特性)。
+arrow_flight_sql_port = 8050
+
+# HTTPS configures
+enable_https = false
+# path of certificate in PEM format.
+ssl_certificate_path = "$DORIS_HOME/conf/cert.pem"
+# path of private key in PEM format.
+ssl_private_key_path = "$DORIS_HOME/conf/key.pem"
+
+# Choose one if there are more than one ip except loopback address. 
+# Note that there should at most one ip match this list.
+# If no ip match this rule, will choose one randomly.
+# use CIDR format, e.g. 10.10.10.0/24 or IP format, e.g. 10.10.10.1
+# Default value is empty.
+# 强制绑定内网网段
+priority_networks = 192.168.221.0/24
+
+# data root path, separate by ';'
+# You can specify the storage type for each root path, HDD (cold data) or SSD (hot data)
+# eg:
+# 数据存储目录
+storage_root_path = /data/doris/storage,medium:HDD
+# storage_root_path = /home/disk1/doris,medium:SSD;/home/disk2/doris,medium:SSD;/home/disk2/doris,medium:HDD
+# /home/disk2/doris,medium:HDD(default)
+# 
+# you also can specify the properties by setting '<property>:<value>', separate by ','
+# property 'medium' has a higher priority than the extension of path
+#
+# Default value is ${DORIS_HOME}/storage, you should create it by hand.
+# storage_root_path = ${DORIS_HOME}/storage
+
+# Default dirs to put jdbc drivers,default value is ${DORIS_HOME}/jdbc_drivers
+# 驱动目录分离
+jdbc_drivers_dir = /data/doris/jdbc_drivers
+
+# Advanced configurations
+# INFO, WARNING, ERROR, FATAL
+sys_log_level = INFO
+
+# sys_log_roll_mode = SIZE-MB-1024
+# sys_log_roll_num = 10
+# sys_log_verbose_modules = *
+# log_buffer_level = -1
+
+# aws sdk log level
+#    Off = 0,
+#    Fatal = 1,
+#    Error = 2,
+#    Warn = 3,
+#    Info = 4,
+#    Debug = 5,
+#    Trace = 6
+# Default to turn off aws sdk log, because aws sdk errors that need to be cared will be output through Doris logs
+aws_log_level = 2
+
+# azure sdk log level
+#    Verbose = 1,
+#    Informational = 2,
+#    Warning = 3,
+#    Error = 4
+azure_log_level = 4
+## If you are not running in aws cloud, you can disable EC2 metadata
+AWS_EC2_METADATA_DISABLED=true
+
+# BE 进程总内存限制
+mem_limit = 80%
+# 开启垂直 Compaction
+enable_vertical_compaction = true
+# 开启 Segment Compaction 小文件合并
+enable_segcompaction = true
+# 提升 Kafka 导入并发
+routine_load_thread_pool_size = 10
+# 提升单次导入上限
+streaming_load_max_mb = 4096
+# 提升查询并行度
+fragment_pool_thread_num_max = 512
+fragment_pool_queue_size = 2048
+
+
+```
+
+
+9.3.分发 be.conf 配置文件到另外两台机器
+
+```shell
+## 发给 bigdata-2
+[root@bigdata-1 conf]# scp /data/doris402/be/conf/be.conf bigdata-2:/data/doris402/be/conf/
+be.conf              100% 5101    10.7MB/s   00:00    
+## 发给 bigdata-3
+[root@bigdata-1 conf]# scp /data/doris402/be/conf/be.conf bigdata-3:/data/doris402/be/conf/
+be.conf              100% 5101    13.6MB/s   00:00    
+[root@bigdata-1 conf]# 
+```
+
+# 10. 分发配置并重启 BE 服务
+为了让新配置生效，我们需要重启 BE。执行下面这段脚本，它会自动遍历三台机器进行“先停后启”。
+
+```shell
+for host in bigdata-1 bigdata-2 bigdata-3; do
+
+echo ">>> 正在重启 $host 的 BE ..."
+
+停止 BE
+
+ssh $host "/data/doris402/be/bin/stop_be.sh"
+
+等待 3 秒确保端口释放
+
+sleep 3
+
+启动 BE (带环境变量加载，防找不到 JAVA_HOME)
+
+ssh $host "source /etc/profile; /data/doris402/be/bin/start_be.sh --daemon"
+
+done
+```
+
+下面的日志中报错 not exist 是正常情况, 表示我要停止它，但是发现这个进程本来就没有运行；
+
+```shell
+[root@bigdata-1 conf] for host in bigdata-1 bigdata-2 bigdata-3; do
+echo ">>> 正在重启 $host 的 BE ..."
+
+ssh $host "/data/doris402/be/bin/stop_be.sh"
+
+sleep 3
+
+ssh $host "source /etc/profile; /data/doris402/be/bin/start_be.sh --daemon"
+done
+
+>>> 正在重启 bigdata-1 的 BE ...
+ERROR: /data/doris402/be/bin/be.pid does not exist
+>>> 正在重启 bigdata-2 的 BE ...
+ERROR: /data/doris402/be/bin/be.pid does not exist
+>>> 正在重启 bigdata-3 的 BE ...
+ERROR: /data/doris402/be/bin/be.pid does not exist
+
+
+```
+
+
+# 11. 验证 BE 进程启动状态
+
+```shell
+ for host in bigdata-1 bigdata-2 bigdata-3; do
+  echo ">>> Checking $host ..."
+  ssh $host "ps -ef | grep doris_be | grep -v grep"
+done
+
+```
+
+# 12. 注册 BE 节点至集群
+
+```shell
+## 进入doris控制台
+[root@bigdata-1 data]# mysql -h 127.0.0.1 -P 9030 -uroot
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.99 doris version doris-4.0.2-rc02-30d2df0459
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql> 
+## 向doris注册三台BE节点
+mysql> ALTER SYSTEM ADD BACKEND "192.168.221.62:9050";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> ALTER SYSTEM ADD BACKEND "192.168.221.63:9050";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> ALTER SYSTEM ADD BACKEND "192.168.221.64:9050";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW PROC '/backends';
+```
+
+三台BE节点的Alive 为 true 则全部启动成功；
+
+# 13. 系统安全加固：修改默认密码
+在 Apache Doris 初始化完成后，默认会有 root 和 admin 两个超级账户，且默认都没有密码。如果不进行修改，任何人只要网络能通，都能随意删库跑路或停止节点。
+
+在集群正式接入业务数据或开放网络访问前，必须强制修改这两个账户的密码，以防止未经授权的恶意访问或误操作。
+
+```shell
+## 修改 root 账户密码 (最高权限账户)
+SET PASSWORD FOR 'root' = PASSWORD('123456');
+
+## 修改 admin 账户密码 (通常用于通过 WebUI 访问)
+SET PASSWORD FOR 'admin' = PASSWORD('123456');
+```
+
+
+13.1.验证登录
+修改完成后，原有的无密连接将立刻失效。请退出当前会话，使用新密码进行登录验证。
+
+```shell
+mysql -h 192.168.221.62 -P 9030 -uroot -p123456
+
+```
+
+完整操作步骤：
+
+```shell
+[root@bigdata-1 data]# mysql -h 127.0.0.1 -P 9030 -uroot
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.99 doris version doris-4.0.2-rc02-30d2df0459
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql> 
+mysql> SET PASSWORD FOR 'root' = PASSWORD('123456');
+Query OK, 0 rows affected (0.03 sec)
+mysql> SET PASSWORD FOR 'admin' = PASSWORD('123456');
+Query OK, 0 rows affected (0.03 sec)
+mysql> exit;
+
+
+[root@bigdata-1 data]# mysql -h 192.168.221.62 -P 9030 -uroot -p123456
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 14
+Server version: 5.7.99 doris version doris-4.0.2-rc02-30d2df0459
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> 
+```
+
+
+14. 集群整体健康度验收
+集群部署并配置完成后，需要进行最后一步的整体健康度检查。此步骤旨在确认 FE 高可用机制是否生效，以及 BE 节点是否正常汇报心跳并承载数据。
+
+14.1. FE 节点完整状态检查
+在 MySQL 客户端执行以下命令，检查 FE 集群的选主状态和同步情况。
+
+```shell
+SHOW PROC '/frontends';
+
+```
+
+<img width="684" height="513" alt="image" src="https://github.com/user-attachments/assets/e9a1eacf-b525-4001-9f58-b3fc7187b142" />
+
+
+<img width="691" height="223" alt="image" src="https://github.com/user-attachments/assets/90c84fe1-8527-464c-9751-797a8c017197" />
+
+
+14.2. BE 节点完整状态检查
+在 MySQL 客户端执行以下命令，检查 BE 节点的存活状态、磁盘容量及分片负载情况。
+
+```shell
+SHOW PROC '/backends';
+
+```
+
+<img width="681" height="505" alt="image" src="https://github.com/user-attachments/assets/c068fd25-6a6c-4324-bde7-b55f98048e99" />
+
+15. 附录 A：集群核心运维命令速查
+
+以下命令需在 Linux 终端执行。路径以本次部署的 /data/doris402 为例，请根据实际情况调整。
+
+<img width="869" height="572" alt="image" src="https://github.com/user-attachments/assets/b31c788d-88be-40fb-bd16-aa7d81555962" />
+
+15.2. 集群运维管理 (SQL 命令)
+以下命令需登录 MySQL 客户端后执行。 登录命令：mysql -h <FE_IP> -P 9030 -uroot -p
+
+<img width="825" height="653" alt="image" src="https://github.com/user-attachments/assets/d0d95716-d9c0-4cf1-a04a-60785d88d667" />
+
+<img width="837" height="578" alt="image" src="https://github.com/user-attachments/assets/0cac5f56-6325-4a5b-8620-965b28ba73a9" />
