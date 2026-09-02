@@ -497,3 +497,254 @@ done
 
 4.2.priority_networks 配置项说明
 
+在 Doris 集群的多节点通信中，priority_networks 是至关重要的配置项。
+
+它用于强制指定 Doris 进程（FE/BE）使用哪个网段进行内部通信，防止自动绑定到错误的虚拟网卡（如 Docker 或 KVM 网桥）导致集群无法互通。
+
+怎么取值？
+
+在 bigdata-1 中 输入：
+
+```shell
+[root@bigdata-1 ~]# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 50:6b:8d:9b:b2:69 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.221.62/24 brd 192.168.221.255 scope global noprefixroute eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::64cc:ba7f:2d8:5838/64 scope link tentative noprefixroute dadfailed 
+       valid_lft forever preferred_lft forever
+    inet6 fe80::3eb7:830:8706:94e/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:f4:ee:9f brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+4: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc pfifo_fast master virbr0 state DOWN group default qlen 1000
+    link/ether 52:54:00:f4:ee:9f brd ff:ff:ff:ff:ff:ff
+[root@bigdata-1 ~]# hostname -i
+192.168.221.62
+[root@bigdata-1 ~]# 
+
+```
+
+<img width="685" height="579" alt="image" src="https://github.com/user-attachments/assets/da93529f-a894-4260-832f-68985f1238b9" />
+
+
+<img width="662" height="360" alt="image" src="https://github.com/user-attachments/assets/fad0f7ef-e4a0-4219-8e33-c4eaa737315a" />
+
+
+3. 最终配置结论
+在 fe.conf 和 be.conf 中，该参数应填写如下：
+
+```conf
+
+# 强制绑定 192.168.221.x 网段，屏蔽 virbr0 和 lo 接口
+priority_networks = 192.168.221.0/24
+
+```
+
+配置优势: 使用网段格式（CIDR）而非具体 IP，可以保证三台机器（192.168.221.62, .63, .64）使用完全相同的配置文件，无需单独修改，便于分发和管理。
+
+
+4.3.完整 fe.conf 如下：
+
+```conf
+#####################################################################
+## The uppercase properties are read and exported by bin/start_fe.sh.
+## To see all Frontend configurations,
+## see fe/src/org/apache/doris/common/Config.java
+#####################################################################
+
+CUR_DATE=`date +%Y%m%d-%H%M%S`
+
+# Log dir 日志目录分离
+LOG_DIR = /data/doris/fe_log
+
+# For jdk 17, this JAVA_OPTS will be used as default JVM options
+JAVA_OPTS_FOR_JDK_17="-Dfile.encoding=UTF-8 -Djavax.security.auth.useSubjectCredsOnly=false -Xmx8192m -Xms8192m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$
+LOG_DIR -Xlog:gc*,classhisto*=trace:$LOG_DIR/fe.gc.log.$CUR_DATE:time,uptime:filecount=10,filesize=50M --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens java
+.base/jdk.internal.ref=ALL-UNNAMED --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.xml/com.sun.org.apache.xerces.internal.jaxp=ALL-UNNAMED"
+
+# 指定JDK路径
+JAVA_HOME=/usr/java/jdk-17.0.12
+
+##
+## the lowercase properties are read by main program.
+##
+
+
+# 元数据目录分离
+meta_dir = /data/doris/doris_meta
+
+# Default dirs to put jdbc drivers,default value is ${DORIS_HOME}/jdbc_drivers
+# jdbc_drivers_dir = ${DORIS_HOME}/jdbc_drivers
+
+http_port = 8030
+rpc_port = 9020
+query_port = 9030
+edit_log_port = 9010
+arrow_flight_sql_port = 8070
+
+# Choose one if there are more than one ip except loopback address. 
+# Note that there should at most one ip match this list.
+# If no ip match this rule, will choose one randomly.
+# use CIDR format, e.g. 10.10.10.0/24 or IP format, e.g. 10.10.10.1
+# 强制绑定内网网段。
+priority_networks = 192.168.221.0/24
+
+# Advanced configurations 
+# log_roll_size_mb = 1024
+# INFO, WARN, ERROR, FATAL
+sys_log_level = INFO
+# NORMAL, BRIEF, ASYNC
+sys_log_mode = ASYNC
+# sys_log_roll_num = 10
+# sys_log_verbose_modules = org.apache.doris
+# 审计日志目录
+audit_log_dir = /data/doris/fe_log
+# audit_log_modules = slow_query, query
+# audit_log_roll_num = 10
+# meta_delay_toleration_second = 10
+# qe_max_connection = 1024
+# qe_query_timeout_second = 300
+# qe_slow_log_ms = 5000
+
+# 开启 SQL 审计
+enable_sql_audit = true
+# 放宽元数据心跳超时
+bdbje_heartbeat_timeout_second = 60
+# 设置远程片段执行超时
+remote_fragment_exec_timeout_ms = 15000
+# 提升最大连接数
+qe_max_connection = 2048
+# 表名大小写不敏感
+lower_case_table_names = 1
+# 提升 Kafka 导入并发。
+max_routine_load_task_num_per_be = 10
+```
+
+
+5. 启动 FE Master 主节点
+在 FE Master( bigdata-1)节点启动 FE,先确保主节点没问题;
+
+```shell
+
+## 启动FE MASTER 节点 
+[root@bigdata-1 fe]# /data/doris402/fe/bin/start_fe.sh --daemon
+
+## 执行完后可等待10s之后执行后面相关状态检测命令
+
+## JPS 查看是否成功启动了FE的进程
+[root@bigdata-1 fe]# jps
+25120 Jps
+24892 DorisFE
+
+## 检查 fe_log 是否输出了 FE内部通信RPC启动成功,注⚠️：WARN ... Help module failed 是帮助模块加载失败，不影响核心功能，可以直接忽略。
+[root@bigdata-1 fe]# grep -E "thrift server started|QeService" /data/doris/fe_log/fe.log
+2026-01-08 01:15:10,270 INFO (UNKNOWN fe_4f44a060_40eb_4b01_a9c3_b1c5677a0324(-1)|1) [FeServer.start():80] thrift server started.
+2026-01-08 01:15:13,600 WARN (UNKNOWN fe_4f44a060_40eb_4b01_a9c3_b1c5677a0324(-1)|1) [QeService.start():58] Help module failed. ignore it.
+ at org.apache.doris.qe.QeService.start(QeService.java:56)
+2026-01-08 01:15:14,023 INFO (UNKNOWN fe_4f44a060_40eb_4b01_a9c3_b1c5677a0324(-1)|1) [QeService.start():75] QE service start.
+[root@bigdata-1 fe]# 
+
+## FE 节点是否从 UNKNOWN 变为了 MASTER 如果输出为空也是正常情况
+[root@bigdata-1 fe]# grep "transfer from UNKNOWN to MASTER" /data/doris/fe_log/fe.log
+[root@bigdata-1 fe]# 
+
+## 是否有报错  log4j:WARN No appenders 此类警告属于非致命错误，可忽略
+[root@bigdata-1 fe]# grep "ERROR" /data/doris/fe_log/fe.log
+2026-01-08 01:15:09,839 ERROR (stateListener|88) [LogLog.warn():157] log4j:WARN No appenders could be found for logger (io.netty.util.ResourceLeakDetector).
+2026-01-08 01:15:09,839 ERROR (stateListener|88) [LogLog.warn():157] log4j:WARN Please initialize the log4j system properly.
+2026-01-08 01:15:09,839 ERROR (stateListener|88) [LogLog.warn():157] log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[root@bigdata-1 fe]# 
+```
+
+
+# 6. 安装 MySQL 客户端工具
+因为 Doris 没有自带命令行工具，它直接“借用”了 MySQL 的客户端来作为它的操作界面。
+
+在集群部署的这个阶段，我们需要进行集群组建操作，而这些操作只能通过 SQL 命令完成，无法通过修改配置文件完成。
+
+
+如果没有安装这个客户端，就无法进入 Doris 的控制台
+
+
+```shell
+[root@bigdata-1 data]# ll
+总用量 3739088
+-rw-r--r-- 1 root root 3596248208 12月 11 17:54 apache-doris-4.0.2-bin-x64.tar.gz
+drwxrwxrwx 7 root root       4096 1月   8 00:44 doris
+drwxr-xr-x 7 root root       4096 1月   8 00:43 doris402
+-rw-r--r-- 1 root root  182799609 1月   7 23:58 jdk-17.0.12_linux-x64_bin.tar.gz
+drwx------ 2 root root      16384 1月   6 18:35 lost+found
+-rw-r--r-- 1 root root   49741908 1月   7 23:59 mysql-客户端rpm.zip
+
+## 解压 mysql客户端安装包
+[root@bigdata-1 data]# unzip mysql-客户端rpm.zip
+Archive:  mysql-客户端rpm.zip
+inflating: mysql-community-client-5.7.28-1.el7.x86_64.rpm  
+inflating: mysql-community-common-5.7.28-1.el7.x86_64.rpm  
+inflating: mysql-community-libs-5.7.28-1.el7.x86_64.rpm  
+
+## 安装 MYSQL 客户端
+[root@bigdata-1 data]# rpm -ivh mysql-community-*.rpm --force --nodeps
+警告：mysql-community-client-5.7.28-1.el7.x86_64.rpm: 头V3 DSA/SHA1 Signature, 密钥 ID 5072e1f5: NOKEY
+准备中...                          ################################# [100%]
+正在升级/安装...
+1:mysql-community-common-5.7.28-1.e################################# [ 33%]
+2:mysql-community-libs-5.7.28-1.el7################################# [ 67%]
+3:mysql-community-client-5.7.28-1.e################################# [100%]
+[root@bigdata-1 data]# 
+```
+
+
+# 7. FE 集群组网：注册 Follower 节点
+
+1. 登录 Master 节点 FE 首次启动默认无密码。请使用 MySQL 客户端连接 Master（命令：mysql -h 127.0.0.1 -P 9030 -uroot），进入管理终端。
+
+2. 预注册 Follower 节点 在 Master 上执行 SQL，将另外两台规划中的 FE 节点加入集群白名单：
+
+```shell
+ALTER SYSTEM ADD FOLLOWER "192.168.221.63:9010";
+ALTER SYSTEM ADD FOLLOWER "192.168.221.64:9010";
+```
+
+
+⚠️ 核心逻辑说明：为什么这里要填具体 IP？ 
+
+虽然我们在配置文件 (fe.conf) 中设置的 priority_networks 是网段（如 192.168.221.0/24），但该配置的作用是让节点启动时自动命中本机的一个具体 IP。
+
+在此处注册时，必须填写该节点“命中后”的真实 IP 地址。
+
+请务必确认填写的 192.168.221.63 确实位于目标机器的 priority_networks 网段规则内，且是该机器的真实内网地址。
+
+切勿在此处直接填写 CIDR 网段，Master 仅接受具体的 IP:Port 格式。
+
+```shell
+## 进入Doris终端
+[root@bigdata-1 data]# mysql -h 127.0.0.1 -P 9030 -uroot
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 1
+Server version: 5.7.99 doris version doris-4.0.2-rc02-30d2df0459
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql> 
+
+## 添加另外两台机器的FE角色为Follower; 
+mysql> ALTER SYSTEM ADD FOLLOWER "192.168.221.63:9010";
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> ALTER SYSTEM ADD FOLLOWER "192.168.221.64:9010";
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> 
+```
