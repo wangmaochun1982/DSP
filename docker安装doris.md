@@ -269,3 +269,166 @@ mysql -uroot -P9030 -h127.0.0.1 -e 'SELECT `host`, `alive` FROM backends()'
 ```
 
 
+```sql
+
+-- ============================================================
+-- 1. 创建数仓各层数据库
+-- ============================================================
+CREATE DATABASE IF NOT EXISTS ods_db;
+CREATE DATABASE IF NOT EXISTS dwd_db;
+CREATE DATABASE IF NOT EXISTS dws_db;
+
+-- ============================================================
+-- 2. DDL 建表阶段
+-- ============================================================
+
+-- 【ODS层】原始订单明细表 (明细模型)
+CREATE TABLE IF NOT EXISTS ods_db.ods_order_detail (
+    `order_id` BIGINT NOT NULL COMMENT "订单ID",
+    `order_time` DATETIME NOT NULL COMMENT "下单时间",
+    `user_id` BIGINT NOT NULL COMMENT "用户ID",
+    `goods_id` INT NOT NULL COMMENT "商品ID",
+    `goods_num` INT COMMENT "购买数量",
+    `order_amount` DECIMAL(12, 2) COMMENT "订单金额",
+    `pay_amount` DECIMAL(12, 2) COMMENT "实付金额",
+    `order_status` TINYINT COMMENT "订单状态: 1-待支付, 2-已支付, 3-已取消",
+    `create_time` DATETIME COMMENT "数据抽取时间"
+)
+DUPLICATE KEY(`order_id`, `order_time`)
+AUTO PARTITION BY RANGE (date_trunc(`order_time`, 'day')) ()
+DISTRIBUTED BY HASH(`order_id`) BUCKETS 8
+PROPERTIES (
+    "replication_num" = "1"
+);
+
+-- 【DWD层】商品维度表 (主键模型)
+CREATE TABLE IF NOT EXISTS dwd_db.dim_goods (
+    `goods_id` INT NOT NULL COMMENT "商品ID",
+    `goods_sn` VARCHAR(64) NOT NULL COMMENT "商品编码",
+    `goods_name` VARCHAR(100) NOT NULL COMMENT "商品名称",
+    `category_name` VARCHAR(50) COMMENT "品类名称",
+    `brand_name` VARCHAR(50) COMMENT "品牌名称",
+    `price` DECIMAL(10, 2) COMMENT "当前售价",
+    `update_time` DATETIME COMMENT "更新时间"
+)
+UNIQUE KEY(`goods_id`)
+DISTRIBUTED BY HASH(`goods_id`) BUCKETS 4
+PROPERTIES (
+    "replication_num" = "1"
+);
+
+-- 【DWD层】用户维度表 (主键模型)
+CREATE TABLE IF NOT EXISTS dwd_db.dim_user (
+    `user_id` BIGINT NOT NULL COMMENT "用户ID",
+    `user_name` VARCHAR(50) NOT NULL COMMENT "用户名称",
+    `gender` TINYINT COMMENT "性别: 1-男, 2-女",
+    `city` VARCHAR(50) COMMENT "所在城市",
+    `register_time` DATETIME COMMENT "注册时间"
+)
+UNIQUE KEY(`user_id`)
+DISTRIBUTED BY HASH(`user_id`) BUCKETS 4
+PROPERTIES (
+    "replication_num" = "1"
+);
+
+-- 【DWD层】交易订单事实表 (明细模型)
+CREATE TABLE IF NOT EXISTS dwd_db.fact_order (
+    `order_id` BIGINT NOT NULL COMMENT "订单ID",
+    `order_time` DATETIME NOT NULL COMMENT "下单时间",
+    `user_id` BIGINT NOT NULL COMMENT "用户ID",
+    `goods_id` INT NOT NULL COMMENT "商品ID",
+    `goods_num` INT COMMENT "购买数量",
+    `order_amount` DECIMAL(12, 2) COMMENT "订单金额",
+    `pay_amount` DECIMAL(12, 2) COMMENT "实付金额"
+)
+DUPLICATE KEY(`order_id`, `order_time`, `user_id`, `goods_id`)
+AUTO PARTITION BY RANGE (date_trunc(`order_time`, 'day')) ()
+DISTRIBUTED BY HASH(`order_id`) BUCKETS 8
+PROPERTIES (
+    "replication_num" = "1"
+);
+
+-- 【DWS层】用户日度消费汇总表 (聚合模型)
+CREATE TABLE IF NOT EXISTS dws_db.dws_user_daily_sales (
+    `dt` DATE NOT NULL COMMENT "统计日期",
+    `user_id` BIGINT NOT NULL COMMENT "用户ID",
+    `total_amount` DECIMAL(12, 2) SUM DEFAULT "0.00" COMMENT "当日总消费金额",
+    `order_count` BIGINT SUM DEFAULT "0" COMMENT "当日下单总笔数",
+    `last_order_time` DATETIME MAX COMMENT "最后一次下单时间"
+)
+AGGREGATE KEY(`dt`, `user_id`)
+DISTRIBUTED BY HASH(`user_id`) BUCKETS 8
+PROPERTIES (
+    "replication_num" = "1"
+);
+
+
+-- ============================================================
+-- 3. 数据写入与流转阶段
+-- ============================================================
+
+-- Step 1: 写入基础维度数据 (DWD)
+INSERT INTO dwd_db.dim_goods VALUES
+(501, 'G-1001', '无线蓝牙耳机', '3C数码', '品牌A', 199.00, '2026-09-03 16:00:00'),
+(502, 'G-1002', '机械键盘', '电脑外设', '品牌B', 299.50, '2026-09-03 16:00:00');
+
+INSERT INTO dwd_db.dim_user VALUES
+(10001, '张三', 1, '厦门', '2026-01-01 10:00:00'),
+(10002, '李四', 2, '深圳', '2026-02-15 11:30:00');
+
+-- Step 2: 写入 ODS 贴源层测试数据 (包含取消的垃圾数据)
+INSERT INTO ods_db.ods_order_detail VALUES
+(20260903001, '2026-09-03 10:15:00', 10001, 501, 1, 199.00, 199.00, 2, '2026-09-03 16:00:00'),
+(20260903002, '2026-09-03 14:20:00', 10001, 502, 1, 299.50, 299.50, 2, '2026-09-03 16:00:00'),
+(20260903003, '2026-09-03 15:00:00', 10002, 501, 2, 398.00, 398.00, 2, '2026-09-03 16:00:00'),
+(20260903004, '2026-09-03 16:00:00', 10002, 502, 1, 299.50, 0.00, 3, '2026-09-03 16:00:00');
+
+-- Step 3: ODS ➔ DWD 过滤清洗 (只保留已支付 order_status = 2)
+INSERT INTO dwd_db.fact_order
+SELECT 
+    order_id,
+    order_time,
+    user_id,
+    goods_id,
+    goods_num,
+    order_amount,
+    pay_amount
+FROM ods_db.ods_order_detail
+WHERE order_status = 2;
+
+-- Step 4: DWD ➔ DWS 轻度汇总
+INSERT INTO dws_db.dws_user_daily_sales
+SELECT 
+    DATE(order_time) AS dt,
+    user_id,
+    pay_amount AS total_amount,
+    1 AS order_count,
+    order_time AS last_order_time
+FROM dwd_db.fact_order;
+
+
+-- ============================================================
+-- 4. 结果验证与星型模型关联查询
+-- ============================================================
+
+-- 校验 ODS 原始层 (4条数据)
+SELECT * FROM ods_db.ods_order_detail;
+
+-- 校验 DWD 事实层 (3条有效数据)
+SELECT * FROM dwd_db.fact_order;
+
+-- 校验 DWS 汇总层 (2条按用户聚合的数据)
+SELECT * FROM dws_db.dws_user_daily_sales;
+
+-- 维度-事实星型模型跨库分析查询
+SELECT 
+    u.city AS "城市",
+    g.category_name AS "商品品类",
+    COUNT(DISTINCT f.order_id) AS "订单总量",
+    SUM(f.pay_amount) AS "总销售额"
+FROM dwd_db.fact_order f
+JOIN dwd_db.dim_user u ON f.user_id = u.user_id
+JOIN dwd_db.dim_goods g ON f.goods_id = g.goods_id
+GROUP BY u.city, g.category_name;
+```
+
