@@ -47,7 +47,11 @@ drwxr-xr-x  4 root root         39 Sep  3 14:09 storage
 ```
 
 
-[root@localhost doris]# cat Dockerfile 
+
+# [root@localhost doris]# cat Dockerfile 
+
+```plaintext
+
 # 使用基于 Rocky Linux 的 Liberica JDK 镜像作为基础镜像
 #FROM bellsoft/liberica-openjdk-rocky:17
 # 使用基于 Rocky Linux 的 Liberica JDK 镜像作为基础镜像
@@ -92,3 +96,4 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["fe"]
 
 
+```
