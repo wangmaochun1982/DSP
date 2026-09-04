@@ -50,7 +50,7 @@ drwxr-xr-x  4 root root         39 Sep  3 14:09 storage
 
 # [root@localhost doris]# cat Dockerfile 
 
-```plaintext
+```dockerfile
 
 # 使用基于 Rocky Linux 的 Liberica JDK 镜像作为基础镜像
 #FROM bellsoft/liberica-openjdk-rocky:17
@@ -96,4 +96,49 @@ ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["fe"]
 
 
+```
+
+
+# [root@localhost doris]# cat docker-compose.yml 
+
+```yaml
+services:
+  doris-fe:
+    image: apache-doris:4.0.8
+    container_name: doris-fe
+    restart: always
+    network_mode: "host"
+    environment:
+      - TZ=Asia/Shanghai
+    command: ["fe"]
+    volumes:
+      - /data/doris/storage/fe-meta:/opt/apache-doris/fe/doris-meta
+      - /data/doris/fe/logs:/opt/apache-doris/fe/log
+      - /data/doris/fe/conf:/opt/apache-doris/fe/conf # 加上这行挂载 FE 配置
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+
+  doris-be:
+    image: apache-doris:4.0.8
+    container_name: doris-be
+    restart: always
+    network_mode: "host"
+    environment:
+      - TZ=Asia/Shanghai
+    command: ["be"]
+    depends_on:
+      - doris-fe
+    volumes:
+      - /data/doris/storage/be-storage:/opt/apache-doris/be/storage
+      - /data/doris/be/logs:/opt/apache-doris/be/log
+      - /data/doris/be/conf:/opt/apache-doris/be/conf # 加上这行挂载 BE 配置
+    ulimits:
+      nofile:
+        soft: 655360
+        hard: 655360
+      memlock:
+        soft: -1
+        hard: -1
 ```
