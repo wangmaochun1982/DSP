@@ -46,6 +46,35 @@ drwxr-xr-x  4 root root         39 Sep  3 14:09 storage
 
 ```
 
+```shell
+
+# 1. 进入指定目录
+cd /data/doris
+
+# 2. 解压下载的 Doris 二进制文件
+tar -zxvf apache-doris-4.0.8-bin-x64.tar.gz
+
+# 3. 将解压出的子目录移动到当前目录根下，生成 ./fe 和 ./be
+mv apache-doris-4.0.8-bin-x64/fe ./fe
+mv apache-doris-4.0.8-bin-x64/be ./be
+
+# 4. 创建运行与持久化所需的相关目录
+mkdir -p /data/doris/storage/fe-meta
+mkdir -p /data/doris/storage/be-storage
+mkdir -p /data/doris/fe/logs
+mkdir -p /data/doris/be/logs
+
+echo "JAVA_HOME=/usr/lib/jvm/jdk-17.0.20.1-bellsoft-x86_64" >> /data/doris/fe/conf/fe.conf
+echo "JAVA_HOME=/usr/lib/jvm/jdk-17.0.20.1-bellsoft-x86_64" >> /data/doris/be/conf/be.conf
+
+# 创建入口脚本文件并写入脚本内容（参见前文文件内容）
+touch entrypoint.sh
+chmod +x entrypoint.sh
+
+# 创建 Dockerfile 和 docker-compose.yml 文件
+touch Dockerfile
+touch docker-compose.yml
+```
 
 
 # [root@localhost doris]# cat Dockerfile 
@@ -142,3 +171,101 @@ services:
         soft: -1
         hard: -1
 ```
+
+# [root@localhost doris]# cat entrypoint.sh 
+
+```shell
+#!/bin/bash
+set -e
+
+ROLE=$1
+
+if [ "$ROLE" = "fe" ]; then
+    echo "Starting Doris Frontend (FE)..."
+    exec /opt/apache-doris/fe/bin/start_fe.sh
+elif [ "$ROLE" = "be" ]; then
+    echo "Starting Doris Backend (BE)..."
+    exec /opt/apache-doris/be/bin/start_be.sh 
+else
+    echo "Usage: docker run <image> [fe|be]"
+    echo "Defaulting to FE..."
+    exec /opt/apache-doris/fe/bin/start_fe.sh
+fi
+```
+
+
+```shell
+
+docker build -t apache-doris:4.0.8 .
+
+sysctl -w vm.max_map_count=2000000
+echo "vm.max_map_count=2000000" >> /etc/sysctl.conf
+sysctl -p
+
+
+docker run --rm docker.1ms.run/bellsoft/liberica-openjdk-rocky:17 /bin/bash -c "echo \$JAVA_HOME; type -p java"
+
+
+# 写入 FE 配置文件
+echo "JAVA_HOME=/usr/lib/jvm/jdk-17.0.10-bellsoft-x86_64" >> /data/doris/fe/conf/fe.conf
+
+# 写入 BE 配置文件（部分版本的 BE 开启 Java UDF 也需要绑定 JAVA_HOME）
+echo "JAVA_HOME=/usr/lib/jvm/jdk-17.0.10-bellsoft-x86_64" >> /data/doris/be/conf/be.conf
+
+ swapoff -a
+sed -i '/swap/s/^\(.*\)$/#\1/g' /etc/fstab
+
+docker compose up -d
+```
+
+
+```shell
+
+dnf install -y https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm
+
+dnf install -y mysql-community-client --nogpgcheck
+
+mysql -h 127.0.0.1 -P 9030 -u root
+
+# 1. 连接 Doris FE（默认无密码）
+mysql -h 127.0.0.1 -P 9030 -u root
+
+# 2. 注册 BE 节点（在 mysql> 提示符中执行，请替换为你的真实宿主机 IP）
+ALTER SYSTEM ADD BACKEND "<宿主机IP>:9050";
+
+# 3. 验证连接状态（Alive 应显示为 true）
+SHOW BACKENDS\G
+
+SHOW FRONTENDS\G
+
+-- 修改当前 root 用户的密码（请将 YourStrongPassword123! 替换为实际密码）
+SET PASSWORD FOR 'root'@'%' = PASSWORD('YourStrongPassword123!');
+
+
+```
+
+```shell
+
+mysql -uroot -P9030 -h127.0.0.1 -e 'SELECT `host`, `join`, `alive` FROM frontends()'
+mysql -uroot -P9030 -h127.0.0.1 -e 'SELECT `host`, `alive` FROM backends()'
+
+
+[root@localhost doris]# mysql -uroot -P9030 -h127.0.0.1 -e 'SELECT `host`, `join`, `alive` FROM frontends()'
++------------+------+-------+
+| host       | join | alive |
++------------+------+-------+
+| 172.17.0.1 | true | true  |
++------------+------+-------+
+[root@localhost doris]# mysql -uroot -P9030 -h127.0.0.1 -e 'SELECT `host`, `alive` FROM backends()'
+\
++------------+-------+
+| host       | alive |
++------------+-------+
+| 10.2.1.244 |     1 |
++------------+-------+
+
+
+
+```
+
+
