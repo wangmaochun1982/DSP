@@ -1,0 +1,2778 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.wangting.fun/study/Doris%E7%9A%84%E5%88%86%E5%8C%BAPartition%E5%92%8C%E5%88%86%E6%A1%B6Bucket%E4%BB%8B%E7%BB%8D.html
+Subject: =?utf-8?Q?Doris=E7=9A=84=E5=88=86=E5=8C=BAPartition=E5=92=8C=E5=88=86=E6?=
+ =?utf-8?Q?=A1=B6Bucket=E4=BB=8B=E7=BB=8D?=
+Date: Tue, 15 Sep 2026 11:01:30 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--e3agMvnmR7Yyt9liCX9xJTPy2VKtSB7lan12UFLgf4----"
+
+
+------MultipartBoundary--e3agMvnmR7Yyt9liCX9xJTPy2VKtSB7lan12UFLgf4----
+Content-Type: text/html
+Content-ID: <frame-95400DC6AD74FFE5080CEBC3E9087CC6@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.wangting.fun/study/Doris%E7%9A%84%E5%88%86%E5%8C%BAPartition%E5%92%8C%E5%88%86%E6%A1%B6Bucket%E4%BB%8B%E7%BB%8D.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-6e2a5f7f-a9a3-437e-b88a-f7cc593db02d@mhtml.blink" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width initial-scale=3D1">
+
+<link href=3D"https://fonts.loli.net/css?family=3DOpen+Sans:400italic,700it=
+alic,700,400&amp;subset=3Dlatin,latin-ext" rel=3D"stylesheet" type=3D"text/=
+css"><title>Doris=E7=9A=84=E5=88=86=E5=8C=BAPartition=E5=92=8C=E5=88=86=E6=
+=A1=B6Bucket=E4=BB=8B=E7=BB=8D</title>
+</head>
+<body class=3D"typora-export os-windows"><div class=3D"typora-export-conten=
+t">
+<div id=3D"write" class=3D""><div align=3D"center"><h1> Doris=E7=9A=84=E5=
+=88=86=E5=8C=BAPartition=E5=92=8C=E5=88=86=E6=A1=B6Bucket=E4=BB=8B=E7=BB=8D=
+ </h1></div><p>&nbsp;</p><p><span>Doris=E6=95=B0=E6=8D=AE=E5=BA=93=E6=98=AF=
+=E4=B8=80=E4=B8=AA=E5=88=86=E5=B8=83=E5=BC=8F=E7=9A=84=E5=88=97=E5=BC=8F=E5=
+=AD=98=E5=82=A8=E6=95=B0=E6=8D=AE=E5=BA=93=EF=BC=8C=E5=AE=83=E6=94=AF=E6=8C=
+=81=E5=88=86=E5=8C=BA=E5=92=8C=E5=88=86=E6=A1=B6=E4=B8=A4=E7=A7=8D=E6=95=B0=
+=E6=8D=AE=E5=88=92=E5=88=86=E6=96=B9=E5=BC=8F</span></p><ol start=3D""><li>=
+<span>=E5=88=86=E5=8C=BA=EF=BC=9ADoris=E6=95=B0=E6=8D=AE=E5=BA=93=E6=94=AF=
+=E6=8C=81=E6=B0=B4=E5=B9=B3=E5=88=86=E5=8C=BA=EF=BC=8C=E5=8D=B3=E5=B0=86=E6=
+=95=B0=E6=8D=AE=E6=8C=89=E7=85=A7=E6=9F=90=E4=B8=AA=E5=AD=97=E6=AE=B5=E7=9A=
+=84=E5=80=BC=E8=BF=9B=E8=A1=8C=E5=88=86=E5=8C=BA=EF=BC=8C=E7=9B=B8=E5=90=8C=
+=E7=9A=84=E5=80=BC=E4=BC=9A=E8=A2=AB=E5=88=86=E9=85=8D=E5=88=B0=E5=90=8C=E4=
+=B8=80=E4=B8=AA=E5=88=86=E5=8C=BA=E4=B8=AD=E3=80=82=E8=BF=99=E7=A7=8D=E6=96=
+=B9=E5=BC=8F=E5=8F=AF=E4=BB=A5=E5=B0=86=E6=95=B0=E6=8D=AE=E5=9D=87=E5=8C=80=
+=E5=9C=B0=E5=88=86=E5=B8=83=E5=88=B0=E4=B8=8D=E5=90=8C=E7=9A=84=E8=8A=82=E7=
+=82=B9=E4=B8=8A=EF=BC=8C=E6=8F=90=E9=AB=98=E6=9F=A5=E8=AF=A2=E6=95=88=E7=8E=
+=87=E5=92=8C=E5=B9=B6=E8=A1=8C=E5=A4=84=E7=90=86=E8=83=BD=E5=8A=9B=E3=80=82=
+</span></li><li><span>=E5=88=86=E6=A1=B6=EF=BC=9ADoris=E6=95=B0=E6=8D=AE=E5=
+=BA=93=E6=94=AF=E6=8C=81=E5=9E=82=E7=9B=B4=E5=88=86=E6=A1=B6=EF=BC=8C=E5=8D=
+=B3=E5=B0=86=E5=90=8C=E4=B8=80=E8=A1=8C=E6=95=B0=E6=8D=AE=E7=9A=84=E4=B8=8D=
+=E5=90=8C=E5=88=97=E5=88=86=E5=88=AB=E5=AD=98=E5=82=A8=E5=9C=A8=E4=B8=8D=E5=
+=90=8C=E7=9A=84=E6=A1=B6=E4=B8=AD=E3=80=82=E8=BF=99=E7=A7=8D=E6=96=B9=E5=BC=
+=8F=E5=8F=AF=E4=BB=A5=E5=B0=86=E7=BB=8F=E5=B8=B8=E4=B8=80=E8=B5=B7=E6=9F=A5=
+=E8=AF=A2=E7=9A=84=E5=88=97=E5=AD=98=E5=82=A8=E5=9C=A8=E5=90=8C=E4=B8=80=E4=
+=B8=AA=E6=A1=B6=E4=B8=AD=EF=BC=8C=E6=8F=90=E9=AB=98=E6=9F=A5=E8=AF=A2=E6=95=
+=88=E7=8E=87=E3=80=82</span></li><li><span>=E8=8A=82=E7=82=B9=E8=B4=9F=E8=
+=BD=BD=E5=9D=87=E8=A1=A1=EF=BC=9ADoris=E6=95=B0=E6=8D=AE=E5=BA=93=E5=8F=AF=
+=E4=BB=A5=E5=B0=86=E6=95=B0=E6=8D=AE=E5=9D=87=E5=8C=80=E5=9C=B0=E5=88=86=E5=
+=B8=83=E5=88=B0=E4=B8=8D=E5=90=8C=E7=9A=84=E8=8A=82=E7=82=B9=E4=B8=8A=EF=BC=
+=8C=E4=BF=9D=E8=AF=81=E6=AF=8F=E4=B8=AA=E8=8A=82=E7=82=B9=E7=9A=84=E8=B4=9F=
+=E8=BD=BD=E5=9D=87=E8=A1=A1=EF=BC=8C=E6=8F=90=E9=AB=98=E7=B3=BB=E7=BB=9F=E7=
+=9A=84=E5=8F=AF=E6=89=A9=E5=B1=95=E6=80=A7=E5=92=8C=E7=A8=B3=E5=AE=9A=E6=80=
+=A7=E3=80=82</span></li><li><span>=E6=95=B0=E6=8D=AE=E5=8E=8B=E7=BC=A9=EF=
+=BC=9ADoris=E6=95=B0=E6=8D=AE=E5=BA=93=E6=94=AF=E6=8C=81=E5=A4=9A=E7=A7=8D=
+=E6=95=B0=E6=8D=AE=E5=8E=8B=E7=BC=A9=E7=AE=97=E6=B3=95=EF=BC=8C=E5=8F=AF=E4=
+=BB=A5=E5=B0=86=E6=95=B0=E6=8D=AE=E5=9C=A8=E5=AD=98=E5=82=A8=E6=97=B6=E8=BF=
+=9B=E8=A1=8C=E5=8E=8B=E7=BC=A9=EF=BC=8C=E5=87=8F=E5=B0=91=E5=AD=98=E5=82=A8=
+=E7=A9=BA=E9=97=B4=EF=BC=8C=E9=99=8D=E4=BD=8E=E5=AD=98=E5=82=A8=E6=88=90=E6=
+=9C=AC=E3=80=82</span></li><li><span>=E6=95=B0=E6=8D=AE=E5=89=AF=E6=9C=AC=
+=EF=BC=9ADoris=E6=95=B0=E6=8D=AE=E5=BA=93=E6=94=AF=E6=8C=81=E6=95=B0=E6=8D=
+=AE=E5=89=AF=E6=9C=AC=EF=BC=8C=E5=8F=AF=E4=BB=A5=E5=B0=86=E6=95=B0=E6=8D=AE=
+=E5=A4=8D=E5=88=B6=E5=88=B0=E5=A4=9A=E4=B8=AA=E8=8A=82=E7=82=B9=E4=B8=8A=EF=
+=BC=8C=E6=8F=90=E9=AB=98=E7=B3=BB=E7=BB=9F=E7=9A=84=E5=AE=B9=E9=94=99=E8=83=
+=BD=E5=8A=9B=E5=92=8C=E5=8F=AF=E7=94=A8=E6=80=A7=E3=80=82</span></li></ol><=
+p><span>         Doris =E6=94=AF=E6=8C=81=E4=B8=A4=E5=B1=82=E7=9A=84=E6=95=
+=B0=E6=8D=AE=E5=88=92=E5=88=86=E3=80=82=E7=AC=AC=E4=B8=80=E5=B1=82=E6=98=AF=
+ Partition=EF=BC=8C=E6=94=AF=E6=8C=81 Range =E5=92=8C List =E7=9A=84=E5=88=
+=92=E5=88=86=E6=96=B9=E5=BC=8F=E3=80=82=E7=AC=AC=E4=BA=8C=E5=B1=82=E6=98=AF=
+ Bucket=EF=BC=88Tablet=EF=BC=89=EF=BC=8C=E4=BB=85=E6=94=AF=E6=8C=81 Hash =
+=E7=9A=84=E5=88=92=E5=88=86=E6=96=B9=E5=BC=8F=E3=80=82</span></p><p><span> =
+       Doris=E6=95=B0=E6=8D=AE=E5=88=92=E5=88=86=E4=B9=9F=E5=8F=AF=E4=BB=A5=
+=E4=BB=85=E4=BD=BF=E7=94=A8=E4=B8=80=E5=B1=82=E5=88=86=E5=8C=BA=E3=80=82=E4=
+=BD=BF=E7=94=A8=E4=B8=80=E5=B1=82=E5=88=86=E5=8C=BA=E6=97=B6=EF=BC=8C=E5=8F=
+=AA=E6=94=AF=E6=8C=81 Bucket =E5=88=92=E5=88=86</span></p><h1 id=3D"1-parti=
+tion---=E5=88=86=E5=8C=BA"><span>1. Partition - =E5=88=86=E5=8C=BA</span></=
+h1><ul><li><span>Partition =E5=88=97=E5=8F=AF=E4=BB=A5=E6=8C=87=E5=AE=9A=E4=
+=B8=80=E5=88=97=E6=88=96=E5=A4=9A=E5=88=97=EF=BC=8C=E5=88=86=E5=8C=BA=E5=88=
+=97=E5=BF=85=E9=A1=BB=E4=B8=BA KEY =E5=88=97=E3=80=82</span></li><li><span>=
+=E4=B8=8D=E8=AE=BA=E5=88=86=E5=8C=BA=E5=88=97=E6=98=AF=E4=BB=80=E4=B9=88=E7=
+=B1=BB=E5=9E=8B=EF=BC=8C=E5=9C=A8=E5=86=99=E5=88=86=E5=8C=BA=E5=80=BC=E6=97=
+=B6=EF=BC=8C=E9=83=BD=E9=9C=80=E8=A6=81=E5=8A=A0=E5=8F=8C=E5=BC=95=E5=8F=B7=
+=E3=80=82</span></li><li><span>=E5=88=86=E5=8C=BA=E6=95=B0=E9=87=8F=E7=90=
+=86=E8=AE=BA=E4=B8=8A=E6=B2=A1=E6=9C=89=E4=B8=8A=E9=99=90=E3=80=82</span></=
+li><li><span>=E5=BD=93=E4=B8=8D=E4=BD=BF=E7=94=A8 Partition =E5=BB=BA=E8=A1=
+=A8=E6=97=B6=EF=BC=8C=E7=B3=BB=E7=BB=9F=E4=BC=9A=E8=87=AA=E5=8A=A8=E7=94=9F=
+=E6=88=90=E4=B8=80=E4=B8=AA=E5=92=8C=E8=A1=A8=E5=90=8D=E5=90=8C=E5=90=8D=E7=
+=9A=84=EF=BC=8C=E5=85=A8=E5=80=BC=E8=8C=83=E5=9B=B4=E7=9A=84 Partition=E3=
+=80=82=E8=AF=A5 Partition =E5=AF=B9=E7=94=A8=E6=88=B7=E4=B8=8D=E5=8F=AF=E8=
+=A7=81=EF=BC=8C=E5=B9=B6=E4=B8=94=E4=B8=8D=E5=8F=AF=E5=88=A0=E6=94=B9=E3=80=
+=82</span></li><li><span>=E5=88=9B=E5=BB=BA=E5=88=86=E5=8C=BA=E6=97=B6</spa=
+n><strong><span>=E4=B8=8D=E5=8F=AF=E6=B7=BB=E5=8A=A0=E8=8C=83=E5=9B=B4=E9=
+=87=8D=E5=8F=A0</span></strong><span>=E7=9A=84=E5=88=86=E5=8C=BA=E3=80=82</=
+span></li></ul><p>&nbsp;</p><p><span>Partition=EF=BC=8C=E6=94=AF=E6=8C=81 R=
+ange =E5=92=8C List </span></p><h2 id=3D"11-range-=E5=88=86=E5=8C=BA=E4=BD=
+=BF=E7=94=A8=E4=BB=8B=E7=BB=8D"><span>1.1 Range =E5=88=86=E5=8C=BA=E4=BD=BF=
+=E7=94=A8=E4=BB=8B=E7=BB=8D</span></h2><p><span>Range=E5=88=86=E5=8C=BA=E6=
+=98=AF=E4=B8=80=E7=A7=8D=E5=9F=BA=E4=BA=8E=E5=88=86=E5=8C=BA=E9=94=AE=E5=AF=
+=B9=E8=A1=A8=E8=BF=9B=E8=A1=8C=E5=88=86=E5=8C=BA=E7=9A=84=E6=96=B9=E5=BC=8F=
+=EF=BC=8C=E5=88=86=E5=8C=BA=E9=94=AE=E6=8C=87=E7=9A=84=E6=98=AF=E8=A1=A8=E4=
+=B8=AD=E7=9A=84=E6=9F=90=E4=B8=80=E5=88=97=EF=BC=8C=E8=80=8CRange=E5=88=99=
+=E6=98=AF=E6=8C=87=E8=BF=99=E4=B8=AA=E5=88=97=E7=9A=84=E5=80=BC=E7=9A=84=E8=
+=8C=83=E5=9B=B4=E3=80=82=E4=BD=BF=E7=94=A8Range=E5=88=86=E5=8C=BA=EF=BC=8C=
+=E5=8F=AF=E4=BB=A5=E5=B0=86=E6=95=B0=E6=8D=AE=E6=8C=89=E7=85=A7=E5=88=97=E7=
+=9A=84=E5=80=BC=E7=9A=84=E8=8C=83=E5=9B=B4=E8=BF=9B=E8=A1=8C=E5=88=92=E5=88=
+=86=EF=BC=8C=E5=B0=86=E6=95=B0=E6=8D=AE=E5=88=86=E6=95=A3=E5=88=B0=E4=B8=8D=
+=E5=90=8C=E7=9A=84=E8=8A=82=E7=82=B9=E4=B8=8A=EF=BC=8C=E4=BB=A5=E5=AE=9E=E7=
+=8E=B0=E5=88=86=E5=B8=83=E5=BC=8F=E5=AD=98=E5=82=A8=E5=92=8C=E6=9F=A5=E8=AF=
+=A2</span></p><ul><li><span>=E5=88=86=E5=8C=BA=E5=88=97=E9=80=9A=E5=B8=B8=
+=E4=B8=BA=E6=97=B6=E9=97=B4=E5=88=97=EF=BC=8C=E4=BB=A5=E6=96=B9=E4=BE=BF=E7=
+=9A=84=E7=AE=A1=E7=90=86=E6=96=B0=E6=97=A7=E6=95=B0=E6=8D=AE</span></li><li=
+><span>Partition =E6=94=AF=E6=8C=81=E9=80=9A=E8=BF=87 </span><code>VALUES L=
+ESS THAN (...)</code><span> =E4=BB=85=E6=8C=87=E5=AE=9A=E4=B8=8A=E7=95=8C=
+=EF=BC=8C=E7=B3=BB=E7=BB=9F=E4=BC=9A=E5=B0=86=E5=89=8D=E4=B8=80=E4=B8=AA=E5=
+=88=86=E5=8C=BA=E7=9A=84=E4=B8=8A=E7=95=8C=E4=BD=9C=E4=B8=BA=E8=AF=A5=E5=88=
+=86=E5=8C=BA=E7=9A=84=E4=B8=8B=E7=95=8C=EF=BC=8C=E7=94=9F=E6=88=90=E4=B8=80=
+=E4=B8=AA=E5=B7=A6=E9=97=AD=E5=8F=B3=E5=BC=80=E7=9A=84=E5=8C=BA=E9=97=B4=E3=
+=80=82=E4=B9=9F=E6=94=AF=E6=8C=81=E9=80=9A=E8=BF=87 </span><code>VALUES [..=
+.)</code><span> =E6=8C=87=E5=AE=9A=E4=B8=8A=E4=B8=8B=E7=95=8C=EF=BC=8C=E7=
+=94=9F=E6=88=90=E4=B8=80=E4=B8=AA=E5=B7=A6=E9=97=AD=E5=8F=B3=E5=BC=80=E7=9A=
+=84=E5=8C=BA=E9=97=B4</span></li><li><span>=E5=BD=93=E4=B8=8D=E4=BD=BF=E7=
+=94=A8Partition=E5=BB=BA=E8=A1=A8=E6=97=B6=EF=BC=8C=E7=B3=BB=E7=BB=9F=E4=BC=
+=9A=E8=87=AA=E5=8A=A8=E7=94=9F=E6=88=90=E4=B8=80=E4=B8=AA=E5=92=8C=E8=A1=A8=
+=E5=90=8D=E5=90=8C=E5=90=8D=E7=9A=84=EF=BC=8C=E5=85=A8=E5=80=BC=E8=8C=83=E5=
+=9B=B4=E7=9A=84 Partition=E3=80=82=E8=AF=A5Partition=E5=AF=B9=E7=94=A8=E6=
+=88=B7=E4=B8=8D=E5=8F=AF=E8=A7=81=EF=BC=8C=E5=B9=B6=E4=B8=94=E4=B8=8D=E5=8F=
+=AF=E5=88=A0=E6=94=B9</span></li></ul><p>&nbsp;</p><p><strong><span>=E5=AE=
+=98=E6=96=B9=E7=A4=BA=E4=BE=8B=E4=BB=8B=E7=BB=8D</span></strong></p><h3 id=
+=3D"111-=E5=BB=BArange-partition=E6=B5=8B=E8=AF=95=E8=A1=A8"><span>1.1.1 =
+=E5=BB=BARange Partition=E6=B5=8B=E8=AF=95=E8=A1=A8</span></h3><pre class=
+=3D"md-fences md-end-block ty-contain-cm modeLoaded" spellcheck=3D"false" l=
+ang=3D"sql" style=3D"break-inside: unset;"><div class=3D"CodeMirror cm-s-in=
+ner cm-s-null-scroll CodeMirror-wrap" lang=3D"sql"><div style=3D"overflow: =
+hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: =
+8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"fa=
+lse" tabindex=3D"0" style=3D"position: absolute; bottom: -1em; padding: 0px=
+; width: 1000px; height: 1em; outline: none;"></textarea></div><div class=
+=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"true"></div><div class=
+=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"></div><div class=3D"C=
+odeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"=
+margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-righ=
+t: 0px; padding-bottom: 0px;"><div style=3D"position: relative; top: 0px;">=
+<div class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"presenta=
+tion" style=3D"position: relative; outline: none;"><div class=3D"CodeMirror=
+-measure"><span><span>=E2=80=8B</span>x</span></div><div class=3D"CodeMirro=
+r-measure"></div><div style=3D"position: relative; z-index: 1;"></div><div =
+class=3D"CodeMirror-code" role=3D"presentation" style=3D""><div class=3D"Co=
+deMirror-activeline" style=3D"position: relative;"><div class=3D"CodeMirror=
+-activeline-background CodeMirror-linebackground"></div><div class=3D"CodeM=
+irror-gutter-background CodeMirror-activeline-gutter" style=3D"left: 0px; w=
+idth: 0px;"></div><pre class=3D" CodeMirror-line " role=3D"presentation"><s=
+pan role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm=
+-comment">-- Range Partition</span></span></pre></div><pre class=3D" CodeMi=
+rror-line " role=3D"presentation"><span role=3D"presentation" style=3D"padd=
+ing-right: 0.1px;"><span class=3D"cm-keyword">use</span> test_db<span class=
+=3D"cm-punctuation">;</span></span></pre><pre class=3D" CodeMirror-line " r=
+ole=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.=
+1px;"><span cm-text=3D"" cm-zwsp=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"=
+cm-keyword">CREATE</span> <span class=3D"cm-keyword">TABLE</span> <span cla=
+ss=3D"cm-keyword">IF</span> <span class=3D"cm-keyword">NOT</span> <span cla=
+ss=3D"cm-keyword">EXISTS</span> test_db<span class=3D"cm-variable-2">.examp=
+le_range_tbl</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pr=
+esentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><sp=
+an class=3D"cm-bracket">(</span></span></pre><pre class=3D" CodeMirror-line=
+ " role=3D"presentation"><span role=3D"presentation" style=3D"padding-right=
+: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`user_id`</span> LARG=
+EINT <span class=3D"cm-keyword">NOT</span> <span class=3D"cm-atom">NULL</sp=
+an> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=
+=E7=94=A8=E6=88=B7id"</span><span class=3D"cm-punctuation">,</span></span><=
+/pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"p=
+resentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"c=
+m-variable-2">`date`</span> <span class=3D"cm-type">DATE</span> <span class=
+=3D"cm-keyword">NOT</span> <span class=3D"cm-atom">NULL</span> <span class=
+=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E6=95=B0=E6=8D=
+=AE=E7=81=8C=E5=85=A5=E6=97=A5=E6=9C=9F=E6=97=B6=E9=97=B4"</span><span clas=
+s=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line " =
+role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0=
+.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`city`</span> <span clas=
+s=3D"cm-type">VARCHAR</span><span class=3D"cm-bracket">(</span><span class=
+=3D"cm-number">20</span><span class=3D"cm-bracket">)</span> <span class=3D"=
+cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=
+=89=80=E5=9C=A8=E5=9F=8E=E5=B8=82"</span><span class=3D"cm-punctuation">,</=
+span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><s=
+pan role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<sp=
+an class=3D"cm-variable-2">`age`</span> <span class=3D"cm-keyword">SMALLINT=
+</span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string"=
+>"=E7=94=A8=E6=88=B7=E5=B9=B4=E9=BE=84"</span><span class=3D"cm-punctuation=
+">,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbs=
+p;<span class=3D"cm-variable-2">`sex`</span> <span class=3D"cm-type">TINYIN=
+T</span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string=
+">"=E7=94=A8=E6=88=B7=E6=80=A7=E5=88=AB"</span><span class=3D"cm-punctuatio=
+n">,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentati=
+on"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nb=
+sp;<span class=3D"cm-variable-2">`last_visit_date`</span> <span class=3D"cm=
+-type">DATETIME</span> <span class=3D"cm-keyword">REPLACE</span> <span clas=
+s=3D"cm-keyword">DEFAULT</span> <span class=3D"cm-string">"1970-01-01 00:00=
+:00"</span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-str=
+ing">"=E7=94=A8=E6=88=B7=E6=9C=80=E5=90=8E=E4=B8=80=E6=AC=A1=E8=AE=BF=E9=97=
+=AE=E6=97=B6=E9=97=B4"</span><span class=3D"cm-punctuation">,</span></span>=
+</pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"=
+presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"=
+cm-variable-2">`cost`</span> <span class=3D"cm-type">BIGINT</span> <span cl=
+ass=3D"cm-keyword">SUM</span> <span class=3D"cm-keyword">DEFAULT</span> <sp=
+an class=3D"cm-string">"0"</span> <span class=3D"cm-keyword">COMMENT</span>=
+ <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=80=BB=E6=B6=88=E8=B4=B9"<=
+/span><span class=3D"cm-punctuation">,</span></span></pre><pre class=3D" Co=
+deMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"=
+padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`max_dwe=
+ll_time`</span> <span class=3D"cm-type">INT</span> <span class=3D"cm-keywor=
+d">MAX</span> <span class=3D"cm-keyword">DEFAULT</span> <span class=3D"cm-s=
+tring">"0"</span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"=
+cm-string">"=E7=94=A8=E6=88=B7=E6=9C=80=E5=A4=A7=E5=81=9C=E7=95=99=E6=97=B6=
+=E9=97=B4"</span><span class=3D"cm-punctuation">,</span></span></pre><pre c=
+lass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation=
+" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-=
+2">`min_dwell_time`</span> <span class=3D"cm-type">INT</span> <span class=
+=3D"cm-keyword">MIN</span> <span class=3D"cm-keyword">DEFAULT</span> <span =
+class=3D"cm-string">"99999"</span> <span class=3D"cm-keyword">COMMENT</span=
+> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=9C=80=E5=B0=8F=E5=81=9C=
+=E7=95=99=E6=97=B6=E9=97=B4"</span></span></pre><pre class=3D" CodeMirror-l=
+ine " role=3D"presentation"><span role=3D"presentation" style=3D"padding-ri=
+ght: 0.1px;"><span class=3D"cm-bracket">)</span></span></pre><pre class=3D"=
+ CodeMirror-line " role=3D"presentation"><span role=3D"presentation" style=
+=3D"padding-right: 0.1px;"><span class=3D"cm-keyword">ENGINE</span><span cl=
+ass=3D"cm-operator">=3D</span>OLAP</span></pre><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;">AGGREGATE <span class=3D"cm-keyword">KEY</span><span class=3D"c=
+m-bracket">(</span><span class=3D"cm-variable-2">`user_id`</span><span clas=
+s=3D"cm-punctuation">,</span> <span class=3D"cm-variable-2">`date`</span><s=
+pan class=3D"cm-punctuation">,</span> <span class=3D"cm-variable-2">`city`<=
+/span><span class=3D"cm-punctuation">,</span> <span class=3D"cm-variable-2"=
+>`age`</span><span class=3D"cm-punctuation">,</span> <span class=3D"cm-vari=
+able-2">`sex`</span><span class=3D"cm-bracket">)</span></span></pre><pre cl=
+ass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation"=
+ style=3D"padding-right: 0.1px;"><span class=3D"cm-keyword">PARTITION</span=
+> <span class=3D"cm-keyword">BY</span> <span class=3D"cm-keyword">RANGE</sp=
+an><span class=3D"cm-bracket">(</span><span class=3D"cm-variable-2">`date`<=
+/span><span class=3D"cm-bracket">)</span></span></pre><pre class=3D" CodeMi=
+rror-line " role=3D"presentation"><span role=3D"presentation" style=3D"padd=
+ing-right: 0.1px;"><span class=3D"cm-bracket">(</span></span></pre><pre cla=
+ss=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" =
+style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PA=
+RTITION</span> <span class=3D"cm-variable-2">`p201701`</span> <span class=
+=3D"cm-keyword">VALUES</span> LESS THAN <span class=3D"cm-bracket">(</span>=
+<span class=3D"cm-string">"2017-02-01"</span><span class=3D"cm-bracket">)</=
+span><span class=3D"cm-punctuation">,</span></span></pre><pre class=3D" Cod=
+eMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"p=
+adding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PARTITION</s=
+pan> <span class=3D"cm-variable-2">`p201702`</span> <span class=3D"cm-keywo=
+rd">VALUES</span> LESS THAN <span class=3D"cm-bracket">(</span><span class=
+=3D"cm-string">"2017-03-01"</span><span class=3D"cm-bracket">)</span><span =
+class=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-lin=
+e " role=3D"presentation"><span role=3D"presentation" style=3D"padding-righ=
+t: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PARTITION</span> <span =
+class=3D"cm-variable-2">`p201703`</span> <span class=3D"cm-keyword">VALUES<=
+/span> LESS THAN <span class=3D"cm-bracket">(</span><span class=3D"cm-strin=
+g">"2017-04-01"</span><span class=3D"cm-bracket">)</span></span></pre><pre =
+class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentatio=
+n" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket">)</span></spa=
+n></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;">DISTRIBUTED <span class=
+=3D"cm-keyword">BY</span> <span class=3D"cm-keyword">HASH</span><span class=
+=3D"cm-bracket">(</span><span class=3D"cm-variable-2">`user_id`</span><span=
+ class=3D"cm-bracket">)</span> BUCKETS <span class=3D"cm-number">16</span><=
+/span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span ro=
+le=3D"presentation" style=3D"padding-right: 0.1px;">PROPERTIES</span></pre>=
+<pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presen=
+tation" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket">(</span>=
+</span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span r=
+ole=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span cl=
+ass=3D"cm-string">"replication_num"</span> <span class=3D"cm-operator">=3D<=
+/span> <span class=3D"cm-string">"3"</span><span class=3D"cm-punctuation">,=
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<=
+span class=3D"cm-string">"storage_medium"</span> <span class=3D"cm-operator=
+">=3D</span> <span class=3D"cm-string">"SSD"</span><span class=3D"cm-punctu=
+ation">,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presen=
+tation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp;=
+ &nbsp;<span class=3D"cm-string">"storage_cooldown_time"</span> <span class=
+=3D"cm-operator">=3D</span> <span class=3D"cm-string">"2023-05-12 12:00:00"=
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"=
+cm-bracket">)</span><span class=3D"cm-punctuation">;</span></span></pre></d=
+iv></div></div></div></div><div style=3D"position: absolute; height: 0px; w=
+idth: 1px; border-bottom: 0px solid transparent; top: 691px;"></div><div cl=
+ass=3D"CodeMirror-gutters" style=3D"display: none; height: 691px;"></div></=
+div></div></pre><p>&nbsp;</p><blockquote><p><span>=E5=A6=82=E4=B8=8A </span=
+><code>example_range_tbl</code><span> =E7=A4=BA=E4=BE=8B=EF=BC=8C=E5=BD=93=
+=E5=BB=BA=E8=A1=A8=E5=AE=8C=E6=88=90=E5=90=8E=EF=BC=8C=E4=BC=9A=E8=87=AA=E5=
+=8A=A8=E7=94=9F=E6=88=90=E5=A6=82=E4=B8=8B3=E4=B8=AA=E5=88=86=E5=8C=BA=EF=
+=BC=9A</span></p><pre class=3D"md-fences md-end-block ty-contain-cm modeLoa=
+ded" spellcheck=3D"false" lang=3D"text"><div class=3D"CodeMirror cm-s-inner=
+ cm-s-null-scroll CodeMirror-wrap" lang=3D"text"><div style=3D"overflow: hi=
+dden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8p=
+x;"><textarea autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"fals=
+e" tabindex=3D"0" style=3D"position: absolute; bottom: -1em; padding: 0px; =
+width: 1000px; height: 1em; outline: none;"></textarea></div><div class=3D"=
+CodeMirror-scrollbar-filler" cm-not-content=3D"true"></div><div class=3D"Co=
+deMirror-gutter-filler" cm-not-content=3D"true"></div><div class=3D"CodeMir=
+ror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin=
+-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px=
+; padding-bottom: 0px;"><div style=3D"position: relative; top: 0px;"><div c=
+lass=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"presentation" =
+style=3D"position: relative; outline: none;"><div class=3D"CodeMirror-measu=
+re"><pre><span>xxxxxxxxxx</span></pre></div><div class=3D"CodeMirror-measur=
+e"></div><div style=3D"position: relative; z-index: 1;"></div><div class=3D=
+"CodeMirror-code" role=3D"presentation"><div class=3D"CodeMirror-activeline=
+" style=3D"position: relative;"><div class=3D"CodeMirror-activeline-backgro=
+und CodeMirror-linebackground"></div><div class=3D"CodeMirror-gutter-backgr=
+ound CodeMirror-activeline-gutter" style=3D"left: 0px; width: 0px;"></div><=
+pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"present=
+ation" style=3D"padding-right: 0.1px;">p201701: [MIN_VALUE,  2017-02-01)</s=
+pan></pre></div><pre class=3D" CodeMirror-line " role=3D"presentation"><spa=
+n role=3D"presentation" style=3D"padding-right: 0.1px;">p201702: [2017-02-0=
+1, 2017-03-01)</span></pre><pre class=3D" CodeMirror-line " role=3D"present=
+ation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">p201703:=
+ [2017-03-01, 2017-04-01)</span></pre></div></div></div></div></div><div st=
+yle=3D"position: absolute; height: 0px; width: 1px; border-bottom: 0px soli=
+d transparent; top: 69px;"></div><div class=3D"CodeMirror-gutters" style=3D=
+"display: none; height: 69px;"></div></div></div></pre></blockquote><h3 id=
+=3D"112-=E6=9F=A5=E7=9C=8B=E5=88=86=E5=8C=BApartition=E6=96=B9=E5=BC=8F"><s=
+pan>1.1.2 =E6=9F=A5=E7=9C=8B=E5=88=86=E5=8C=BApartition=E6=96=B9=E5=BC=8F</=
+span></h3><pre class=3D"md-fences md-end-block ty-contain-cm modeLoaded" sp=
+ellcheck=3D"false" lang=3D"sql"><div class=3D"CodeMirror cm-s-inner cm-s-nu=
+ll-scroll CodeMirror-wrap" lang=3D"sql"><div style=3D"overflow: hidden; pos=
+ition: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><text=
+area autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"false" tabind=
+ex=3D"0" style=3D"position: absolute; bottom: -1em; padding: 0px; width: 10=
+00px; height: 1em; outline: none;"></textarea></div><div class=3D"CodeMirro=
+r-scrollbar-filler" cm-not-content=3D"true"></div><div class=3D"CodeMirror-=
+gutter-filler" cm-not-content=3D"true"></div><div class=3D"CodeMirror-scrol=
+l" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin-left: 0p=
+x; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding=
+-bottom: 0px;"><div style=3D"position: relative; top: 0px;"><div class=3D"C=
+odeMirror-lines" role=3D"presentation"><div role=3D"presentation" style=3D"=
+position: relative; outline: none;"><div class=3D"CodeMirror-measure"><pre>=
+<span>xxxxxxxxxx</span></pre></div><div class=3D"CodeMirror-measure"></div>=
+<div style=3D"position: relative; z-index: 1;"></div><div class=3D"CodeMirr=
+or-code" role=3D"presentation"><div class=3D"CodeMirror-activeline" style=
+=3D"position: relative;"><div class=3D"CodeMirror-activeline-background Cod=
+eMirror-linebackground"></div><div class=3D"CodeMirror-gutter-background Co=
+deMirror-activeline-gutter" style=3D"left: 0px; width: 0px;"></div><pre cla=
+ss=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" =
+style=3D"padding-right: 0.1px;">MySQL <span class=3D"cm-bracket">[</span>te=
+st_db<span class=3D"cm-bracket">]</span><span class=3D"cm-operator">&gt;</s=
+pan> <span class=3D"cm-keyword">show</span> <span class=3D"cm-keyword">part=
+itions</span> <span class=3D"cm-keyword">from</span> example_range_tbl<span=
+ class=3D"cm-punctuation">;</span></span></pre></div></div></div></div></di=
+v></div><div style=3D"position: absolute; height: 0px; width: 1px; border-b=
+ottom: 0px solid transparent; top: 23px;"></div><div class=3D"CodeMirror-gu=
+tters" style=3D"display: none; height: 23px;"></div></div></div></pre><h3 i=
+d=3D"113-=E5=90=91=E5=AF=B9=E5=BA=94=E5=88=86=E5=8C=BA=E6=8F=92=E5=85=A5=E6=
+=95=B0=E6=8D=AE"><span>1.1.3 =E5=90=91=E5=AF=B9=E5=BA=94=E5=88=86=E5=8C=BA=
+=E6=8F=92=E5=85=A5=E6=95=B0=E6=8D=AE</span></h3><pre class=3D"md-fences md-=
+end-block ty-contain-cm modeLoaded" spellcheck=3D"false" lang=3D"sql"><div =
+class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=3D"sq=
+l"><div style=3D"overflow: hidden; position: relative; width: 3px; height: =
+0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" autocapitali=
+ze=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: absolute;=
+ bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></=
+textarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-content=3D=
+"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"true=
+"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"Code=
+Mirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; border-right-w=
+idth: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"position=
+: relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation=
+"><div role=3D"presentation" style=3D"position: relative; outline: none;"><=
+div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><d=
+iv class=3D"CodeMirror-measure"></div><div style=3D"position: relative; z-i=
+ndex: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentation"><div c=
+lass=3D"CodeMirror-activeline" style=3D"position: relative;"><div class=3D"=
+CodeMirror-activeline-background CodeMirror-linebackground"></div><div clas=
+s=3D"CodeMirror-gutter-background CodeMirror-activeline-gutter" style=3D"le=
+ft: 0px; width: 0px;"></div><pre class=3D" CodeMirror-line " role=3D"presen=
+tation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span c=
+lass=3D"cm-keyword">insert</span> <span class=3D"cm-keyword">into</span> te=
+st_db<span class=3D"cm-variable-2">.example_range_tbl</span> <span class=3D=
+"cm-keyword">values</span> <span class=3D"cm-bracket">(</span><span class=
+=3D"cm-number">10000</span><span class=3D"cm-punctuation">,</span><span cla=
+ss=3D"cm-string">'2017-01-01'</span><span class=3D"cm-punctuation">,</span>=
+<span class=3D"cm-string">'=E5=8C=97=E4=BA=AC'</span><span class=3D"cm-punc=
+tuation">,</span><span class=3D"cm-number">20</span><span class=3D"cm-punct=
+uation">,</span><span class=3D"cm-number">0</span><span class=3D"cm-punctua=
+tion">,</span><span class=3D"cm-string">'2017-01-01 06:00:00'</span><span c=
+lass=3D"cm-punctuation">,</span><span class=3D"cm-number">20</span><span cl=
+ass=3D"cm-punctuation">,</span><span class=3D"cm-number">10</span><span cla=
+ss=3D"cm-punctuation">,</span><span class=3D"cm-number">10</span><span clas=
+s=3D"cm-bracket">)</span></span></pre></div></div></div></div></div></div><=
+div style=3D"position: absolute; height: 0px; width: 1px; border-bottom: 0p=
+x solid transparent; top: 23px;"></div><div class=3D"CodeMirror-gutters" st=
+yle=3D"display: none; height: 23px;"></div></div></div></pre><h3 id=3D"114-=
+=E6=9F=A5=E8=AF=A2=E5=88=86=E5=8C=BA=E5=86=85=E6=95=B0=E6=8D=AE"><span>1.1.=
+4 =E6=9F=A5=E8=AF=A2=E5=88=86=E5=8C=BA=E5=86=85=E6=95=B0=E6=8D=AE</span></h=
+3><p><span>=E9=AA=8C=E8=AF=81=E6=95=B0=E6=8D=AE=E6=98=AF=E5=90=A6=E5=9C=A8=
+=E5=AF=B9=E5=BA=94=E5=88=86=E5=8C=BA=E5=86=85</span></p><pre class=3D"md-fe=
+nces md-end-block ty-contain-cm modeLoaded" spellcheck=3D"false" lang=3D"sq=
+l"><div class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" la=
+ng=3D"sql"><div style=3D"overflow: hidden; position: relative; width: 3px; =
+height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" auto=
+capitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: a=
+bsolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: n=
+one;"></textarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-co=
+ntent=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=
+=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=
+=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; border=
+-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"=
+position: relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"pres=
+entation"><div role=3D"presentation" style=3D"position: relative; outline: =
+none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>=
+</div><div class=3D"CodeMirror-measure"></div><div style=3D"position: relat=
+ive; z-index: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentation=
+" style=3D""><div class=3D"CodeMirror-activeline" style=3D"position: relati=
+ve;"><div class=3D"CodeMirror-activeline-background CodeMirror-linebackgrou=
+nd"></div><div class=3D"CodeMirror-gutter-background CodeMirror-activeline-=
+gutter" style=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;">MySQL <span class=3D"cm-bracket">[</span>test_db<span class=3D"=
+cm-bracket">]</span><span class=3D"cm-operator">&gt;</span> <span class=3D"=
+cm-keyword">SELECT</span> user_id<span class=3D"cm-punctuation">,</span><sp=
+an class=3D"cm-type">date</span> <span class=3D"cm-keyword">FROM</span> exa=
+mple_range_tbl <span class=3D"cm-keyword">PARTITION</span> <span class=3D"c=
+m-variable-2">`p201701`</span><span class=3D"cm-punctuation">;</span></span=
+></pre></div><pre class=3D" CodeMirror-line " role=3D"presentation"><span r=
+ole=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-oper=
+ator">+---------+------------+</span></span></pre><pre class=3D" CodeMirror=
+-line " role=3D"presentation"><span role=3D"presentation" style=3D"padding-=
+right: 0.1px;"><span class=3D"cm-operator">|</span> user_id <span class=3D"=
+cm-operator">|</span> <span class=3D"cm-type">date</span> &nbsp; &nbsp; &nb=
+sp; <span class=3D"cm-operator">|</span></span></pre><pre class=3D" CodeMir=
+ror-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddi=
+ng-right: 0.1px;"><span class=3D"cm-operator">+---------+------------+</spa=
+n></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span=
+ role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-op=
+erator">|</span> <span class=3D"cm-number">10000</span> &nbsp; <span class=
+=3D"cm-operator">|</span> <span class=3D"cm-number">2017</span><span class=
+=3D"cm-operator">-</span><span class=3D"cm-number">01</span><span class=3D"=
+cm-operator">-</span><span class=3D"cm-number">01</span> <span class=3D"cm-=
+operator">|</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pre=
+sentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><spa=
+n class=3D"cm-operator">+---------+------------+</span></span></pre><pre cl=
+ass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation"=
+ style=3D"padding-right: 0.1px;"><span class=3D"cm-number">1</span> <span c=
+lass=3D"cm-keyword">row</span> <span class=3D"cm-keyword">in</span> <span c=
+lass=3D"cm-keyword">set</span> <span class=3D"cm-bracket">(</span><span cla=
+ss=3D"cm-number">0.01</span> sec<span class=3D"cm-bracket">)</span></span><=
+/pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"p=
+resentation" style=3D"padding-right: 0.1px;"><span cm-text=3D"" cm-zwsp=3D"=
+">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">MySQL <span cla=
+ss=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]</span><span c=
+lass=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">SELECT</span> u=
+ser_id<span class=3D"cm-punctuation">,</span><span class=3D"cm-type">date</=
+span> <span class=3D"cm-keyword">FROM</span> example_range_tbl <span class=
+=3D"cm-keyword">PARTITION</span> <span class=3D"cm-variable-2">`p201702`</s=
+pan><span class=3D"cm-punctuation">;</span></span></pre><pre class=3D" Code=
+Mirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"pa=
+dding-right: 0.1px;">Empty <span class=3D"cm-keyword">set</span> <span clas=
+s=3D"cm-bracket">(</span><span class=3D"cm-number">0.01</span> sec<span cla=
+ss=3D"cm-bracket">)</span></span></pre><pre class=3D" CodeMirror-line " rol=
+e=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1p=
+x;"><span cm-text=3D"" cm-zwsp=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">MySQL <span cla=
+ss=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]</span><span c=
+lass=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">SELECT</span> u=
+ser_id<span class=3D"cm-punctuation">,</span><span class=3D"cm-type">date</=
+span> <span class=3D"cm-keyword">FROM</span> example_range_tbl <span class=
+=3D"cm-keyword">PARTITION</span> <span class=3D"cm-variable-2">`p201703`</s=
+pan><span class=3D"cm-punctuation">;</span></span></pre><pre class=3D" Code=
+Mirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"pa=
+dding-right: 0.1px;">Empty <span class=3D"cm-keyword">set</span> <span clas=
+s=3D"cm-bracket">(</span><span class=3D"cm-number">0.00</span> sec<span cla=
+ss=3D"cm-bracket">)</span></span></pre></div></div></div></div></div><div s=
+tyle=3D"position: absolute; height: 0px; width: 1px; border-bottom: 0px sol=
+id transparent; top: 300px;"></div><div class=3D"CodeMirror-gutters" style=
+=3D"display: none; height: 300px;"></div></div></div></pre><h3 id=3D"115-=
+=E6=B5=8B=E8=AF=95=E6=8F=92=E5=85=A5=E6=97=A0=E5=AF=B9=E5=BA=94=E5=88=86=E5=
+=8C=BA=E6=95=B0=E6=8D=AE"><span>1.1.5 =E6=B5=8B=E8=AF=95=E6=8F=92=E5=85=A5=
+=E6=97=A0=E5=AF=B9=E5=BA=94=E5=88=86=E5=8C=BA=E6=95=B0=E6=8D=AE</span></h3>=
+<pre class=3D"md-fences md-end-block ty-contain-cm modeLoaded" spellcheck=
+=3D"false" lang=3D"sql"><div class=3D"CodeMirror cm-s-inner cm-s-null-scrol=
+l CodeMirror-wrap" lang=3D"sql"><div style=3D"overflow: hidden; position: r=
+elative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea aut=
+ocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"false" tabindex=3D"0"=
+ style=3D"position: absolute; bottom: -1em; padding: 0px; width: 1000px; he=
+ight: 1em; outline: none;"></textarea></div><div class=3D"CodeMirror-scroll=
+bar-filler" cm-not-content=3D"true"></div><div class=3D"CodeMirror-gutter-f=
+iller" cm-not-content=3D"true"></div><div class=3D"CodeMirror-scroll" tabin=
+dex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margi=
+n-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom:=
+ 0px;"><div style=3D"position: relative; top: 0px;"><div class=3D"CodeMirro=
+r-lines" role=3D"presentation"><div role=3D"presentation" style=3D"position=
+: relative; outline: none;"><div class=3D"CodeMirror-measure"><pre><span>xx=
+xxxxxxxx</span></pre></div><div class=3D"CodeMirror-measure"></div><div sty=
+le=3D"position: relative; z-index: 1;"></div><div class=3D"CodeMirror-code"=
+ role=3D"presentation" style=3D""><div class=3D"CodeMirror-activeline" styl=
+e=3D"position: relative;"><div class=3D"CodeMirror-activeline-background Co=
+deMirror-linebackground"></div><div class=3D"CodeMirror-gutter-background C=
+odeMirror-activeline-gutter" style=3D"left: 0px; width: 0px;"></div><pre cl=
+ass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation"=
+ style=3D"padding-right: 0.1px;">MySQL <span class=3D"cm-bracket">[</span>t=
+est_db<span class=3D"cm-bracket">]</span><span class=3D"cm-operator">&gt;</=
+span> <span class=3D"cm-keyword">insert</span> <span class=3D"cm-keyword">i=
+nto</span> test_db<span class=3D"cm-variable-2">.example_range_tbl</span> <=
+span class=3D"cm-keyword">values</span> <span class=3D"cm-bracket">(</span>=
+<span class=3D"cm-number">20000</span><span class=3D"cm-punctuation">,</spa=
+n><span class=3D"cm-string">'2017-11-01'</span><span class=3D"cm-punctuatio=
+n">,</span><span class=3D"cm-string">'=E5=8C=97=E4=BA=AC'</span><span class=
+=3D"cm-punctuation">,</span><span class=3D"cm-number">20</span><span class=
+=3D"cm-punctuation">,</span><span class=3D"cm-number">0</span><span class=
+=3D"cm-punctuation">,</span><span class=3D"cm-string">'2017-11-01 06:00:00'=
+</span><span class=3D"cm-punctuation">,</span><span class=3D"cm-number">20<=
+/span><span class=3D"cm-punctuation">,</span><span class=3D"cm-number">10</=
+span><span class=3D"cm-punctuation">,</span><span class=3D"cm-number">10</s=
+pan><span class=3D"cm-bracket">)</span><span class=3D"cm-punctuation">;</sp=
+an></span></pre></div><pre class=3D" CodeMirror-line " role=3D"presentation=
+"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=
+=3D"cm-keyword">Query</span> OK<span class=3D"cm-punctuation">,</span> <spa=
+n class=3D"cm-number">0</span> rows affected<span class=3D"cm-punctuation">=
+,</span> <span class=3D"cm-number">1</span> warning <span class=3D"cm-brack=
+et">(</span><span class=3D"cm-number">0.04</span> sec<span class=3D"cm-brac=
+ket">)</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presenta=
+tion"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span cla=
+ss=3D"cm-bracket">{</span><span class=3D"cm-string">'label'</span><span cla=
+ss=3D"cm-punctuation">:</span><span class=3D"cm-string">'insert_1bb0bf56553=
+44769-b3479bb93baa9a5a'</span><span class=3D"cm-punctuation">,</span> <span=
+ class=3D"cm-string">'status'</span><span class=3D"cm-punctuation">:</span>=
+<span class=3D"cm-string">'VISIBLE'</span><span class=3D"cm-punctuation">,<=
+/span> <span class=3D"cm-string">'txnId'</span><span class=3D"cm-punctuatio=
+n">:</span><span class=3D"cm-string">'53'</span><span class=3D"cm-bracket">=
+}</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"=
+><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span cm-text=
+=3D"" cm-zwsp=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">MySQL <span cla=
+ss=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]</span><span c=
+lass=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">select</span> u=
+ser_id<span class=3D"cm-punctuation">,</span><span class=3D"cm-type">date</=
+span> <span class=3D"cm-keyword">from</span> example_range_tbl<span class=
+=3D"cm-punctuation">;</span></span></pre><pre class=3D" CodeMirror-line " r=
+ole=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.=
+1px;"><span class=3D"cm-operator">+---------+------------+</span></span></p=
+re><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pre=
+sentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-operator">|</s=
+pan> user_id <span class=3D"cm-operator">|</span> <span class=3D"cm-type">d=
+ate</span> &nbsp; &nbsp; &nbsp; <span class=3D"cm-operator">|</span></span>=
+</pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"=
+presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-operator">+=
+---------+------------+</span></span></pre><pre class=3D" CodeMirror-line "=
+ role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: =
+0.1px;"><span class=3D"cm-operator">|</span> <span class=3D"cm-number">1000=
+0</span> &nbsp; <span class=3D"cm-operator">|</span> <span class=3D"cm-numb=
+er">2017</span><span class=3D"cm-operator">-</span><span class=3D"cm-number=
+">01</span><span class=3D"cm-operator">-</span><span class=3D"cm-number">01=
+</span> <span class=3D"cm-operator">|</span></span></pre><pre class=3D" Cod=
+eMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"p=
+adding-right: 0.1px;"><span class=3D"cm-operator">+---------+------------+<=
+/span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><=
+span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"c=
+m-number">1</span> <span class=3D"cm-keyword">row</span> <span class=3D"cm-=
+keyword">in</span> <span class=3D"cm-keyword">set</span> <span class=3D"cm-=
+bracket">(</span><span class=3D"cm-number">0.01</span> sec<span class=3D"cm=
+-bracket">)</span></span></pre></div></div></div></div></div><div style=3D"=
+position: absolute; height: 0px; width: 1px; border-bottom: 0px solid trans=
+parent; top: 254px;"></div><div class=3D"CodeMirror-gutters" style=3D"displ=
+ay: none; height: 254px;"></div></div></div></pre><blockquote><p><span>=E6=
+=8F=92=E5=85=A5=E7=9A=84=E8=BF=99=E6=9D=A1=E6=95=B0=E6=8D=AE=EF=BC=8C'2017-=
+11-01' =E6=B2=A1=E6=9C=89=E5=AF=B9=E5=BA=94=E7=9A=84=E5=88=86=E5=8C=BA, =E6=
+=8F=92=E5=85=A5=E4=B8=8D=E6=88=90=E5=8A=9F, =E4=BD=86=E4=B8=8D=E4=BC=9A=E6=
+=8A=9B=E5=87=BA=E5=BC=82=E5=B8=B8=E6=88=96=E9=94=99=E8=AF=AF=E3=80=82( =E6=
+=9F=A5=E8=AF=A2=E7=BB=93=E6=9E=9C=E9=87=8C=E6=B2=A1=E6=9C=89=E6=96=B0=E6=8F=
+=92=E5=85=A5=E7=9A=84=E8=BF=99=E6=9D=A1=E6=95=B0=E6=8D=AE )</span></p></blo=
+ckquote><h3 id=3D"116-=E5=A2=9E=E5=8A=A0=E4=B8=80=E4=B8=AApartition=E5=88=
+=86=E5=8C=BA"><span>1.1.6 =E5=A2=9E=E5=8A=A0=E4=B8=80=E4=B8=AApartition=E5=
+=88=86=E5=8C=BA</span></h3><pre class=3D"md-fences md-end-block ty-contain-=
+cm modeLoaded" spellcheck=3D"false" lang=3D"sql"><div class=3D"CodeMirror c=
+m-s-inner cm-s-null-scroll CodeMirror-wrap" lang=3D"sql"><div style=3D"over=
+flow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; =
+left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off" spellcheck=
+=3D"false" tabindex=3D"0" style=3D"position: absolute; bottom: -1em; paddin=
+g: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div c=
+lass=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"true"></div><div cla=
+ss=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"></div><div class=3D=
+"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=
+=3D"margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-=
+right: 0px; padding-bottom: 0px;"><div style=3D"position: relative; top: 0p=
+x;"><div class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"pres=
+entation" style=3D"position: relative; outline: none;"><div class=3D"CodeMi=
+rror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class=3D"CodeMir=
+ror-measure"></div><div style=3D"position: relative; z-index: 1;"></div><di=
+v class=3D"CodeMirror-code" role=3D"presentation"><div class=3D"CodeMirror-=
+activeline" style=3D"position: relative;"><div class=3D"CodeMirror-activeli=
+ne-background CodeMirror-linebackground"></div><div class=3D"CodeMirror-gut=
+ter-background CodeMirror-activeline-gutter" style=3D"left: 0px; width: 0px=
+;"></div><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-keyword=
+">alter</span> <span class=3D"cm-keyword">table</span> example_range_tbl <s=
+pan class=3D"cm-keyword">add</span> <span class=3D"cm-keyword">partition</s=
+pan> p201705 <span class=3D"cm-keyword">values</span> less than <span class=
+=3D"cm-bracket">(</span><span class=3D"cm-string">'2017-06-01'</span><span =
+class=3D"cm-bracket">)</span><span class=3D"cm-punctuation">;</span></span>=
+</pre></div></div></div></div></div></div><div style=3D"position: absolute;=
+ height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"=
+></div><div class=3D"CodeMirror-gutters" style=3D"display: none; height: 23=
+px;"></div></div></div></pre><blockquote><p><span>=E5=BD=93alter=E6=89=A7=
+=E8=A1=8C=E5=AE=8C=E6=88=90=E5=90=8E=EF=BC=8C=E6=96=B0=E7=9A=84=E5=88=86=E5=
+=8C=BA=E4=BF=A1=E6=81=AF=E5=A6=82=E4=B8=8B=EF=BC=9A</span></p><pre class=3D=
+"md-fences md-end-block ty-contain-cm modeLoaded" spellcheck=3D"false" lang=
+=3D"tex"><div class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wr=
+ap" lang=3D"tex"><div style=3D"overflow: hidden; position: relative; width:=
+ 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off=
+" autocapitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"posit=
+ion: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outl=
+ine: none;"></textarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-=
+not-content=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-c=
+ontent=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div=
+ class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; =
+border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div sty=
+le=3D"position: relative; top: 0px;"><div class=3D"CodeMirror-lines" role=
+=3D"presentation"><div role=3D"presentation" style=3D"position: relative; o=
+utline: none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</spa=
+n></pre></div><div class=3D"CodeMirror-measure"></div><div style=3D"positio=
+n: relative; z-index: 1;"></div><div class=3D"CodeMirror-code" role=3D"pres=
+entation"><div class=3D"CodeMirror-activeline" style=3D"position: relative;=
+"><div class=3D"CodeMirror-activeline-background CodeMirror-linebackground"=
+></div><div class=3D"CodeMirror-gutter-background CodeMirror-activeline-gut=
+ter" style=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-line =
+" role=3D"presentation"><span role=3D"presentation" style=3D"padding-right:=
+ 0.1px;">p201701: <span class=3D"cm-bracket">[</span>MIN_VALUE,  2017-02-01=
+)</span></pre></div><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">p201702: <span =
+class=3D"cm-bracket">[</span><span class=3D"cm-atom">2017</span>-02-01, 201=
+7-03-01)</span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"=
+><span role=3D"presentation" style=3D"padding-right: 0.1px;">p201703: <span=
+ class=3D"cm-bracket">[</span><span class=3D"cm-atom">2017</span>-03-01, 20=
+17-04-01)</span></pre><pre class=3D" CodeMirror-line " role=3D"presentation=
+"><span role=3D"presentation" style=3D"padding-right: 0.1px;">p201705: <spa=
+n class=3D"cm-bracket">[</span><span class=3D"cm-atom">2017</span>-04-01, 2=
+017-06-01)</span></pre></div></div></div></div></div><div style=3D"position=
+: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; =
+top: 92px;"></div><div class=3D"CodeMirror-gutters" style=3D"display: none;=
+ height: 92px;"></div></div></div></pre></blockquote><h3 id=3D"117-=E5=88=
+=A0=E9=99=A4=E4=B8=80=E4=B8=AApartition=E5=88=86=E5=8C=BA"><span>1.1.7 =E5=
+=88=A0=E9=99=A4=E4=B8=80=E4=B8=AApartition=E5=88=86=E5=8C=BA</span></h3><pr=
+e class=3D"md-fences md-end-block ty-contain-cm modeLoaded" spellcheck=3D"f=
+alse" lang=3D"sql"><div class=3D"CodeMirror cm-s-inner cm-s-null-scroll Cod=
+eMirror-wrap" lang=3D"sql"><div style=3D"overflow: hidden; position: relati=
+ve; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorr=
+ect=3D"off" autocapitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" styl=
+e=3D"position: absolute; bottom: -1em; padding: 0px; width: 1000px; height:=
+ 1em; outline: none;"></textarea></div><div class=3D"CodeMirror-scrollbar-f=
+iller" cm-not-content=3D"true"></div><div class=3D"CodeMirror-gutter-filler=
+" cm-not-content=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=
+=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-b=
+ottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0p=
+x;"><div style=3D"position: relative; top: 0px;"><div class=3D"CodeMirror-l=
+ines" role=3D"presentation"><div role=3D"presentation" style=3D"position: r=
+elative; outline: none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxx=
+xxxxx</span></pre></div><div class=3D"CodeMirror-measure"></div><div style=
+=3D"position: relative; z-index: 1;"></div><div class=3D"CodeMirror-code" r=
+ole=3D"presentation"><div class=3D"CodeMirror-activeline" style=3D"position=
+: relative;"><div class=3D"CodeMirror-activeline-background CodeMirror-line=
+background"></div><div class=3D"CodeMirror-gutter-background CodeMirror-act=
+iveline-gutter" style=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeM=
+irror-line " role=3D"presentation"><span role=3D"presentation" style=3D"pad=
+ding-right: 0.1px;"><span class=3D"cm-keyword">alter</span> <span class=3D"=
+cm-keyword">table</span> example_range_tbl <span class=3D"cm-keyword">drop<=
+/span> <span class=3D"cm-keyword">partition</span> p201703<span class=3D"cm=
+-punctuation">;</span></span></pre></div></div></div></div></div></div><div=
+ style=3D"position: absolute; height: 0px; width: 1px; border-bottom: 0px s=
+olid transparent; top: 23px;"></div><div class=3D"CodeMirror-gutters" style=
+=3D"display: none; height: 23px;"></div></div></div></pre><blockquote><p><s=
+pan>=E5=BD=93alter=E6=89=A7=E8=A1=8C=E5=AE=8C=E6=88=90=E5=90=8E=EF=BC=8C=E6=
+=96=B0=E7=9A=84=E5=88=86=E5=8C=BA=E4=BF=A1=E6=81=AF=E5=A6=82=E4=B8=8B=EF=BC=
+=9A</span></p><pre class=3D"md-fences md-end-block ty-contain-cm modeLoaded=
+" spellcheck=3D"false" lang=3D"tex"><div class=3D"CodeMirror cm-s-inner cm-=
+s-null-scroll CodeMirror-wrap" lang=3D"tex"><div style=3D"overflow: hidden;=
+ position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><=
+textarea autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"false" ta=
+bindex=3D"0" style=3D"position: absolute; bottom: -1em; padding: 0px; width=
+: 1000px; height: 1em; outline: none;"></textarea></div><div class=3D"CodeM=
+irror-scrollbar-filler" cm-not-content=3D"true"></div><div class=3D"CodeMir=
+ror-gutter-filler" cm-not-content=3D"true"></div><div class=3D"CodeMirror-s=
+croll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin-left=
+: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; pad=
+ding-bottom: 0px;"><div style=3D"position: relative; top: 0px;"><div class=
+=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"presentation" styl=
+e=3D"position: relative; outline: none;"><div class=3D"CodeMirror-measure">=
+<pre><span>xxxxxxxxxx</span></pre></div><div class=3D"CodeMirror-measure"><=
+/div><div style=3D"position: relative; z-index: 1;"></div><div class=3D"Cod=
+eMirror-code" role=3D"presentation"><div class=3D"CodeMirror-activeline" st=
+yle=3D"position: relative;"><div class=3D"CodeMirror-activeline-background =
+CodeMirror-linebackground"></div><div class=3D"CodeMirror-gutter-background=
+ CodeMirror-activeline-gutter" style=3D"left: 0px; width: 0px;"></div><pre =
+class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentatio=
+n" style=3D"padding-right: 0.1px;">p201701: <span class=3D"cm-bracket">[</s=
+pan>MIN_VALUE,  2017-02-01)</span></pre></div><pre class=3D" CodeMirror-lin=
+e " role=3D"presentation"><span role=3D"presentation" style=3D"padding-righ=
+t: 0.1px;">p201702: <span class=3D"cm-bracket">[</span><span class=3D"cm-at=
+om">2017</span>-02-01, 2017-03-01)</span></pre><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;">p201705: <span class=3D"cm-bracket">[</span><span class=3D"cm-a=
+tom">2017</span>-04-01, 2017-06-01)</span></pre></div></div></div></div></d=
+iv><div style=3D"position: absolute; height: 0px; width: 1px; border-bottom=
+: 0px solid transparent; top: 69px;"></div><div class=3D"CodeMirror-gutters=
+" style=3D"display: none; height: 69px;"></div></div></div></pre></blockquo=
+te><blockquote><p><span>=E6=B3=A8=E6=84=8F=EF=BC=9A</span></p><p><span>=E8=
+=BF=99=E6=97=B6=E5=85=B6=E4=BB=96=E5=88=86=E5=8C=BA=E5=B9=B6=E4=B8=8D=E4=BC=
+=9A=E5=8F=91=E7=94=9F=E5=8F=98=E5=8C=96, p201702=E5=92=8Cp201705=E4=B9=8B=
+=E9=97=B4=E5=B0=B1=E5=87=BA=E7=8E=B0=E4=BA=86=E4=B8=80=E4=B8=AA=E7=A9=BA=E6=
+=B4=9E: [2017-03-01, 2017-04-01) =E5=8D=B3=E5=A6=82=E6=9E=9C=E5=AF=BC=E5=85=
+=A5=E7=9A=84=E6=95=B0=E6=8D=AE=E8=8C=83=E5=9B=B4=E5=9C=A8=E8=BF=99=E4=B8=AA=
+=E7=A9=BA=E6=B4=9E=E8=8C=83=E5=9B=B4=E5=86=85=EF=BC=8C=E6=95=B0=E6=8D=AE=E6=
+=98=AF=E6=97=A0=E6=B3=95=E5=AF=BC=E5=85=A5=E7=9A=84=EF=BC=8C=E8=99=BD=E7=84=
+=B6=E4=B8=8D=E4=BC=9A=E6=8A=9B=E5=87=BA=E5=BC=82=E5=B8=B8=E6=88=96=E9=94=99=
+=E8=AF=AF=EF=BC=8C=E4=BD=86=E5=A4=84=E4=BA=8E=E8=BF=99=E4=B8=AA=E7=A9=BA=E6=
+=B4=9E=E5=8C=BA=E9=97=B4=E7=9A=84=E6=95=B0=E6=8D=AE=E7=9B=B8=E5=BD=93=E4=BA=
+=8E=E6=8A=B9=E5=8E=BB=E4=BA=86=E3=80=82</span></p></blockquote><h3 id=3D"11=
+8-range=E5=A4=9A=E5=88=97=E5=88=86=E5=8C=BA"><span>1.1.8 Range=E5=A4=9A=E5=
+=88=97=E5=88=86=E5=8C=BA</span></h3><p><span>=E5=BB=BA=E8=A1=A8=E7=A4=BA=E4=
+=BE=8B=EF=BC=9A</span></p><pre class=3D"md-fences md-end-block ty-contain-c=
+m modeLoaded" spellcheck=3D"false" lang=3D"sql" style=3D"break-inside: unse=
+t;"><div class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" l=
+ang=3D"sql"><div style=3D"overflow: hidden; position: relative; width: 3px;=
+ height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" aut=
+ocapitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: =
+absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: =
+none;"></textarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-c=
+ontent=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-conten=
+t=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div clas=
+s=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; borde=
+r-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D=
+"position: relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"pre=
+sentation"><div role=3D"presentation" style=3D"position: relative; outline:=
+ none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre=
+></div><div class=3D"CodeMirror-measure"></div><div style=3D"position: rela=
+tive; z-index: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentatio=
+n" style=3D""><div class=3D"CodeMirror-activeline" style=3D"position: relat=
+ive;"><div class=3D"CodeMirror-activeline-background CodeMirror-linebackgro=
+und"></div><div class=3D"CodeMirror-gutter-background CodeMirror-activeline=
+-gutter" style=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-l=
+ine " role=3D"presentation"><span role=3D"presentation" style=3D"padding-ri=
+ght: 0.1px;"><span class=3D"cm-keyword">CREATE</span> <span class=3D"cm-key=
+word">TABLE</span> <span class=3D"cm-keyword">IF</span> <span class=3D"cm-k=
+eyword">NOT</span> <span class=3D"cm-keyword">EXISTS</span> test_db<span cl=
+ass=3D"cm-variable-2">.example_range_tbl_more</span></span></pre></div><pre=
+ class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentati=
+on" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket">(</span></sp=
+an></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=
+=3D"cm-variable-2">`user_id`</span> LARGEINT <span class=3D"cm-keyword">NOT=
+</span> <span class=3D"cm-atom">NULL</span> <span class=3D"cm-keyword">COMM=
+ENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7id"</span><span cla=
+ss=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line "=
+ role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: =
+0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`date`</span> <span cla=
+ss=3D"cm-type">DATE</span> <span class=3D"cm-keyword">NOT</span> <span clas=
+s=3D"cm-atom">NULL</span> <span class=3D"cm-keyword">COMMENT</span> <span c=
+lass=3D"cm-string">"=E6=95=B0=E6=8D=AE=E7=81=8C=E5=85=A5=E6=97=A5=E6=9C=9F=
+=E6=97=B6=E9=97=B4"</span><span class=3D"cm-punctuation">,</span></span></p=
+re><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pre=
+sentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-=
+variable-2">`city`</span> <span class=3D"cm-type">VARCHAR</span><span class=
+=3D"cm-bracket">(</span><span class=3D"cm-number">20</span><span class=3D"c=
+m-bracket">)</span> <span class=3D"cm-keyword">COMMENT</span> <span class=
+=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=89=80=E5=9C=A8=E5=9F=8E=E5=B8=82"</sp=
+an><span class=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeM=
+irror-line " role=3D"presentation"><span role=3D"presentation" style=3D"pad=
+ding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`age`</span=
+> <span class=3D"cm-keyword">SMALLINT</span> <span class=3D"cm-keyword">COM=
+MENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E5=B9=B4=E9=BE=84=
+"</span><span class=3D"cm-punctuation">,</span></span></pre><pre class=3D" =
+CodeMirror-line " role=3D"presentation"><span role=3D"presentation" style=
+=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`sex=
+`</span> <span class=3D"cm-type">TINYINT</span> <span class=3D"cm-keyword">=
+COMMENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=80=A7=E5=88=
+=AB"</span><span class=3D"cm-punctuation">,</span></span></pre><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`=
+last_visit_date`</span> <span class=3D"cm-type">DATETIME</span> <span class=
+=3D"cm-keyword">REPLACE</span> <span class=3D"cm-keyword">DEFAULT</span> <s=
+pan class=3D"cm-string">"1970-01-01 00:00:00"</span> <span class=3D"cm-keyw=
+ord">COMMENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=9C=80=
+=E5=90=8E=E4=B8=80=E6=AC=A1=E8=AE=BF=E9=97=AE=E6=97=B6=E9=97=B4"</span><spa=
+n class=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-l=
+ine " role=3D"presentation"><span role=3D"presentation" style=3D"padding-ri=
+ght: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`cost`</span> <spa=
+n class=3D"cm-type">BIGINT</span> <span class=3D"cm-keyword">SUM</span> <sp=
+an class=3D"cm-keyword">DEFAULT</span> <span class=3D"cm-string">"0"</span>=
+ <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E7=
+=94=A8=E6=88=B7=E6=80=BB=E6=B6=88=E8=B4=B9"</span><span class=3D"cm-punctua=
+tion">,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"present=
+ation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; =
+&nbsp;<span class=3D"cm-variable-2">`max_dwell_time`</span> <span class=3D"=
+cm-type">INT</span> <span class=3D"cm-keyword">MAX</span> <span class=3D"cm=
+-keyword">DEFAULT</span> <span class=3D"cm-string">"0"</span> <span class=
+=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=
+=B7=E6=9C=80=E5=A4=A7=E5=81=9C=E7=95=99=E6=97=B6=E9=97=B4"</span><span clas=
+s=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line " =
+role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0=
+.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`min_dwell_time`</span> =
+<span class=3D"cm-type">INT</span> <span class=3D"cm-keyword">MIN</span> <s=
+pan class=3D"cm-keyword">DEFAULT</span> <span class=3D"cm-string">"99999"</=
+span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=
+=E7=94=A8=E6=88=B7=E6=9C=80=E5=B0=8F=E5=81=9C=E7=95=99=E6=97=B6=E9=97=B4"</=
+span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><s=
+pan role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm=
+-bracket">)</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pre=
+sentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><spa=
+n class=3D"cm-keyword">ENGINE</span><span class=3D"cm-operator">=3D</span>O=
+LAP</span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><spa=
+n role=3D"presentation" style=3D"padding-right: 0.1px;">AGGREGATE <span cla=
+ss=3D"cm-keyword">KEY</span><span class=3D"cm-bracket">(</span><span class=
+=3D"cm-variable-2">`user_id`</span><span class=3D"cm-punctuation">,</span> =
+<span class=3D"cm-variable-2">`date`</span><span class=3D"cm-punctuation">,=
+</span> <span class=3D"cm-variable-2">`city`</span><span class=3D"cm-punctu=
+ation">,</span> <span class=3D"cm-variable-2">`age`</span><span class=3D"cm=
+-punctuation">,</span> <span class=3D"cm-variable-2">`sex`</span><span clas=
+s=3D"cm-bracket">)</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span class=3D"cm-keyword">PARTITION</span> <span class=3D"cm-keyword">B=
+Y</span> <span class=3D"cm-keyword">RANGE</span><span class=3D"cm-bracket">=
+(</span><span class=3D"cm-variable-2">`date`</span><span class=3D"cm-punctu=
+ation">,</span> <span class=3D"cm-variable-2">`user_id`</span><span class=
+=3D"cm-bracket">)</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span class=3D"cm-bracket">(</span></span></pre><pre class=3D" CodeMirro=
+r-line " role=3D"presentation"><span role=3D"presentation" style=3D"padding=
+-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PARTITION</span> <=
+span class=3D"cm-variable-2">`p201701_1000`</span> <span class=3D"cm-keywor=
+d">VALUES</span> LESS THAN <span class=3D"cm-bracket">(</span><span class=
+=3D"cm-string">"2017-02-01"</span><span class=3D"cm-punctuation">,</span> <=
+span class=3D"cm-string">"1000"</span><span class=3D"cm-bracket">)</span><s=
+pan class=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror=
+-line " role=3D"presentation"><span role=3D"presentation" style=3D"padding-=
+right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PARTITION</span> <s=
+pan class=3D"cm-variable-2">`p201702_2000`</span> <span class=3D"cm-keyword=
+">VALUES</span> LESS THAN <span class=3D"cm-bracket">(</span><span class=3D=
+"cm-string">"2017-03-01"</span><span class=3D"cm-punctuation">,</span> <spa=
+n class=3D"cm-string">"2000"</span><span class=3D"cm-bracket">)</span><span=
+ class=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PARTITION</span> <span=
+ class=3D"cm-variable-2">`p201703_all`</span> &nbsp;<span class=3D"cm-keywo=
+rd">VALUES</span> LESS THAN <span class=3D"cm-bracket">(</span><span class=
+=3D"cm-string">"2017-04-01"</span><span class=3D"cm-bracket">)</span></span=
+></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D=
+"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket">)=
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">DISTRIBUTED <sp=
+an class=3D"cm-keyword">BY</span> <span class=3D"cm-keyword">HASH</span><sp=
+an class=3D"cm-bracket">(</span><span class=3D"cm-variable-2">`user_id`</sp=
+an><span class=3D"cm-bracket">)</span> BUCKETS <span class=3D"cm-number">16=
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">PROPERTIES</spa=
+n></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket=
+">(</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbs=
+p;<span class=3D"cm-string">"replication_num"</span> <span class=3D"cm-oper=
+ator">=3D</span> <span class=3D"cm-string">"3"</span><span class=3D"cm-punc=
+tuation">,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pres=
+entation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbs=
+p; &nbsp;<span class=3D"cm-string">"storage_medium"</span> <span class=3D"c=
+m-operator">=3D</span> <span class=3D"cm-string">"SSD"</span><span class=3D=
+"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"> &nbsp; &nbsp;<span class=3D"cm-string">"storage_cooldown_time"</span> <=
+span class=3D"cm-operator">=3D</span> <span class=3D"cm-string">"2023-05-12=
+ 12:00:00"</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pres=
+entation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span=
+ class=3D"cm-bracket">)</span><span class=3D"cm-punctuation">;</span></span=
+></pre></div></div></div></div></div><div style=3D"position: absolute; heig=
+ht: 0px; width: 1px; border-bottom: 0px solid transparent; top: 622px;"></d=
+iv><div class=3D"CodeMirror-gutters" style=3D"display: none; height: 622px;=
+"></div></div></div></pre><blockquote><p><span>=E5=9C=A8=E4=BB=A5=E4=B8=8A=
+=E7=A4=BA=E4=BE=8B=E4=B8=AD=EF=BC=8C=E6=88=91=E4=BB=AC=E6=8C=87=E5=AE=9A da=
+te(DATE =E7=B1=BB=E5=9E=8B) =E5=92=8C id(INT =E7=B1=BB=E5=9E=8B) =E4=BD=9C=
+=E4=B8=BA=E5=88=86=E5=8C=BA=E5=88=97=E3=80=82=E4=BB=A5=E4=B8=8A=E7=A4=BA=E4=
+=BE=8B=E6=9C=80=E7=BB=88=E5=BE=97=E5=88=B0=E7=9A=84=E5=88=86=E5=8C=BA=E5=A6=
+=82=E4=B8=8B=EF=BC=9A</span></p><pre class=3D"md-fences md-end-block ty-con=
+tain-cm modeLoaded" spellcheck=3D"false" lang=3D"tex"><div class=3D"CodeMir=
+ror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=3D"tex"><div style=3D=
+"overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5234=
+4px; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off" spell=
+check=3D"false" tabindex=3D"0" style=3D"position: absolute; bottom: -1em; p=
+adding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><=
+div class=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"true"></div><di=
+v class=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"></div><div cla=
+ss=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" st=
+yle=3D"margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; paddi=
+ng-right: 0px; padding-bottom: 0px;"><div style=3D"position: relative; top:=
+ 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"p=
+resentation" style=3D"position: relative; outline: none;"><div class=3D"Cod=
+eMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class=3D"Code=
+Mirror-measure"></div><div style=3D"position: relative; z-index: 1;"></div>=
+<div class=3D"CodeMirror-code" role=3D"presentation"><div class=3D"CodeMirr=
+or-activeline" style=3D"position: relative;"><div class=3D"CodeMirror-activ=
+eline-background CodeMirror-linebackground"></div><div class=3D"CodeMirror-=
+gutter-background CodeMirror-activeline-gutter" style=3D"left: 0px; width: =
+0px;"></div><pre class=3D" CodeMirror-line " role=3D"presentation"><span ro=
+le=3D"presentation" style=3D"padding-right: 0.1px;">* p201701_1000: &nbsp; =
+&nbsp;<span class=3D"cm-bracket">[</span>(MIN_VALUE,  MIN_VALUE), ("2017-02=
+-01", "1000") &nbsp; )</span></pre></div><pre class=3D" CodeMirror-line " r=
+ole=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.=
+1px;">* p201702_2000: &nbsp; &nbsp;<span class=3D"cm-bracket">[</span>("201=
+7-02-01", "1000"),  ("2017-03-01", "2000") &nbsp; )</span></pre><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;">* p201703_all: &nbsp; &nbsp; <span class=3D"c=
+m-bracket">[</span>("2017-03-01", "2000"),  ("2017-04-01", MIN_VALUE)) </sp=
+an></pre></div></div></div></div></div><div style=3D"position: absolute; he=
+ight: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></=
+div><div class=3D"CodeMirror-gutters" style=3D"display: none; height: 69px;=
+"></div></div></div></pre></blockquote><p><span>=E6=9C=80=E5=90=8E=E4=B8=80=
+=E4=B8=AA=E5=88=86=E5=8C=BA=E7=94=A8=E6=88=B7=E7=BC=BA=E7=9C=81=E5=8F=AA=E6=
+=8C=87=E5=AE=9A=E4=BA=86 </span><code>date</code><span> =E5=88=97=E7=9A=84=
+=E5=88=86=E5=8C=BA=E5=80=BC=EF=BC=8C=E6=89=80=E4=BB=A5 </span><code>id</cod=
+e><span> =E5=88=97=E7=9A=84=E5=88=86=E5=8C=BA=E5=80=BC=E4=BC=9A=E9=BB=98=E8=
+=AE=A4=E5=A1=AB=E5=85=85 </span><code>MIN_VALUE</code><span>=E3=80=82=E5=BD=
+=93=E7=94=A8=E6=88=B7=E6=8F=92=E5=85=A5=E6=95=B0=E6=8D=AE=E6=97=B6=EF=BC=8C=
+=E5=88=86=E5=8C=BA=E5=88=97=E5=80=BC=E4=BC=9A=E6=8C=89=E7=85=A7=E9=A1=BA=E5=
+=BA=8F=E4=BE=9D=E6=AC=A1=E6=AF=94=E8=BE=83=EF=BC=8C=E6=9C=80=E7=BB=88=E5=BE=
+=97=E5=88=B0=E5=AF=B9=E5=BA=94=E7=9A=84=E5=88=86=E5=8C=BA=EF=BC=8C=E4=B8=BE=
+=E4=BE=8B=E5=A6=82=E4=B8=8B=EF=BC=9A</span></p><pre class=3D"md-fences md-e=
+nd-block ty-contain-cm modeLoaded" spellcheck=3D"false" lang=3D"tex"><div c=
+lass=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=3D"tex=
+"><div style=3D"overflow: hidden; position: relative; width: 3px; height: 0=
+px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" autocapitaliz=
+e=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: absolute; =
+bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></t=
+extarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"=
+true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"=
+></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeM=
+irror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; border-right-wi=
+dth: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"position:=
+ relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation"=
+><div role=3D"presentation" style=3D"position: relative; outline: none;"><d=
+iv class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><di=
+v class=3D"CodeMirror-measure"></div><div style=3D"position: relative; z-in=
+dex: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentation" style=
+=3D""><div class=3D"CodeMirror-activeline" style=3D"position: relative;"><d=
+iv class=3D"CodeMirror-activeline-background CodeMirror-linebackground"></d=
+iv><div class=3D"CodeMirror-gutter-background CodeMirror-activeline-gutter"=
+ style=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-line " ro=
+le=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1=
+px;">* =E6=95=B0=E6=8D=AE  --&gt;  =E5=88=86=E5=8C=BA</span></pre></div><pr=
+e class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentat=
+ion" style=3D"padding-right: 0.1px;">* 2017-01-01, 200 &nbsp; &nbsp; --&gt;=
+ p201701_1000</span></pre><pre class=3D" CodeMirror-line " role=3D"presenta=
+tion"><span role=3D"presentation" style=3D"padding-right: 0.1px;">* 2017-01=
+-01, 2000 &nbsp;  --&gt; p201701_1000</span></pre><pre class=3D" CodeMirror=
+-line " role=3D"presentation"><span role=3D"presentation" style=3D"padding-=
+right: 0.1px;">* 2017-02-01, 100 &nbsp; &nbsp; --&gt; p201701_1000</span></=
+pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pr=
+esentation" style=3D"padding-right: 0.1px;">* 2017-02-01, 2000 &nbsp;  --&g=
+t; p201702_2000</span></pre><pre class=3D" CodeMirror-line " role=3D"presen=
+tation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">* 2017-=
+02-15, 5000 &nbsp;  --&gt; p201702_2000</span></pre><pre class=3D" CodeMirr=
+or-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddin=
+g-right: 0.1px;">* 2017-03-01, 2000 &nbsp;  --&gt; p201703_all</span></pre>=
+<pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presen=
+tation" style=3D"padding-right: 0.1px;">* 2017-03-10, 1 &nbsp; &nbsp; &nbsp=
+; --&gt; p201703_all</span></pre><pre class=3D" CodeMirror-line " role=3D"p=
+resentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">* =
+2017-04-01, 1000 &nbsp;  --&gt; =E6=97=A0=E6=B3=95=E5=AF=BC=E5=85=A5</span>=
+</pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"=
+presentation" style=3D"padding-right: 0.1px;">* 2017-05-01, 1000 &nbsp;  --=
+&gt; =E6=97=A0=E6=B3=95=E5=AF=BC=E5=85=A5</span></pre></div></div></div></d=
+iv></div><div style=3D"position: absolute; height: 0px; width: 1px; border-=
+bottom: 0px solid transparent; top: 230px;"></div><div class=3D"CodeMirror-=
+gutters" style=3D"display: none; height: 230px;"></div></div></div></pre><p=
+>&nbsp;</p><h2 id=3D"12-list-=E5=88=86=E5=8C=BA=E4=BD=BF=E7=94=A8=E4=BB=8B=
+=E7=BB=8D"><span>1.2 List =E5=88=86=E5=8C=BA=E4=BD=BF=E7=94=A8=E4=BB=8B=E7=
+=BB=8D</span></h2><ul><li><span>=E5=88=86=E5=8C=BA=E5=88=97=E6=94=AF=E6=8C=
+=81 BOOLEAN, TINYINT,  SMALLINT, INT, BIGINT, LARGEINT, DATE, DATETIME, CHA=
+R, VARCHAR =E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B=EF=BC=8C=E5=88=86=E5=8C=BA=
+=E5=80=BC=E4=B8=BA=E6=9E=9A=E4=B8=BE=E5=80=BC=E3=80=82=E5=8F=AA=E6=9C=89=E5=
+=BD=93=E6=95=B0=E6=8D=AE=E4=B8=BA=E7=9B=AE=E6=A0=87=E5=88=86=E5=8C=BA=E6=9E=
+=9A=E4=B8=BE=E5=80=BC=E5=85=B6=E4=B8=AD=E4=B9=8B=E4=B8=80=E6=97=B6=EF=BC=8C=
+=E6=89=8D=E5=8F=AF=E4=BB=A5=E5=91=BD=E4=B8=AD=E5=88=86=E5=8C=BA=E3=80=82</s=
+pan></li><li><span>Partition =E6=94=AF=E6=8C=81=E9=80=9A=E8=BF=87 VALUES IN=
+ (...) =E6=9D=A5=E6=8C=87=E5=AE=9A=E6=AF=8F=E4=B8=AA=E5=88=86=E5=8C=BA=E5=
+=8C=85=E5=90=AB=E7=9A=84=E6=9E=9A=E4=B8=BE=E5=80=BC=E3=80=82</span></li></u=
+l><p>&nbsp;</p><p><strong><span>=E5=AE=98=E6=96=B9=E7=A4=BA=E4=BE=8B=E4=BB=
+=8B=E7=BB=8D</span></strong></p><h3 id=3D"121-=E5=BB=BAlist-partition=E6=B5=
+=8B=E8=AF=95=E8=A1=A8"><span>1.2.1 =E5=BB=BAList Partition=E6=B5=8B=E8=AF=
+=95=E8=A1=A8</span></h3><pre class=3D"md-fences md-end-block ty-contain-cm =
+modeLoaded" spellcheck=3D"false" lang=3D"sql" style=3D"break-inside: unset;=
+"><div class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lan=
+g=3D"sql"><div style=3D"overflow: hidden; position: relative; width: 3px; h=
+eight: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" autoc=
+apitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: ab=
+solute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: no=
+ne;"></textarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-con=
+tent=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=
+=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=
+=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; border=
+-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"=
+position: relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"pres=
+entation"><div role=3D"presentation" style=3D"position: relative; outline: =
+none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>=
+</div><div class=3D"CodeMirror-measure"></div><div style=3D"position: relat=
+ive; z-index: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentation=
+" style=3D""><div class=3D"CodeMirror-activeline" style=3D"position: relati=
+ve;"><div class=3D"CodeMirror-activeline-background CodeMirror-linebackgrou=
+nd"></div><div class=3D"CodeMirror-gutter-background CodeMirror-activeline-=
+gutter" style=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;"><span class=3D"cm-comment">-- List Partition</span></span></pre=
+></div><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D=
+"presentation" style=3D"padding-right: 0.1px;"><span cm-text=3D"" cm-zwsp=
+=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"=
+cm-keyword">CREATE</span> <span class=3D"cm-keyword">TABLE</span> <span cla=
+ss=3D"cm-keyword">IF</span> <span class=3D"cm-keyword">NOT</span> <span cla=
+ss=3D"cm-keyword">EXISTS</span> test_db<span class=3D"cm-variable-2">.examp=
+le_list_tbl</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pre=
+sentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><spa=
+n class=3D"cm-bracket">(</span></span></pre><pre class=3D" CodeMirror-line =
+" role=3D"presentation"><span role=3D"presentation" style=3D"padding-right:=
+ 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`user_id`</span> LARGE=
+INT <span class=3D"cm-keyword">NOT</span> <span class=3D"cm-atom">NULL</spa=
+n> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E7=
+=94=A8=E6=88=B7id"</span><span class=3D"cm-punctuation">,</span></span></pr=
+e><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pres=
+entation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-v=
+ariable-2">`date`</span> <span class=3D"cm-type">DATE</span> <span class=3D=
+"cm-keyword">NOT</span> <span class=3D"cm-atom">NULL</span> <span class=3D"=
+cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E6=95=B0=E6=8D=AE=E7=
+=81=8C=E5=85=A5=E6=97=A5=E6=9C=9F=E6=97=B6=E9=97=B4"</span><span class=3D"c=
+m-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`city`</span> <span class=3D=
+"cm-type">VARCHAR</span><span class=3D"cm-bracket">(</span><span class=3D"c=
+m-number">20</span><span class=3D"cm-bracket">)</span> <span class=3D"cm-ke=
+yword">NOT</span> <span class=3D"cm-atom">NULL</span> <span class=3D"cm-key=
+word">COMMENT</span> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=89=80=
+=E5=9C=A8=E5=9F=8E=E5=B8=82"</span><span class=3D"cm-punctuation">,</span><=
+/span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span ro=
+le=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span cla=
+ss=3D"cm-variable-2">`age`</span> <span class=3D"cm-keyword">SMALLINT</span=
+> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=E7=
+=94=A8=E6=88=B7=E5=B9=B4=E9=BE=84"</span><span class=3D"cm-punctuation">,</=
+span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><s=
+pan role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<sp=
+an class=3D"cm-variable-2">`sex`</span> <span class=3D"cm-type">TINYINT</sp=
+an> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-string">"=
+=E7=94=A8=E6=88=B7=E6=80=A7=E5=88=AB"</span><span class=3D"cm-punctuation">=
+,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"=
+><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;=
+<span class=3D"cm-variable-2">`last_visit_date`</span> <span class=3D"cm-ty=
+pe">DATETIME</span> <span class=3D"cm-keyword">REPLACE</span> <span class=
+=3D"cm-keyword">DEFAULT</span> <span class=3D"cm-string">"1970-01-01 00:00:=
+00"</span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"cm-stri=
+ng">"=E7=94=A8=E6=88=B7=E6=9C=80=E5=90=8E=E4=B8=80=E6=AC=A1=E8=AE=BF=E9=97=
+=AE=E6=97=B6=E9=97=B4"</span><span class=3D"cm-punctuation">,</span></span>=
+</pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"=
+presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"=
+cm-variable-2">`cost`</span> <span class=3D"cm-type">BIGINT</span> <span cl=
+ass=3D"cm-keyword">SUM</span> <span class=3D"cm-keyword">DEFAULT</span> <sp=
+an class=3D"cm-string">"0"</span> <span class=3D"cm-keyword">COMMENT</span>=
+ <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=80=BB=E6=B6=88=E8=B4=B9"<=
+/span><span class=3D"cm-punctuation">,</span></span></pre><pre class=3D" Co=
+deMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"=
+padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-2">`max_dwe=
+ll_time`</span> <span class=3D"cm-type">INT</span> <span class=3D"cm-keywor=
+d">MAX</span> <span class=3D"cm-keyword">DEFAULT</span> <span class=3D"cm-s=
+tring">"0"</span> <span class=3D"cm-keyword">COMMENT</span> <span class=3D"=
+cm-string">"=E7=94=A8=E6=88=B7=E6=9C=80=E5=A4=A7=E5=81=9C=E7=95=99=E6=97=B6=
+=E9=97=B4"</span><span class=3D"cm-punctuation">,</span></span></pre><pre c=
+lass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation=
+" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-variable-=
+2">`min_dwell_time`</span> <span class=3D"cm-type">INT</span> <span class=
+=3D"cm-keyword">MIN</span> <span class=3D"cm-keyword">DEFAULT</span> <span =
+class=3D"cm-string">"99999"</span> <span class=3D"cm-keyword">COMMENT</span=
+> <span class=3D"cm-string">"=E7=94=A8=E6=88=B7=E6=9C=80=E5=B0=8F=E5=81=9C=
+=E7=95=99=E6=97=B6=E9=97=B4"</span></span></pre><pre class=3D" CodeMirror-l=
+ine " role=3D"presentation"><span role=3D"presentation" style=3D"padding-ri=
+ght: 0.1px;"><span class=3D"cm-bracket">)</span></span></pre><pre class=3D"=
+ CodeMirror-line " role=3D"presentation"><span role=3D"presentation" style=
+=3D"padding-right: 0.1px;"><span class=3D"cm-keyword">ENGINE</span><span cl=
+ass=3D"cm-operator">=3D</span>olap</span></pre><pre class=3D" CodeMirror-li=
+ne " role=3D"presentation"><span role=3D"presentation" style=3D"padding-rig=
+ht: 0.1px;">AGGREGATE <span class=3D"cm-keyword">KEY</span><span class=3D"c=
+m-bracket">(</span><span class=3D"cm-variable-2">`user_id`</span><span clas=
+s=3D"cm-punctuation">,</span> <span class=3D"cm-variable-2">`date`</span><s=
+pan class=3D"cm-punctuation">,</span> <span class=3D"cm-variable-2">`city`<=
+/span><span class=3D"cm-punctuation">,</span> <span class=3D"cm-variable-2"=
+>`age`</span><span class=3D"cm-punctuation">,</span> <span class=3D"cm-vari=
+able-2">`sex`</span><span class=3D"cm-bracket">)</span></span></pre><pre cl=
+ass=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation"=
+ style=3D"padding-right: 0.1px;"><span class=3D"cm-keyword">PARTITION</span=
+> <span class=3D"cm-keyword">BY</span> <span class=3D"cm-keyword">LIST</spa=
+n><span class=3D"cm-bracket">(</span><span class=3D"cm-variable-2">`city`</=
+span><span class=3D"cm-bracket">)</span></span></pre><pre class=3D" CodeMir=
+ror-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddi=
+ng-right: 0.1px;"><span class=3D"cm-bracket">(</span></span></pre><pre clas=
+s=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" s=
+tyle=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PAR=
+TITION</span> <span class=3D"cm-variable-2">`p_cn`</span> <span class=3D"cm=
+-keyword">VALUES</span> <span class=3D"cm-keyword">IN</span> <span class=3D=
+"cm-bracket">(</span><span class=3D"cm-string">"Beijing"</span><span class=
+=3D"cm-punctuation">,</span> <span class=3D"cm-string">"Shanghai"</span><sp=
+an class=3D"cm-punctuation">,</span> <span class=3D"cm-string">"Hong Kong"<=
+/span><span class=3D"cm-bracket">)</span><span class=3D"cm-punctuation">,</=
+span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><s=
+pan role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nbsp;<sp=
+an class=3D"cm-keyword">PARTITION</span> <span class=3D"cm-variable-2">`p_u=
+sa`</span> <span class=3D"cm-keyword">VALUES</span> <span class=3D"cm-keywo=
+rd">IN</span> <span class=3D"cm-bracket">(</span><span class=3D"cm-string">=
+"New York"</span><span class=3D"cm-punctuation">,</span> <span class=3D"cm-=
+string">"San Francisco"</span><span class=3D"cm-bracket">)</span><span clas=
+s=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line " =
+role=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0=
+.1px;"> &nbsp; &nbsp;<span class=3D"cm-keyword">PARTITION</span> <span clas=
+s=3D"cm-variable-2">`p_jp`</span> <span class=3D"cm-keyword">VALUES</span> =
+<span class=3D"cm-keyword">IN</span> <span class=3D"cm-bracket">(</span><sp=
+an class=3D"cm-string">"Tokyo"</span><span class=3D"cm-bracket">)</span></s=
+pan></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket=
+">)</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;">DISTRIBUTED =
+<span class=3D"cm-keyword">BY</span> <span class=3D"cm-keyword">HASH</span>=
+<span class=3D"cm-bracket">(</span><span class=3D"cm-variable-2">`user_id`<=
+/span><span class=3D"cm-bracket">)</span> BUCKETS <span class=3D"cm-number"=
+>16</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;">PROPERTIES</=
+span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span rol=
+e=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracke=
+t">(</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentati=
+on"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nbsp; &nb=
+sp;<span class=3D"cm-string">"replication_num"</span> <span class=3D"cm-ope=
+rator">=3D</span> <span class=3D"cm-string">"3"</span><span class=3D"cm-pun=
+ctuation">,</span></span></pre><pre class=3D" CodeMirror-line " role=3D"pre=
+sentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"> &nb=
+sp; &nbsp;<span class=3D"cm-string">"storage_medium"</span> <span class=3D"=
+cm-operator">=3D</span> <span class=3D"cm-string">"SSD"</span><span class=
+=3D"cm-punctuation">,</span></span></pre><pre class=3D" CodeMirror-line " r=
+ole=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.=
+1px;"> &nbsp; &nbsp;<span class=3D"cm-string">"storage_cooldown_time"</span=
+> <span class=3D"cm-operator">=3D</span> <span class=3D"cm-string">"2023-05=
+-12 12:00:00"</span></span></pre><pre class=3D" CodeMirror-line " role=3D"p=
+resentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><s=
+pan class=3D"cm-bracket">)</span><span class=3D"cm-punctuation">;</span></s=
+pan></pre></div></div></div></div></div><div style=3D"position: absolute; h=
+eight: 0px; width: 1px; border-bottom: 0px solid transparent; top: 668px;">=
+</div><div class=3D"CodeMirror-gutters" style=3D"display: none; height: 668=
+px;"></div></div></div></pre><blockquote><p><span>=E5=A6=82=E4=B8=8A </span=
+><code>example_list_tbl</code><span> =E7=A4=BA=E4=BE=8B=EF=BC=8C=E5=BD=93=
+=E5=BB=BA=E8=A1=A8=E5=AE=8C=E6=88=90=E5=90=8E=EF=BC=8C=E4=BC=9A=E8=87=AA=E5=
+=8A=A8=E7=94=9F=E6=88=90=E5=A6=82=E4=B8=8B3=E4=B8=AA=E5=88=86=E5=8C=BA=EF=
+=BC=9A</span></p><pre class=3D"md-fences md-end-block ty-contain-cm modeLoa=
+ded" spellcheck=3D"false" lang=3D"tex"><div class=3D"CodeMirror cm-s-inner =
+cm-s-null-scroll CodeMirror-wrap" lang=3D"tex"><div style=3D"overflow: hidd=
+en; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;=
+"><textarea autocorrect=3D"off" autocapitalize=3D"off" spellcheck=3D"false"=
+ tabindex=3D"0" style=3D"position: absolute; bottom: -1em; padding: 0px; wi=
+dth: 1000px; height: 1em; outline: none;"></textarea></div><div class=3D"Co=
+deMirror-scrollbar-filler" cm-not-content=3D"true"></div><div class=3D"Code=
+Mirror-gutter-filler" cm-not-content=3D"true"></div><div class=3D"CodeMirro=
+r-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-sizer" style=3D"margin-l=
+eft: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; =
+padding-bottom: 0px;"><div style=3D"position: relative; top: 0px;"><div cla=
+ss=3D"CodeMirror-lines" role=3D"presentation"><div role=3D"presentation" st=
+yle=3D"position: relative; outline: none;"><div class=3D"CodeMirror-measure=
+"><pre><span>xxxxxxxxxx</span></pre></div><div class=3D"CodeMirror-measure"=
+></div><div style=3D"position: relative; z-index: 1;"></div><div class=3D"C=
+odeMirror-code" role=3D"presentation"><div class=3D"CodeMirror-activeline" =
+style=3D"position: relative;"><div class=3D"CodeMirror-activeline-backgroun=
+d CodeMirror-linebackground"></div><div class=3D"CodeMirror-gutter-backgrou=
+nd CodeMirror-activeline-gutter" style=3D"left: 0px; width: 0px;"></div><pr=
+e class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentat=
+ion" style=3D"padding-right: 0.1px;">p_cn: ("Beijing", "Shanghai", "Hong Ko=
+ng")</span></pre></div><pre class=3D" CodeMirror-line " role=3D"presentatio=
+n"><span role=3D"presentation" style=3D"padding-right: 0.1px;">p_usa: ("New=
+ York", "San Francisco")</span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;">p_jp: ("Tokyo")</span></pre></div></div></div></div></div><div style=3D"=
+position: absolute; height: 0px; width: 1px; border-bottom: 0px solid trans=
+parent; top: 69px;"></div><div class=3D"CodeMirror-gutters" style=3D"displa=
+y: none; height: 69px;"></div></div></div></pre></blockquote><h3 id=3D"122-=
+=E5=90=91=E5=AF=B9=E5=BA=94=E5=88=86=E5=8C=BA=E6=8F=92=E5=85=A5=E6=95=B0=E6=
+=8D=AE"><span>1.2.2 =E5=90=91=E5=AF=B9=E5=BA=94=E5=88=86=E5=8C=BA=E6=8F=92=
+=E5=85=A5=E6=95=B0=E6=8D=AE</span></h3><pre class=3D"md-fences md-end-block=
+ ty-contain-cm modeLoaded" spellcheck=3D"false" lang=3D"sql"><div class=3D"=
+CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=3D"sql"><div s=
+tyle=3D"overflow: hidden; position: relative; width: 3px; height: 0px; top:=
+ 9.52344px; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=3D"off=
+" spellcheck=3D"false" tabindex=3D"0" style=3D"position: absolute; bottom: =
+-1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea>=
+</div><div class=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"true"></=
+div><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"true"></div><=
+div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMirror-si=
+zer" style=3D"margin-left: 0px; margin-bottom: 0px; border-right-width: 0px=
+; padding-right: 0px; padding-bottom: 0px;"><div style=3D"position: relativ=
+e; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation"><div ro=
+le=3D"presentation" style=3D"position: relative; outline: none;"><div class=
+=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class=
+=3D"CodeMirror-measure"></div><div style=3D"position: relative; z-index: 1;=
+"></div><div class=3D"CodeMirror-code" role=3D"presentation" style=3D""><di=
+v class=3D"CodeMirror-activeline" style=3D"position: relative;"><div class=
+=3D"CodeMirror-activeline-background CodeMirror-linebackground"></div><div =
+class=3D"CodeMirror-gutter-background CodeMirror-activeline-gutter" style=
+=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-line " role=3D"=
+presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">M=
+ySQL <span class=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]=
+</span><span class=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">i=
+nsert</span> <span class=3D"cm-keyword">into</span> test_db<span class=3D"c=
+m-variable-2">.example_list_tbl</span> <span class=3D"cm-keyword">values</s=
+pan> <span class=3D"cm-bracket">(</span><span class=3D"cm-number">10000</sp=
+an><span class=3D"cm-punctuation">,</span><span class=3D"cm-string">'2017-0=
+1-01'</span><span class=3D"cm-punctuation">,</span><span class=3D"cm-string=
+">'Beijing'</span><span class=3D"cm-punctuation">,</span><span class=3D"cm-=
+number">20</span><span class=3D"cm-punctuation">,</span><span class=3D"cm-n=
+umber">0</span><span class=3D"cm-punctuation">,</span><span class=3D"cm-str=
+ing">'2017-01-01 06:00:00'</span><span class=3D"cm-punctuation">,</span><sp=
+an class=3D"cm-number">20</span><span class=3D"cm-punctuation">,</span><spa=
+n class=3D"cm-number">10</span><span class=3D"cm-punctuation">,</span><span=
+ class=3D"cm-number">10</span><span class=3D"cm-bracket">)</span><span clas=
+s=3D"cm-punctuation">;</span></span></pre></div><pre class=3D" CodeMirror-l=
+ine " role=3D"presentation"><span role=3D"presentation" style=3D"padding-ri=
+ght: 0.1px;"><span class=3D"cm-keyword">Query</span> OK<span class=3D"cm-pu=
+nctuation">,</span> <span class=3D"cm-number">1</span> <span class=3D"cm-ke=
+yword">row</span> affected <span class=3D"cm-bracket">(</span><span class=
+=3D"cm-number">0.04</span> sec<span class=3D"cm-bracket">)</span></span></p=
+re><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pre=
+sentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-bracket">{</sp=
+an><span class=3D"cm-string">'label'</span><span class=3D"cm-punctuation">:=
+</span><span class=3D"cm-string">'insert_92a0193c3d65454a-a9d71623490c05eb'=
+</span><span class=3D"cm-punctuation">,</span> <span class=3D"cm-string">'s=
+tatus'</span><span class=3D"cm-punctuation">:</span><span class=3D"cm-strin=
+g">'VISIBLE'</span><span class=3D"cm-punctuation">,</span> <span class=3D"c=
+m-string">'txnId'</span><span class=3D"cm-punctuation">:</span><span class=
+=3D"cm-string">'66'</span><span class=3D"cm-bracket">}</span></span></pre><=
+pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"present=
+ation" style=3D"padding-right: 0.1px;"><span cm-text=3D"" cm-zwsp=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">MySQL <span cla=
+ss=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]</span><span c=
+lass=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">select</span> u=
+ser_id<span class=3D"cm-punctuation">,</span><span class=3D"cm-type">date</=
+span> <span class=3D"cm-keyword">from</span> example_list_tbl<span class=3D=
+"cm-punctuation">;</span> </span></pre><pre class=3D" CodeMirror-line " rol=
+e=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1p=
+x;"><span class=3D"cm-operator">+---------+------------+</span></span></pre=
+><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"prese=
+ntation" style=3D"padding-right: 0.1px;"><span class=3D"cm-operator">|</spa=
+n> user_id <span class=3D"cm-operator">|</span> <span class=3D"cm-type">dat=
+e</span> &nbsp; &nbsp; &nbsp; <span class=3D"cm-operator">|</span></span></=
+pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pr=
+esentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-operator">+--=
+-------+------------+</span></span></pre><pre class=3D" CodeMirror-line " r=
+ole=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.=
+1px;"><span class=3D"cm-operator">|</span> <span class=3D"cm-number">10000<=
+/span> &nbsp; <span class=3D"cm-operator">|</span> <span class=3D"cm-number=
+">2017</span><span class=3D"cm-operator">-</span><span class=3D"cm-number">=
+01</span><span class=3D"cm-operator">-</span><span class=3D"cm-number">01</=
+span> <span class=3D"cm-operator">|</span></span></pre><pre class=3D" CodeM=
+irror-line " role=3D"presentation"><span role=3D"presentation" style=3D"pad=
+ding-right: 0.1px;"><span class=3D"cm-operator">+---------+------------+</s=
+pan></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><sp=
+an role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"cm-=
+number">1</span> <span class=3D"cm-keyword">row</span> <span class=3D"cm-ke=
+yword">in</span> <span class=3D"cm-keyword">set</span> <span class=3D"cm-br=
+acket">(</span><span class=3D"cm-number">0.02</span> sec<span class=3D"cm-b=
+racket">)</span></span></pre></div></div></div></div></div><div style=3D"po=
+sition: absolute; height: 0px; width: 1px; border-bottom: 0px solid transpa=
+rent; top: 254px;"></div><div class=3D"CodeMirror-gutters" style=3D"display=
+: none; height: 254px;"></div></div></div></pre><h3 id=3D"123-=E6=9F=A5=E8=
+=AF=A2=E5=88=86=E5=8C=BA=E5=86=85=E6=95=B0=E6=8D=AE"><span>1.2.3 =E6=9F=A5=
+=E8=AF=A2=E5=88=86=E5=8C=BA=E5=86=85=E6=95=B0=E6=8D=AE</span></h3><pre clas=
+s=3D"md-fences md-end-block ty-contain-cm modeLoaded" spellcheck=3D"false" =
+lang=3D"sql"><div class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirro=
+r-wrap" lang=3D"sql"><div style=3D"overflow: hidden; position: relative; wi=
+dth: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D=
+"off" autocapitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"p=
+osition: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; =
+outline: none;"></textarea></div><div class=3D"CodeMirror-scrollbar-filler"=
+ cm-not-content=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-n=
+ot-content=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1">=
+<div class=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0=
+px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div=
+ style=3D"position: relative; top: 0px;"><div class=3D"CodeMirror-lines" ro=
+le=3D"presentation"><div role=3D"presentation" style=3D"position: relative;=
+ outline: none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</s=
+pan></pre></div><div class=3D"CodeMirror-measure"></div><div style=3D"posit=
+ion: relative; z-index: 1;"></div><div class=3D"CodeMirror-code" role=3D"pr=
+esentation" style=3D""><div class=3D"CodeMirror-activeline" style=3D"positi=
+on: relative;"><div class=3D"CodeMirror-activeline-background CodeMirror-li=
+nebackground"></div><div class=3D"CodeMirror-gutter-background CodeMirror-a=
+ctiveline-gutter" style=3D"left: 0px; width: 0px;"></div><pre class=3D" Cod=
+eMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"p=
+adding-right: 0.1px;">MySQL <span class=3D"cm-bracket">[</span>test_db<span=
+ class=3D"cm-bracket">]</span><span class=3D"cm-operator">&gt;</span> <span=
+ class=3D"cm-keyword">SELECT</span> user_id<span class=3D"cm-punctuation">,=
+</span><span class=3D"cm-type">date</span> <span class=3D"cm-keyword">FROM<=
+/span> example_list_tbl <span class=3D"cm-keyword">PARTITION</span> <span c=
+lass=3D"cm-variable-2">`p_cn`</span><span class=3D"cm-punctuation">;</span>=
+</span></pre></div><pre class=3D" CodeMirror-line " role=3D"presentation"><=
+span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D"c=
+m-operator">+---------+------------+</span></span></pre><pre class=3D" Code=
+Mirror-line " role=3D"presentation"><span role=3D"presentation" style=3D"pa=
+dding-right: 0.1px;"><span class=3D"cm-operator">|</span> user_id <span cla=
+ss=3D"cm-operator">|</span> <span class=3D"cm-type">date</span> &nbsp; &nbs=
+p; &nbsp; <span class=3D"cm-operator">|</span></span></pre><pre class=3D" C=
+odeMirror-line " role=3D"presentation"><span role=3D"presentation" style=3D=
+"padding-right: 0.1px;"><span class=3D"cm-operator">+---------+------------=
++</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation"=
+><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span class=3D=
+"cm-operator">|</span> <span class=3D"cm-number">10000</span> &nbsp; <span =
+class=3D"cm-operator">|</span> <span class=3D"cm-number">2017</span><span c=
+lass=3D"cm-operator">-</span><span class=3D"cm-number">01</span><span class=
+=3D"cm-operator">-</span><span class=3D"cm-number">01</span> <span class=3D=
+"cm-operator">|</span></span></pre><pre class=3D" CodeMirror-line " role=3D=
+"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px;">=
+<span class=3D"cm-operator">+---------+------------+</span></span></pre><pr=
+e class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentat=
+ion" style=3D"padding-right: 0.1px;"><span class=3D"cm-number">1</span> <sp=
+an class=3D"cm-keyword">row</span> <span class=3D"cm-keyword">in</span> <sp=
+an class=3D"cm-keyword">set</span> <span class=3D"cm-bracket">(</span><span=
+ class=3D"cm-number">0.01</span> sec<span class=3D"cm-bracket">)</span></sp=
+an></pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=
+=3D"presentation" style=3D"padding-right: 0.1px;"><span cm-text=3D"" cm-zws=
+p=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">MySQL <span cla=
+ss=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]</span><span c=
+lass=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">SELECT</span> u=
+ser_id<span class=3D"cm-punctuation">,</span><span class=3D"cm-type">date</=
+span> <span class=3D"cm-keyword">FROM</span> example_list_tbl <span class=
+=3D"cm-keyword">PARTITION</span> <span class=3D"cm-variable-2">`p_usa`</spa=
+n><span class=3D"cm-punctuation">;</span></span></pre><pre class=3D" CodeMi=
+rror-line " role=3D"presentation"><span role=3D"presentation" style=3D"padd=
+ing-right: 0.1px;">Empty <span class=3D"cm-keyword">set</span> <span class=
+=3D"cm-bracket">(</span><span class=3D"cm-number">0.00</span> sec<span clas=
+s=3D"cm-bracket">)</span></span></pre><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;"><span cm-text=3D"" cm-zwsp=3D"">
+</span></span></pre><pre class=3D" CodeMirror-line " role=3D"presentation">=
+<span role=3D"presentation" style=3D"padding-right: 0.1px;">MySQL <span cla=
+ss=3D"cm-bracket">[</span>test_db<span class=3D"cm-bracket">]</span><span c=
+lass=3D"cm-operator">&gt;</span> <span class=3D"cm-keyword">SELECT</span> u=
+ser_id<span class=3D"cm-punctuation">,</span><span class=3D"cm-type">date</=
+span> <span class=3D"cm-keyword">FROM</span> example_list_tbl <span class=
+=3D"cm-keyword">PARTITION</span> <span class=3D"cm-variable-2">`p_jp`</span=
+><span class=3D"cm-punctuation">;</span></span></pre><pre class=3D" CodeMir=
+ror-line " role=3D"presentation"><span role=3D"presentation" style=3D"paddi=
+ng-right: 0.1px;">Empty <span class=3D"cm-keyword">set</span> <span class=
+=3D"cm-bracket">(</span><span class=3D"cm-number">0.00</span> sec<span clas=
+s=3D"cm-bracket">)</span></span></pre></div></div></div></div></div><div st=
+yle=3D"position: absolute; height: 0px; width: 1px; border-bottom: 0px soli=
+d transparent; top: 300px;"></div><div class=3D"CodeMirror-gutters" style=
+=3D"display: none; height: 300px;"></div></div></div></pre><blockquote><p><=
+span>=E8=BF=99=E9=87=8C=E5=92=8C=E4=B8=8A=E6=96=B9Range=E5=88=86=E5=8C=BA=
+=E7=9B=B8=E5=90=8C=EF=BC=8C=E4=B8=8D=E5=B1=95=E5=BC=80=E6=B5=8B=E8=AF=95=E6=
+=8F=92=E5=85=A5=E5=88=A0=E9=99=A4=E6=95=B0=E6=8D=AE=E7=AD=89=E6=93=8D=E4=BD=
+=9C</span></p></blockquote><h3 id=3D"124-=E5=A2=9E=E5=8A=A0=E4=B8=80=E4=B8=
+=AA=E5=AD=90=E5=88=86=E5=8C=BA"><span>1.2.4 =E5=A2=9E=E5=8A=A0=E4=B8=80=E4=
+=B8=AA=E5=AD=90=E5=88=86=E5=8C=BA</span></h3><pre class=3D"md-fences md-end=
+-block ty-contain-cm modeLoaded" spellcheck=3D"false" lang=3D"sql"><div cla=
+ss=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=3D"sql">=
+<div style=3D"overflow: hidden; position: relative; width: 3px; height: 0px=
+; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" autocapitalize=
+=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: absolute; b=
+ottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></te=
+xtarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-content=3D"t=
+rue"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=3D"true">=
+</div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=3D"CodeMi=
+rror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; border-right-wid=
+th: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"position: =
+relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"presentation">=
+<div role=3D"presentation" style=3D"position: relative; outline: none;"><di=
+v class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div=
+ class=3D"CodeMirror-measure"></div><div style=3D"position: relative; z-ind=
+ex: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentation"><div cla=
+ss=3D"CodeMirror-activeline" style=3D"position: relative;"><div class=3D"Co=
+deMirror-activeline-background CodeMirror-linebackground"></div><div class=
+=3D"CodeMirror-gutter-background CodeMirror-activeline-gutter" style=3D"lef=
+t: 0px; width: 0px;"></div><pre class=3D" CodeMirror-line " role=3D"present=
+ation"><span role=3D"presentation" style=3D"padding-right: 0.1px;"><span cl=
+ass=3D"cm-keyword">alter</span> <span class=3D"cm-keyword">table</span> exa=
+mple_list_tbl <span class=3D"cm-keyword">add</span> <span class=3D"cm-keywo=
+rd">partition</span> p_uk <span class=3D"cm-keyword">values</span> <span cl=
+ass=3D"cm-keyword">IN</span> <span class=3D"cm-bracket">(</span><span class=
+=3D"cm-string">"London"</span><span class=3D"cm-bracket">)</span><span clas=
+s=3D"cm-punctuation">;</span></span></pre></div></div></div></div></div></d=
+iv><div style=3D"position: absolute; height: 0px; width: 1px; border-bottom=
+: 0px solid transparent; top: 23px;"></div><div class=3D"CodeMirror-gutters=
+" style=3D"display: none; height: 23px;"></div></div></div></pre><blockquot=
+e><p><span>=E5=BD=93=E6=88=91=E4=BB=AC=E5=A2=9E=E5=8A=A0=E4=B8=80=E4=B8=AA=
+=E5=88=86=E5=8C=BA p_uk VALUES IN ("London")=EF=BC=8C=E5=88=86=E5=8C=BA=E7=
+=BB=93=E6=9E=9C=E5=A6=82=E4=B8=8B=EF=BC=9A</span></p><pre class=3D"md-fence=
+s md-end-block ty-contain-cm modeLoaded" spellcheck=3D"false" lang=3D"tex">=
+<div class=3D"CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=
+=3D"tex"><div style=3D"overflow: hidden; position: relative; width: 3px; he=
+ight: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect=3D"off" autoca=
+pitalize=3D"off" spellcheck=3D"false" tabindex=3D"0" style=3D"position: abs=
+olute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: non=
+e;"></textarea></div><div class=3D"CodeMirror-scrollbar-filler" cm-not-cont=
+ent=3D"true"></div><div class=3D"CodeMirror-gutter-filler" cm-not-content=
+=3D"true"></div><div class=3D"CodeMirror-scroll" tabindex=3D"-1"><div class=
+=3D"CodeMirror-sizer" style=3D"margin-left: 0px; margin-bottom: 0px; border=
+-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style=3D"=
+position: relative; top: 0px;"><div class=3D"CodeMirror-lines" role=3D"pres=
+entation"><div role=3D"presentation" style=3D"position: relative; outline: =
+none;"><div class=3D"CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre>=
+</div><div class=3D"CodeMirror-measure"></div><div style=3D"position: relat=
+ive; z-index: 1;"></div><div class=3D"CodeMirror-code" role=3D"presentation=
+"><div class=3D"CodeMirror-activeline" style=3D"position: relative;"><div c=
+lass=3D"CodeMirror-activeline-background CodeMirror-linebackground"></div><=
+div class=3D"CodeMirror-gutter-background CodeMirror-activeline-gutter" sty=
+le=3D"left: 0px; width: 0px;"></div><pre class=3D" CodeMirror-line " role=
+=3D"presentation"><span role=3D"presentation" style=3D"padding-right: 0.1px=
+;">p_cn: ("Beijing", "Shanghai", "Hong Kong")</span></pre></div><pre class=
+=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentation" st=
+yle=3D"padding-right: 0.1px;">p_usa: ("New York", "San Francisco")</span></=
+pre><pre class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"pr=
+esentation" style=3D"padding-right: 0.1px;">p_jp: ("Tokyo")</span></pre><pr=
+e class=3D" CodeMirror-line " role=3D"presentation"><span role=3D"presentat=
+ion" style=3D"padding-right: 0.1px;">p_uk: ("London")</span></pre></div></d=
+iv></div></div></div><div style=3D"position: absolute; height: 0px; width: =
+1px; border-bottom: 0px solid transparent; top: 92px;"></div><div class=3D"=
+CodeMirror-gutters" style=3D"display: none; height: 92px;"></div></div></di=
+v></pre></blockquote><p>&nbsp;</p><h1 id=3D"2-bucket---=E5=88=86=E6=A1=B6">=
+<span>2. Bucket - =E5=88=86=E6=A1=B6</span></h1><ul><li><p><span>=E5=88=86=
+=E6=A1=B6=E8=AF=AD=E6=B3=95</span><code>DISTRIBUTED BY HASH(user_id) BUCKET=
+S 16</code></p></li><li><p><span>=E5=A6=82=E6=9E=9C=E4=BD=BF=E7=94=A8=E4=BA=
+=86 Partition=EF=BC=8C=E5=88=99 </span><code>DISTRIBUTED ...</code><span> =
+=E8=AF=AD=E5=8F=A5=E6=8F=8F=E8=BF=B0=E7=9A=84=E6=98=AF=E6=95=B0=E6=8D=AE=E5=
+=9C=A8</span><strong><span>=E5=90=84=E4=B8=AA=E5=88=86=E5=8C=BA=E5=86=85</s=
+pan></strong><span>=E7=9A=84=E5=88=92=E5=88=86=E8=A7=84=E5=88=99=E3=80=82=
+=E5=A6=82=E6=9E=9C=E4=B8=8D=E4=BD=BF=E7=94=A8 Partition=EF=BC=8C=E5=88=99=
+=E6=8F=8F=E8=BF=B0=E7=9A=84=E6=98=AF=E5=AF=B9=E6=95=B4=E4=B8=AA=E8=A1=A8=E7=
+=9A=84=E6=95=B0=E6=8D=AE=E7=9A=84=E5=88=92=E5=88=86=E8=A7=84=E5=88=99</span=
+></p></li><li><p><span>=E5=88=86=E6=A1=B6=E5=88=97=E5=8F=AF=E4=BB=A5=E6=98=
+=AF=E5=A4=9A=E5=88=97=EF=BC=8CAggregate =E5=92=8C Unique =E6=A8=A1=E5=9E=8B=
+=E5=BF=85=E9=A1=BB=E4=B8=BA Key =E5=88=97=EF=BC=8CDuplicate =E6=A8=A1=E5=9E=
+=8B=E5=8F=AF=E4=BB=A5=E6=98=AF key =E5=88=97=E5=92=8C value =E5=88=97=E3=80=
+=82=E5=88=86=E6=A1=B6=E5=88=97=E5=8F=AF=E4=BB=A5=E5=92=8C Partition =E5=88=
+=97=E7=9B=B8=E5=90=8C=E6=88=96=E4=B8=8D=E5=90=8C</span></p></li><li><p><spa=
+n>=E5=88=86=E6=A1=B6=E5=88=97=E7=9A=84=E9=80=89=E6=8B=A9=EF=BC=8C=E6=98=AF=
+=E5=9C=A8 </span><strong><span>=E6=9F=A5=E8=AF=A2=E5=90=9E=E5=90=90</span><=
+/strong><span> =E5=92=8C </span><strong><span>=E6=9F=A5=E8=AF=A2=E5=B9=B6=
+=E5=8F=91</span></strong><span> =E4=B9=8B=E9=97=B4=E7=9A=84=E4=B8=80=E7=A7=
+=8D=E6=9D=83=E8=A1=A1</span></p><ul><li><span>=E5=A6=82=E6=9E=9C=E9=80=89=
+=E6=8B=A9=E5=A4=9A=E4=B8=AA=E5=88=86=E6=A1=B6=E5=88=97=EF=BC=8C=E5=88=99=E6=
+=95=B0=E6=8D=AE=E5=88=86=E5=B8=83=E6=9B=B4=E5=9D=87=E5=8C=80=E3=80=82=E5=A6=
+=82=E6=9E=9C=E4=B8=80=E4=B8=AA=E6=9F=A5=E8=AF=A2=E6=9D=A1=E4=BB=B6=E4=B8=8D=
+=E5=8C=85=E5=90=AB=E6=89=80=E6=9C=89=E5=88=86=E6=A1=B6=E5=88=97=E7=9A=84=E7=
+=AD=89=E5=80=BC=E6=9D=A1=E4=BB=B6=EF=BC=8C=E9=82=A3=E4=B9=88=E8=AF=A5=E6=9F=
+=A5=E8=AF=A2=E4=BC=9A=E8=A7=A6=E5=8F=91=E6=89=80=E6=9C=89=E5=88=86=E6=A1=B6=
+=E5=90=8C=E6=97=B6=E6=89=AB=E6=8F=8F=EF=BC=8C=E8=BF=99=E6=A0=B7=E6=9F=A5=E8=
+=AF=A2=E7=9A=84=E5=90=9E=E5=90=90=E4=BC=9A=E5=A2=9E=E5=8A=A0=EF=BC=8C=E5=8D=
+=95=E4=B8=AA=E6=9F=A5=E8=AF=A2=E7=9A=84=E5=BB=B6=E8=BF=9F=E9=9A=8F=E4=B9=8B=
+=E9=99=8D=E4=BD=8E=E3=80=82=E8=BF=99=E4=B8=AA=E6=96=B9=E5=BC=8F=E9=80=82=E5=
+=90=88=E5=A4=A7=E5=90=9E=E5=90=90=E4=BD=8E=E5=B9=B6=E5=8F=91=E7=9A=84=E6=9F=
+=A5=E8=AF=A2=E5=9C=BA=E6=99=AF</span></li><li><span>=E5=A6=82=E6=9E=9C=E4=
+=BB=85=E9=80=89=E6=8B=A9=E4=B8=80=E4=B8=AA=E6=88=96=E5=B0=91=E6=95=B0=E5=88=
+=86=E6=A1=B6=E5=88=97=EF=BC=8C=E5=88=99=E5=AF=B9=E5=BA=94=E7=9A=84=E7=82=B9=
+=E6=9F=A5=E8=AF=A2=E5=8F=AF=E4=BB=A5=E4=BB=85=E8=A7=A6=E5=8F=91=E4=B8=80=E4=
+=B8=AA=E5=88=86=E6=A1=B6=E6=89=AB=E6=8F=8F=E3=80=82=E6=AD=A4=E6=97=B6=EF=BC=
+=8C=E5=BD=93=E5=A4=9A=E4=B8=AA=E7=82=B9=E6=9F=A5=E8=AF=A2=E5=B9=B6=E5=8F=91=
+=E6=97=B6=EF=BC=8C=E8=BF=99=E4=BA=9B=E6=9F=A5=E8=AF=A2=E6=9C=89=E8=BE=83=E5=
+=A4=A7=E7=9A=84=E6=A6=82=E7=8E=87=E5=88=86=E5=88=AB=E8=A7=A6=E5=8F=91=E4=B8=
+=8D=E5=90=8C=E7=9A=84=E5=88=86=E6=A1=B6=E6=89=AB=E6=8F=8F=EF=BC=8C=E5=90=84=
+=E4=B8=AA=E6=9F=A5=E8=AF=A2=E4=B9=8B=E9=97=B4=E7=9A=84IO=E5=BD=B1=E5=93=8D=
+=E8=BE=83=E5=B0=8F=EF=BC=88=E5=B0=A4=E5=85=B6=E5=BD=93=E4=B8=8D=E5=90=8C=E6=
+=A1=B6=E5=88=86=E5=B8=83=E5=9C=A8=E4=B8=8D=E5=90=8C=E7=A3=81=E7=9B=98=E4=B8=
+=8A=E6=97=B6=EF=BC=89=EF=BC=8C=E6=89=80=E4=BB=A5=E8=BF=99=E7=A7=8D=E6=96=B9=
+=E5=BC=8F=E9=80=82=E5=90=88=E9=AB=98=E5=B9=B6=E5=8F=91=E7=9A=84=E7=82=B9=E6=
+=9F=A5=E8=AF=A2=E5=9C=BA=E6=99=AF</span></li></ul></li><li><p><span>Auto Bu=
+cket : =E6=A0=B9=E6=8D=AE=E6=95=B0=E6=8D=AE=E9=87=8F=EF=BC=8C=E8=AE=A1=E7=
+=AE=97=E5=88=86=E6=A1=B6=E6=95=B0=E3=80=82 =E5=AF=B9=E4=BA=8E=E5=88=86=E5=
+=8C=BA=E8=A1=A8=EF=BC=8C=E5=8F=AF=E4=BB=A5=E6=A0=B9=E6=8D=AE=E5=8E=86=E5=8F=
+=B2=E5=88=86=E5=8C=BA=E7=9A=84=E6=95=B0=E6=8D=AE=E9=87=8F=E3=80=81=E6=9C=BA=
+=E5=99=A8=E6=95=B0=E3=80=81=E7=9B=98=E6=95=B0=EF=BC=8C=E7=A1=AE=E5=AE=9A=E4=
+=B8=80=E4=B8=AA=E5=88=86=E6=A1=B6</span></p></li><li><p><span>=E5=88=86=E6=
+=A1=B6=E7=9A=84=E6=95=B0=E9=87=8F=E7=90=86=E8=AE=BA=E4=B8=8A=E6=B2=A1=E6=9C=
+=89=E4=B8=8A=E9=99=90</span></p></li></ul><p>&nbsp;</p><p>&nbsp;</p><h1 id=
+=3D"3--=E5=AE=98=E6=96=B9=E5=85=B3=E4=BA=8E-partition-=E5=92=8C-bucket-=E7=
+=9A=84=E6=95=B0=E9=87=8F=E5=92=8C=E6=95=B0=E6=8D=AE=E9=87=8F=E7=9A=84=E5=BB=
+=BA=E8=AE=AE"><span>3.  =E5=AE=98=E6=96=B9=E5=85=B3=E4=BA=8E Partition =E5=
+=92=8C Bucket =E7=9A=84=E6=95=B0=E9=87=8F=E5=92=8C=E6=95=B0=E6=8D=AE=E9=87=
+=8F=E7=9A=84=E5=BB=BA=E8=AE=AE</span></h1><ul><li><span>=E4=B8=80=E4=B8=AA=
+=E8=A1=A8=E7=9A=84 Tablet =E6=80=BB=E6=95=B0=E9=87=8F=E7=AD=89=E4=BA=8E (Pa=
+rtition num * Bucket num)=E3=80=82</span></li><li><span>=E4=B8=80=E4=B8=AA=
+=E8=A1=A8=E7=9A=84 Tablet =E6=95=B0=E9=87=8F=EF=BC=8C=E5=9C=A8=E4=B8=8D=E8=
+=80=83=E8=99=91=E6=89=A9=E5=AE=B9=E7=9A=84=E6=83=85=E5=86=B5=E4=B8=8B=EF=BC=
+=8C=E6=8E=A8=E8=8D=90=E7=95=A5=E5=A4=9A=E4=BA=8E=E6=95=B4=E4=B8=AA=E9=9B=86=
+=E7=BE=A4=E7=9A=84=E7=A3=81=E7=9B=98=E6=95=B0=E9=87=8F=E3=80=82</span></li>=
+<li><span>=E5=8D=95=E4=B8=AA Tablet =E7=9A=84=E6=95=B0=E6=8D=AE=E9=87=8F=E7=
+=90=86=E8=AE=BA=E4=B8=8A=E6=B2=A1=E6=9C=89=E4=B8=8A=E4=B8=8B=E7=95=8C=EF=BC=
+=8C=E4=BD=86=E5=BB=BA=E8=AE=AE=E5=9C=A8 1G - 10G =E7=9A=84=E8=8C=83=E5=9B=
+=B4=E5=86=85=E3=80=82=E5=A6=82=E6=9E=9C=E5=8D=95=E4=B8=AA Tablet =E6=95=B0=
+=E6=8D=AE=E9=87=8F=E8=BF=87=E5=B0=8F=EF=BC=8C=E5=88=99=E6=95=B0=E6=8D=AE=E7=
+=9A=84=E8=81=9A=E5=90=88=E6=95=88=E6=9E=9C=E4=B8=8D=E4=BD=B3=EF=BC=8C=E4=B8=
+=94=E5=85=83=E6=95=B0=E6=8D=AE=E7=AE=A1=E7=90=86=E5=8E=8B=E5=8A=9B=E5=A4=A7=
+=E3=80=82=E5=A6=82=E6=9E=9C=E6=95=B0=E6=8D=AE=E9=87=8F=E8=BF=87=E5=A4=A7=EF=
+=BC=8C=E5=88=99=E4=B8=8D=E5=88=A9=E4=BA=8E=E5=89=AF=E6=9C=AC=E7=9A=84=E8=BF=
+=81=E7=A7=BB=E3=80=81=E8=A1=A5=E9=BD=90=EF=BC=8C=E4=B8=94=E4=BC=9A=E5=A2=9E=
+=E5=8A=A0 Schema Change =E6=88=96=E8=80=85 Rollup =E6=93=8D=E4=BD=9C=E5=A4=
+=B1=E8=B4=A5=E9=87=8D=E8=AF=95=E7=9A=84=E4=BB=A3=E4=BB=B7=EF=BC=88=E8=BF=99=
+=E4=BA=9B=E6=93=8D=E4=BD=9C=E5=A4=B1=E8=B4=A5=E9=87=8D=E8=AF=95=E7=9A=84=E7=
+=B2=92=E5=BA=A6=E6=98=AF Tablet=EF=BC=89=E3=80=82</span></li><li><span>=E5=
+=BD=93 Tablet =E7=9A=84=E6=95=B0=E6=8D=AE=E9=87=8F=E5=8E=9F=E5=88=99=E5=92=
+=8C=E6=95=B0=E9=87=8F=E5=8E=9F=E5=88=99=E5=86=B2=E7=AA=81=E6=97=B6=EF=BC=8C=
+=E5=BB=BA=E8=AE=AE=E4=BC=98=E5=85=88=E8=80=83=E8=99=91=E6=95=B0=E6=8D=AE=E9=
+=87=8F=E5=8E=9F=E5=88=99=E3=80=82</span></li><li><span>=E5=9C=A8=E5=BB=BA=
+=E8=A1=A8=E6=97=B6=EF=BC=8C=E6=AF=8F=E4=B8=AA=E5=88=86=E5=8C=BA=E7=9A=84 Bu=
+cket =E6=95=B0=E9=87=8F=E7=BB=9F=E4=B8=80=E6=8C=87=E5=AE=9A=E3=80=82=E4=BD=
+=86=E6=98=AF=E5=9C=A8=E5=8A=A8=E6=80=81=E5=A2=9E=E5=8A=A0=E5=88=86=E5=8C=BA=
+=E6=97=B6=EF=BC=88</span><code>ADD PARTITION</code><span>=EF=BC=89=EF=BC=8C=
+=E5=8F=AF=E4=BB=A5=E5=8D=95=E7=8B=AC=E6=8C=87=E5=AE=9A=E6=96=B0=E5=88=86=E5=
+=8C=BA=E7=9A=84 Bucket =E6=95=B0=E9=87=8F=E3=80=82=E5=8F=AF=E4=BB=A5=E5=88=
+=A9=E7=94=A8=E8=BF=99=E4=B8=AA=E5=8A=9F=E8=83=BD=E6=96=B9=E4=BE=BF=E7=9A=84=
+=E5=BA=94=E5=AF=B9=E6=95=B0=E6=8D=AE=E7=BC=A9=E5=B0=8F=E6=88=96=E8=86=A8=E8=
+=83=80=E3=80=82</span></li><li><span>=E4=B8=80=E4=B8=AA Partition =E7=9A=84=
+ Bucket =E6=95=B0=E9=87=8F=E4=B8=80=E6=97=A6=E6=8C=87=E5=AE=9A=EF=BC=8C=E4=
+=B8=8D=E5=8F=AF=E6=9B=B4=E6=94=B9=E3=80=82=E6=89=80=E4=BB=A5=E5=9C=A8=E7=A1=
+=AE=E5=AE=9A Bucket =E6=95=B0=E9=87=8F=E6=97=B6=EF=BC=8C=E9=9C=80=E8=A6=81=
+=E9=A2=84=E5=85=88=E8=80=83=E8=99=91=E9=9B=86=E7=BE=A4=E6=89=A9=E5=AE=B9=E7=
+=9A=84=E6=83=85=E5=86=B5=E3=80=82=E6=AF=94=E5=A6=82=E5=BD=93=E5=89=8D=E5=8F=
+=AA=E6=9C=89 3 =E5=8F=B0 host=EF=BC=8C=E6=AF=8F=E5=8F=B0 host =E6=9C=89 1 =
+=E5=9D=97=E7=9B=98=E3=80=82=E5=A6=82=E6=9E=9C Bucket =E7=9A=84=E6=95=B0=E9=
+=87=8F=E5=8F=AA=E8=AE=BE=E7=BD=AE=E4=B8=BA 3 =E6=88=96=E6=9B=B4=E5=B0=8F=EF=
+=BC=8C=E9=82=A3=E4=B9=88=E5=90=8E=E6=9C=9F=E5=8D=B3=E4=BD=BF=E5=86=8D=E5=A2=
+=9E=E5=8A=A0=E6=9C=BA=E5=99=A8=EF=BC=8C=E4=B9=9F=E4=B8=8D=E8=83=BD=E6=8F=90=
+=E9=AB=98=E5=B9=B6=E5=8F=91=E5=BA=A6=E3=80=82</span></li><li><span>=E4=B8=
+=BE=E4=B8=80=E4=BA=9B=E4=BE=8B=E5=AD=90=EF=BC=9A=E5=81=87=E8=AE=BE=E5=9C=A8=
+=E6=9C=8910=E5=8F=B0BE=EF=BC=8C=E6=AF=8F=E5=8F=B0BE=E4=B8=80=E5=9D=97=E7=A3=
+=81=E7=9B=98=E7=9A=84=E6=83=85=E5=86=B5=E4=B8=8B=E3=80=82=E5=A6=82=E6=9E=9C=
+=E4=B8=80=E4=B8=AA=E8=A1=A8=E6=80=BB=E5=A4=A7=E5=B0=8F=E4=B8=BA 500 MB=EF=
+=BC=8C=E5=88=99=E5=8F=AF=E4=BB=A5=E8=80=83=E8=99=914-8=E4=B8=AA=E5=88=86=E7=
+=89=87=E3=80=825 GB=EF=BC=9A 8-16=E4=B8=AA=E5=88=86=E7=89=87=E3=80=8250 GB=
+=EF=BC=9A 32=E4=B8=AA=E5=88=86=E7=89=87=E3=80=82500 GB=EF=BC=9A=E5=BB=BA=E8=
+=AE=AE=E5=88=86=E5=8C=BA=EF=BC=8C=E6=AF=8F=E4=B8=AA=E5=88=86=E5=8C=BA=E5=A4=
+=A7=E5=B0=8F=E5=9C=A8 50 GB =E5=B7=A6=E5=8F=B3=EF=BC=8C=E6=AF=8F=E4=B8=AA=
+=E5=88=86=E5=8C=BA16-32=E4=B8=AA=E5=88=86=E7=89=87=E3=80=825 TB=EF=BC=9A=E5=
+=BB=BA=E8=AE=AE=E5=88=86=E5=8C=BA=EF=BC=8C=E6=AF=8F=E4=B8=AA=E5=88=86=E5=8C=
+=BA=E5=A4=A7=E5=B0=8F=E5=9C=A8 50 GB =E5=B7=A6=E5=8F=B3=EF=BC=8C=E6=AF=8F=
+=E4=B8=AA=E5=88=86=E5=8C=BA16-32=E4=B8=AA=E5=88=86=E7=89=87=E3=80=82</span>=
+</li></ul><p>&nbsp;</p><h1 id=3D"4-=E5=A4=8D=E5=90=88=E5=88=86=E5=8C=BA=E4=
+=B8=8E=E5=8D=95=E5=88=86=E5=8C=BA"><span>4. =E5=A4=8D=E5=90=88=E5=88=86=E5=
+=8C=BA=E4=B8=8E=E5=8D=95=E5=88=86=E5=8C=BA</span></h1><p><span>=E5=A4=8D=E5=
+=90=88=E5=88=86=E5=8C=BA</span></p><ul><li><span>=E7=AC=AC=E4=B8=80=E7=BA=
+=A7=E7=A7=B0=E4=B8=BA Partition=EF=BC=8C=E5=8D=B3=E5=88=86=E5=8C=BA=E3=80=
+=82=E7=94=A8=E6=88=B7=E5=8F=AF=E4=BB=A5=E6=8C=87=E5=AE=9A=E6=9F=90=E4=B8=80=
+=E7=BB=B4=E5=BA=A6=E5=88=97=E4=BD=9C=E4=B8=BA=E5=88=86=E5=8C=BA=E5=88=97=EF=
+=BC=88=E5=BD=93=E5=89=8D=E5=8F=AA=E6=94=AF=E6=8C=81=E6=95=B4=E5=9E=8B=E5=92=
+=8C=E6=97=B6=E9=97=B4=E7=B1=BB=E5=9E=8B=E7=9A=84=E5=88=97=EF=BC=89=EF=BC=8C=
+=E5=B9=B6=E6=8C=87=E5=AE=9A=E6=AF=8F=E4=B8=AA=E5=88=86=E5=8C=BA=E7=9A=84=E5=
+=8F=96=E5=80=BC=E8=8C=83=E5=9B=B4=E3=80=82</span></li><li><span>=E7=AC=AC=
+=E4=BA=8C=E7=BA=A7=E7=A7=B0=E4=B8=BA Distribution=EF=BC=8C=E5=8D=B3=E5=88=
+=86=E6=A1=B6=E3=80=82=E7=94=A8=E6=88=B7=E5=8F=AF=E4=BB=A5=E6=8C=87=E5=AE=9A=
+=E4=B8=80=E4=B8=AA=E6=88=96=E5=A4=9A=E4=B8=AA=E7=BB=B4=E5=BA=A6=E5=88=97=E4=
+=BB=A5=E5=8F=8A=E6=A1=B6=E6=95=B0=E5=AF=B9=E6=95=B0=E6=8D=AE=E8=BF=9B=E8=A1=
+=8C HASH =E5=88=86=E5=B8=83 =E6=88=96=E8=80=85=E4=B8=8D=E6=8C=87=E5=AE=9A=
+=E5=88=86=E6=A1=B6=E5=88=97=E8=AE=BE=E7=BD=AE=E6=88=90 Random Distribution =
+=E5=AF=B9=E6=95=B0=E6=8D=AE=E8=BF=9B=E8=A1=8C=E9=9A=8F=E6=9C=BA=E5=88=86=E5=
+=B8=83=E3=80=82</span></li></ul><p><span>=E4=BB=A5=E4=B8=8B=E5=9C=BA=E6=99=
+=AF=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8=E5=A4=8D=E5=90=88=E5=88=86=E5=8C=BA=
+</span></p><ul><li><span>=E6=9C=89=E6=97=B6=E9=97=B4=E7=BB=B4=E5=BA=A6=E6=
+=88=96=E7=B1=BB=E4=BC=BC=E5=B8=A6=E6=9C=89=E6=9C=89=E5=BA=8F=E5=80=BC=E7=9A=
+=84=E7=BB=B4=E5=BA=A6=EF=BC=8C=E5=8F=AF=E4=BB=A5=E4=BB=A5=E8=BF=99=E7=B1=BB=
+=E7=BB=B4=E5=BA=A6=E5=88=97=E4=BD=9C=E4=B8=BA=E5=88=86=E5=8C=BA=E5=88=97=E3=
+=80=82=E5=88=86=E5=8C=BA=E7=B2=92=E5=BA=A6=E5=8F=AF=E4=BB=A5=E6=A0=B9=E6=8D=
+=AE=E5=AF=BC=E5=85=A5=E9=A2=91=E6=AC=A1=E3=80=81=E5=88=86=E5=8C=BA=E6=95=B0=
+=E6=8D=AE=E9=87=8F=E7=AD=89=E8=BF=9B=E8=A1=8C=E8=AF=84=E4=BC=B0=E3=80=82</s=
+pan></li><li><span>=E5=8E=86=E5=8F=B2=E6=95=B0=E6=8D=AE=E5=88=A0=E9=99=A4=
+=E9=9C=80=E6=B1=82=EF=BC=9A=E5=A6=82=E6=9C=89=E5=88=A0=E9=99=A4=E5=8E=86=E5=
+=8F=B2=E6=95=B0=E6=8D=AE=E7=9A=84=E9=9C=80=E6=B1=82=EF=BC=88=E6=AF=94=E5=A6=
+=82=E4=BB=85=E4=BF=9D=E7=95=99=E6=9C=80=E8=BF=91N =E5=A4=A9=E7=9A=84=E6=95=
+=B0=E6=8D=AE=EF=BC=89=E3=80=82=E4=BD=BF=E7=94=A8=E5=A4=8D=E5=90=88=E5=88=86=
+=E5=8C=BA=EF=BC=8C=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E5=88=A0=E9=99=A4=E5=
+=8E=86=E5=8F=B2=E5=88=86=E5=8C=BA=E6=9D=A5=E8=BE=BE=E5=88=B0=E7=9B=AE=E7=9A=
+=84=E3=80=82=E4=B9=9F=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E5=9C=A8=E6=8C=87=
+=E5=AE=9A=E5=88=86=E5=8C=BA=E5=86=85=E5=8F=91=E9=80=81 DELETE =E8=AF=AD=E5=
+=8F=A5=E8=BF=9B=E8=A1=8C=E6=95=B0=E6=8D=AE=E5=88=A0=E9=99=A4=E3=80=82</span=
+></li><li><span>=E8=A7=A3=E5=86=B3=E6=95=B0=E6=8D=AE=E5=80=BE=E6=96=9C=E9=
+=97=AE=E9=A2=98=EF=BC=9A=E6=AF=8F=E4=B8=AA=E5=88=86=E5=8C=BA=E5=8F=AF=E4=BB=
+=A5=E5=8D=95=E7=8B=AC=E6=8C=87=E5=AE=9A=E5=88=86=E6=A1=B6=E6=95=B0=E9=87=8F=
+=E3=80=82=E5=A6=82=E6=8C=89=E5=A4=A9=E5=88=86=E5=8C=BA=EF=BC=8C=E5=BD=93=E6=
+=AF=8F=E5=A4=A9=E7=9A=84=E6=95=B0=E6=8D=AE=E9=87=8F=E5=B7=AE=E5=BC=82=E5=BE=
+=88=E5=A4=A7=E6=97=B6=EF=BC=8C=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E6=8C=87=
+=E5=AE=9A=E5=88=86=E5=8C=BA=E7=9A=84=E5=88=86=E6=A1=B6=E6=95=B0=EF=BC=8C=E5=
+=90=88=E7=90=86=E5=88=92=E5=88=86=E4=B8=8D=E5=90=8C=E5=88=86=E5=8C=BA=E7=9A=
+=84=E6=95=B0=E6=8D=AE,=E5=88=86=E6=A1=B6=E5=88=97=E5=BB=BA=E8=AE=AE=E9=80=
+=89=E6=8B=A9=E5=8C=BA=E5=88=86=E5=BA=A6=E5=A4=A7=E7=9A=84=E5=88=97=E3=80=82=
+</span></li></ul><p><span>=E7=94=A8=E6=88=B7=E4=B9=9F=E5=8F=AF=E4=BB=A5=E4=
+=B8=8D=E4=BD=BF=E7=94=A8=E5=A4=8D=E5=90=88=E5=88=86=E5=8C=BA=EF=BC=8C=E5=8D=
+=B3=E4=BD=BF=E7=94=A8=E5=8D=95=E5=88=86=E5=8C=BA=E3=80=82=E5=88=99=E6=95=B0=
+=E6=8D=AE=E5=8F=AA=E5=81=9A HASH =E5=88=86=E5=B8=83=E3=80=82</span></p><p>&=
+nbsp;</p></div></div>
+
+</body></html>
+------MultipartBoundary--e3agMvnmR7Yyt9liCX9xJTPy2VKtSB7lan12UFLgf4----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2") format("woff2"); unico=
+de-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-=
+FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6F15M.woff2") format("woff2"); unico=
+de-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6F15M.woff2") format("woff2"); unico=
+de-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6F15M.woff2") format("woff2"); unico=
+de-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06F15M.woff2") format("woff2"); unico=
+de-range: U+307-308, U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWxU6F15M.woff2") format("woff2"); unico=
+de-range: U+302-303, U+305, U+307-308, U+310, U+312, U+315, U+31A, U+326-32=
+7, U+32C, U+32F-330, U+332-333, U+338, U+33A, U+346, U+34D, U+391-3A1, U+3A=
+3-3A9, U+3B1-3C9, U+3D1, U+3D5-3D6, U+3F0-3F1, U+3F4-3F5, U+2016-2017, U+20=
+34-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-207=
+1, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112,=
+ U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0=
+-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2=
+310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0,=
+ U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, =
+U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-=
+2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqW106F15M.woff2") format("woff2"); unico=
+de-range: U+1-C, U+E-1F, U+7F-9F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+=
+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299=
+, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-2=
+8FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-=
+FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, =
+U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, =
+U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1=
+F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3A=
+F, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1=
+F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1=
+F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1=
+F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, =
+U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1=
+F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, =
+U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, =
+U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1=
+F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1=
+F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1=
+F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1=
+F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1=
+FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6F15M.woff2") format("woff2"); unico=
+de-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0,=
+ U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06F15M.woff2") format("woff2"); unico=
+de-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+3=
+08, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20=
+AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2") format("woff2"); unicode-=
+range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+3=
+08, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+F=
+EFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2") format("woff2"); unico=
+de-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-=
+FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWvU6F15M.woff2") format("woff2"); unico=
+de-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtU6F15M.woff2") format("woff2"); unico=
+de-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuk6F15M.woff2") format("woff2"); unico=
+de-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWu06F15M.woff2") format("woff2"); unico=
+de-range: U+307-308, U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWxU6F15M.woff2") format("woff2"); unico=
+de-range: U+302-303, U+305, U+307-308, U+310, U+312, U+315, U+31A, U+326-32=
+7, U+32C, U+32F-330, U+332-333, U+338, U+33A, U+346, U+34D, U+391-3A1, U+3A=
+3-3A9, U+3B1-3C9, U+3D1, U+3D5-3D6, U+3F0-3F1, U+3F4-3F5, U+2016-2017, U+20=
+34-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-207=
+1, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112,=
+ U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0=
+-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2=
+310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0,=
+ U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, =
+U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-=
+2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqW106F15M.woff2") format("woff2"); unico=
+de-range: U+1-C, U+E-1F, U+7F-9F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+=
+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299=
+, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-2=
+8FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-=
+FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, =
+U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, =
+U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1=
+F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3A=
+F, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1=
+F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1=
+F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1=
+F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, =
+U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1=
+F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, =
+U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, =
+U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1=
+F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1=
+F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1=
+F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1=
+F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1=
+FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtk6F15M.woff2") format("woff2"); unico=
+de-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0,=
+ U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWt06F15M.woff2") format("woff2"); unico=
+de-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+3=
+08, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20=
+AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+tYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWuU6F.woff2") format("woff2"); unicode-=
+range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+3=
+08, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+F=
+EFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2") format("woff2"); unicode-=
+range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2=
+F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2") format("woff2"); unicode-=
+range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2") format("woff2"); unicode-=
+range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2") format("woff2"); unicode-=
+range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2") format("woff2"); unicode-=
+range: U+307-308, U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2") format("woff2"); unicode-=
+range: U+302-303, U+305, U+307-308, U+310, U+312, U+315, U+31A, U+326-327, =
+U+32C, U+32F-330, U+332-333, U+338, U+33A, U+346, U+34D, U+391-3A1, U+3A3-3=
+A9, U+3B1-3C9, U+3D1, U+3D5-3D6, U+3F0-3F1, U+3F4-3F5, U+2016-2017, U+2034-=
+2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, =
+U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+=
+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21=
+E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310=
+, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+=
+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+2=
+5CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4=
+C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2") format("woff2"); unicode-=
+range: U+1-C, U+E-1F, U+7F-9F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+219=
+0, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U=
++22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF=
+, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFF=
+B, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+1=
+0E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1=
+F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F33=
+6, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, =
+U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F=
+3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F44=
+2, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A=
+3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1=
+F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4F=
+D-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1=
+F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1=
+F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D=
+7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80=
+B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B=
+B, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E=
+9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FAD=
+C, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2") format("woff2"); unicode-=
+range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+=
+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2") format("woff2"); unicode-=
+range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308,=
+ U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-=
+20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2") format("woff2"); unicode-ra=
+nge: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308=
+, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEF=
+F, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu1aB.woff2") format("woff2"); unicode-=
+range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2=
+F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu1aB.woff2") format("woff2"); unicode-=
+range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2") format("woff2"); unicode-=
+range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu1aB.woff2") format("woff2"); unicode-=
+range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu1aB.woff2") format("woff2"); unicode-=
+range: U+307-308, U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTVOmu1aB.woff2") format("woff2"); unicode-=
+range: U+302-303, U+305, U+307-308, U+310, U+312, U+315, U+31A, U+326-327, =
+U+32C, U+32F-330, U+332-333, U+338, U+33A, U+346, U+34D, U+391-3A1, U+3A3-3=
+A9, U+3B1-3C9, U+3D1, U+3D5-3D6, U+3F0-3F1, U+3F4-3F5, U+2016-2017, U+2034-=
+2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, =
+U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+=
+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21=
+E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310=
+, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+=
+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+2=
+5CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4=
+C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTUGmu1aB.woff2") format("woff2"); unicode-=
+range: U+1-C, U+E-1F, U+7F-9F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+219=
+0, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U=
++22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF=
+, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFF=
+B, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+1=
+0E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1=
+F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F33=
+6, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, =
+U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F=
+3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F44=
+2, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A=
+3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1=
+F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4F=
+D-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1=
+F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1=
+F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D=
+7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80=
+B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8B=
+B, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E=
+9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FAD=
+C, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu1aB.woff2") format("woff2"); unicode-=
+range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+=
+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu1aB.woff2") format("woff2"); unicode-=
+range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308,=
+ U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-=
+20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; font-stretch: 100%; src: url("https://gstatic.loli.net/s/opensans/v44/mem=
+vYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-muw.woff2") format("woff2"); unicode-ra=
+nge: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308=
+, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEF=
+F, U+FFFD; }
+------MultipartBoundary--e3agMvnmR7Yyt9liCX9xJTPy2VKtSB7lan12UFLgf4----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-6e2a5f7f-a9a3-437e-b88a-f7cc593db02d@mhtml.blink
+
+@charset "utf-8";
+
+html { overflow-x: initial !important; }
+
+:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color:=
+ #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Con=
+solas,"Courier",monospace; --title-bar-height: 20px; }
+
+.mac-os-11 { --title-bar-height: 28px; }
+
+html { font-size: 14px; background-color: var(--bg-color); color: var(--tex=
+t-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -web=
+kit-font-smoothing: antialiased; }
+
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem=
+; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: =
+4; }
+
+iframe { margin: auto; }
+
+a.url { word-break: break-all; }
+
+a:active, a:hover { outline: 0px; }
+
+.in-text-selection, ::selection { text-shadow: none; background: var(--sele=
+ct-text-bg-color); color: var(--select-text-font-color); }
+
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal=
+; overflow-wrap: break-word; position: relative; white-space: normal; overf=
+low-x: visible; padding-top: 36px; }
+
+#write.first-line-indent p { text-indent: 2em; }
+
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: =
+0px; }
+
+#write.first-line-indent li { margin-left: 2em; }
+
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-=
+space: pre-wrap; }
+
+.typora-export .task-list-item input { pointer-events: none; }
+
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+
+#write ol, #write ul { position: relative; }
+
+img { max-width: 100%; vertical-align: middle; image-orientation: from-imag=
+e; }
+
+button, input, select, textarea { color: inherit; font: inherit; }
+
+input[type=3D"checkbox"], input[type=3D"radio"] { line-height: normal; padd=
+ing: 0px; }
+
+*, ::after, ::before { box-sizing: border-box; }
+
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p,=
+ #write pre { width: inherit; }
+
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p =
+{ position: relative; }
+
+p { line-height: inherit; }
+
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orph=
+ans: 4; }
+
+p { orphans: 4; }
+
+h1 { font-size: 2rem; }
+
+h2 { font-size: 1.8rem; }
+
+h3 { font-size: 1.6rem; }
+
+h4 { font-size: 1.4rem; }
+
+h5 { font-size: 1.2rem; }
+
+h6 { font-size: 1rem; }
+
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem;=
+ margin-bottom: 1rem; }
+
+.hidden { display: none; }
+
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: it=
+alic; }
+
+a { cursor: pointer; }
+
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0=
+.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform=
+: inherit; text-decoration: inherit; }
+
+#write input[type=3D"checkbox"] { cursor: pointer; width: inherit; height: =
+inherit; }
+
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px);=
+ padding: 0px; }
+
+figure > table { margin: 0px; }
+
+thead, tr { break-inside: avoid; break-after: auto; }
+
+thead { display: table-header-group; }
+
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overfl=
+ow: auto; break-inside: auto; text-align: left; }
+
+table.md-table td { min-width: 32px; }
+
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+
+.CodeMirror-linenumber { user-select: none; }
+
+.CodeMirror { text-align: left; }
+
+.CodeMirror-placeholder { opacity: 0.3; }
+
+.CodeMirror pre { padding: 0px 4px; }
+
+.CodeMirror-lines { padding: 0px; }
+
+div.hr:focus { cursor: none; }
+
+#write pre { white-space: pre-wrap; }
+
+#write.fences-no-line-wrapping pre { white-space: pre; }
+
+#write pre.ty-contain-cm { white-space: normal; }
+
+.CodeMirror-gutters { margin-right: 4px; }
+
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-a=
+lign: left; overflow: visible; white-space: pre; background: inherit; posit=
+ion: relative !important; }
+
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; p=
+adding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overf=
+low-x: auto; }
+
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+
+svg { break-inside: avoid; }
+
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-botto=
+m: 1em; }
+
+.footnotes + .footnotes { margin-top: 0px; }
+
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-=
+align: top; background: 0px 0px; text-decoration: none; text-shadow: none; =
+float: none; position: static; width: auto; height: auto; white-space: nowr=
+ap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height:=
+ normal; font-weight: 400; text-align: left; box-sizing: content-box; direc=
+tion: ltr; }
+
+li div { padding-top: 0px; }
+
+blockquote { margin: 1rem 0px; }
+
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+
+li blockquote { margin: 1rem 0px; }
+
+li { margin: 0px; position: relative; }
+
+blockquote > :last-child { margin-bottom: 0px; }
+
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-=
+bottom: 0.143rem; white-space: normal; }
+
+#write .footnote-line { white-space: pre-wrap; }
+
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avo=
+id; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !im=
+portant; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+
+a img, img a { cursor: pointer; }
+
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre=
+-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; =
+}
+
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { displ=
+ay: block; margin: auto; }
+
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { =
+left: -2em; position: relative; }
+
+p > .md-image:only-child { display: inline-block; width: 100%; }
+
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+
+.md-math-block { width: 100%; }
+
+.md-math-block:not(:empty)::after { display: none; }
+
+.MathJax_ref { fill: currentcolor; }
+
+[contenteditable=3D"true"]:active, [contenteditable=3D"true"]:focus, [conte=
+nteditable=3D"false"]:active, [contenteditable=3D"false"]:focus { outline: =
+0px; box-shadow: none; }
+
+.md-task-list-item { position: relative; list-style-type: none; }
+
+.task-list-item.md-task-list-item { padding-left: 0px; }
+
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margi=
+n-left: -1.2em; margin-top: calc(1em - 10px); border-width: medium; border-=
+style: none; border-color: currentcolor; border-image: none; }
+
+.math { font-size: 1rem; }
+
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; borde=
+r-radius: 10px; }
+
+.md-toc-content { position: relative; margin-left: 0px; }
+
+.md-toc-content::after, .md-toc::after { display: none; }
+
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+
+.md-toc-item a { text-decoration: none; }
+
+.md-toc-inner:hover { text-decoration: underline; }
+
+.md-toc-inner { display: inline-block; cursor: pointer; }
+
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inhe=
+rit; line-height: inherit; }
+
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+
+.md-attr { display: none; }
+
+.md-fn-count::after { content: "."; }
+
+code, pre, samp, tt { font-family: var(--monospace); }
+
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb=
+(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 17=
+9, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px,=
+ rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-al=
+ign: middle; }
+
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--mon=
+ospace); }
+
+code { text-align: left; vertical-align: initial; }
+
+a.md-print-anchor { white-space: pre !important; border-width: initial !imp=
+ortant; border-style: none !important; border-color: initial !important; di=
+splay: inline-block !important; position: absolute !important; width: 1px !=
+important; right: 0px !important; outline: 0px !important; background: 0px =
+0px !important; text-decoration: initial !important; text-shadow: initial !=
+important; }
+
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", san=
+s-serif; }
+
+.md-diagram-panel > svg { max-width: 100%; }
+
+[lang=3D"flow"] svg, [lang=3D"mermaid"] svg { max-width: 100%; height: auto=
+; }
+
+[lang=3D"mermaid"] .node text { font-size: 1rem; }
+
+table tr th { border-bottom: 0px; }
+
+video { max-width: 100%; display: block; margin: 0px auto; }
+
+iframe { max-width: 100%; width: 100%; border-width: medium; border-style: =
+none; border-color: currentcolor; border-image: none; }
+
+.highlight td, .highlight tr { border: 0px; }
+
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, ma=
+rk strong { color: inherit; }
+
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+
+mark .md-meta { color: rgb(0, 0, 0); }
+
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h=
+4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+.md-diagram-panel .messageText { stroke: none !important; }
+
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+
+.md-fences.md-fences-math { font-size: 1em; }
+
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; bor=
+der: 0px; }
+
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+
+.typora-export-show-outline .typora-export-content { max-width: 1440px; mar=
+gin: auto; display: flex; flex-direction: row; }
+
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px;=
+ margin-right: 18px; }
+
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-he=
+ight: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px;=
+ width: 300px; }
+
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: =
+240px; }
+}
+
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: =
+0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+
+.outline-content strong { font-weight: 400; }
+
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; di=
+splay: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4=
+px; }
+
+.outline-expander::before { content: "=EF=84=A5"; position: relative; font-=
+family: Ionicons; display: inline-block; font-size: 8px; vertical-align: mi=
+ddle; }
+
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+
+.outline-expander:hover::before { content: "=EF=84=A3"; }
+
+.outline-h1 > .outline-item { padding-left: 0px; }
+
+.outline-h2 > .outline-item { padding-left: 1em; }
+
+.outline-h3 > .outline-item { padding-left: 2em; }
+
+.outline-h4 > .outline-item { padding-left: 3em; }
+
+.outline-h5 > .outline-item { padding-left: 4em; }
+
+.outline-h6 > .outline-item { padding-left: 5em; }
+
+.outline-label { cursor: pointer; display: table-cell; vertical-align: midd=
+le; text-decoration: none; color: inherit; }
+
+.outline-label:hover { text-decoration: underline; }
+
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: v=
+ar(--item-hover-bg-color); }
+
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left:=
+ 28px solid transparent; border-right: 28px solid transparent; }
+
+.outline-item-single .outline-expander::before, .outline-item-single .outli=
+ne-expander:hover::before { display: none; }
+
+.outline-item-open > .outline-item > .outline-expander::before { content: "=
+=EF=84=A3"; }
+
+.outline-children { display: none; }
+
+.info-panel-tab-wrapper { display: none; }
+
+.outline-item-open > .outline-children { display: block; }
+
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px =
+solid transparent; }
+
+.typora-export .outline-expander::before { content: "+"; font-family: inher=
+it; top: -1px; }
+
+.typora-export .outline-expander:hover::before, .typora-export .outline-ite=
+m-open > .outline-item > .outline-expander::before { content: "=E2=88=92"; =
+}
+
+.typora-export-collapse-outline .outline-children { display: none; }
+
+.typora-export-collapse-outline .outline-item-open > .outline-children, .ty=
+pora-export-no-collapse-outline .outline-children { display: block; }
+
+.typora-export-no-collapse-outline .outline-expander::before { content: "" =
+!important; }
+
+.typora-export-show-outline .outline-item-active > .outline-item .outline-l=
+abel { font-weight: 700; }
+
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+mjx-container { break-inside: avoid; }
+
+.CodeMirror { height: auto; }
+
+.CodeMirror.cm-s-inner { background: inherit; }
+
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color:=
+ rgb(255, 255, 255); }
+
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); backgroun=
+d: inherit; white-space: nowrap; }
+
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color=
+: rgb(153, 153, 153); }
+
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+
+.cm-negative { color: rgb(221, 68, 68); }
+
+.cm-positive { color: rgb(34, 153, 34); }
+
+.cm-header, .cm-strong { font-weight: 700; }
+
+.cm-del { text-decoration: line-through; }
+
+.cm-em { font-style: italic; }
+
+.cm-link { text-decoration: underline; }
+
+.cm-error { color: red; }
+
+.cm-invalidchar { color: red; }
+
+.cm-constant { color: rgb(38, 139, 210); }
+
+.cm-defined { color: rgb(181, 137, 0); }
+
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34)=
+; }
+
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+
+.CodeMirror { position: relative; overflow: hidden; }
+
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-si=
+zing: content-box; background: inherit; }
+
+.CodeMirror-sizer { position: relative; }
+
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-fi=
+ller, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: non=
+e; outline: 0px; }
+
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bott=
+om: 10px; z-index: 3; overflow-y: hidden; }
+
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content=
+-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0p=
+x 0px !important; border-width: medium !important; border-style: none !impo=
+rtant; border-color: currentcolor !important; border-image: none !important=
+; }
+
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; =
+z-index: 4; }
+
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+
+.CodeMirror-lines { cursor: text; }
+
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0p=
+x; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre;=
+ overflow-wrap: normal; color: inherit; z-index: 2; position: relative; ove=
+rflow: visible; }
+
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; wo=
+rd-break: normal; }
+
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-con=
+tent; }
+
+.CodeMirror-wrap .CodeMirror-code pre { border-right-width: medium; border-=
+right-style: none; border-right-color: currentcolor; width: auto; }
+
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflo=
+w: hidden; visibility: hidden; }
+
+.CodeMirror-measure pre { position: static; }
+
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden;=
+ border-right-width: medium; border-right-style: none; border-right-color: =
+currentcolor; width: 0px; }
+
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+
+span.cm-underlined { text-decoration: underline; }
+
+span.cm-strikethrough { text-decoration: line-through; }
+
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, =
+0, 0); }
+
+.cm-tw-deleted { text-decoration: line-through; }
+
+.cm-tw-header5 { font-weight: 700; }
+
+.cm-tw-listitem:first-child { padding-left: 10px; }
+
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-wi=
+dth: 1px; border-left-width: 1px; border-color: inherit; border-top-width: =
+0px !important; }
+
+.cm-tw-underline { text-decoration: underline; }
+
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica,=
+ Arial, "Segoe UI Emoji", sans-serif; color: rgb(51, 51, 51); line-height: =
+1.6; }
+
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+
+@media only screen and (min-width: 1400px) {
+  #write { max-width: 1024px; }
+}
+
+@media only screen and (min-width: 1800px) {
+  #write { max-width: 1200px; }
+}
+
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+
+a { color: rgb(65, 131, 196); }
+
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-botto=
+m: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor,=
+ h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+
+h1 tt, h1 code { font-size: inherit; }
+
+h2 tt, h2 code { font-size: inherit; }
+
+h3 tt, h3 code { font-size: inherit; }
+
+h4 tt, h4 code { font-size: inherit; }
+
+h5 tt, h5 code { font-size: inherit; }
+
+h6 tt, h6 code { font-size: inherit; }
+
+h1 { font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238,=
+ 238, 238); }
+
+h2 { font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(23=
+8, 238, 238); }
+
+h3 { font-size: 1.5em; line-height: 1.43; }
+
+h4 { font-size: 1.25em; }
+
+h5 { font-size: 1em; }
+
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+
+li > ol, li > ul { margin: 0px; }
+
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231=
+, 231, 231); border: 0px; overflow: hidden; box-sizing: content-box; }
+
+li p.first { display: inline-block; }
+
+ul, ol { padding-left: 30px; }
+
+ul:first-child, ol:first-child { margin-top: 0px; }
+
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; =
+color: rgb(119, 119, 119); }
+
+blockquote blockquote { padding-right: 0px; }
+
+table { padding: 0px; word-break: initial; }
+
+table tr { border: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px;=
+ }
+
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+
+table th { font-weight: bold; border-width: 1px 1px 0px; border-style: soli=
+d solid none; border-color: rgb(223, 226, 229) rgb(223, 226, 229) currentco=
+lor; border-image: none; margin: 0px; padding: 6px 13px; }
+
+table td { border: 1px solid rgb(223, 226, 229); margin: 0px; padding: 6px =
+13px; }
+
+table th:first-child, table td:first-child { margin-top: 0px; }
+
+table th:last-child, table td:last-child { margin-bottom: 0px; }
+
+.CodeMirror-lines { padding-left: 4px; }
+
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-to=
+p: 1px solid rgb(238, 242, 242); }
+
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-col=
+or: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size=
+: 0.9em; }
+
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; paddi=
+ng-bottom: 6px; }
+
+.md-task-list-item > input { margin-left: -1.3em; }
+
+@media print {
+  html { font-size: 13px; }
+  pre { break-inside: avoid; overflow-wrap: break-word; }
+}
+
+.md-fences { background-color: rgb(248, 248, 248); }
+
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45=
+; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; co=
+lor: rgb(119, 119, 119); margin-top: 0px !important; }
+
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-s=
+ize: 0.9em; color: inherit; }
+
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+
+.sidebar-tabs { border-bottom-width: medium; border-bottom-style: none; bor=
+der-bottom-color: currentcolor; }
+
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color=
+: rgb(248, 248, 248); }
+
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-colo=
+r: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 2=
+38); border-style: solid; border-width: 1px; }
+
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI",=
+ Arial, sans-serif; }
+
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-no=
+de-open-state { visibility: visible; }
+
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-co=
+lor); }
+
+.md-lang { color: rgb(180, 101, 77); }
+
+#md-notification .btn { border: 0px; }
+
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); opacity: 0.4; }
+
+.ty-preferences .window-content { background-color: rgb(250, 250, 250); }
+
+.ty-preferences .nav-group-item.active { color: white; background: rgb(153,=
+ 153, 153); }
+
+.menu-item-container a.menu-style-btn { background-color: rgb(245, 248, 250=
+); background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 25=
+5, 255, 0)); }
+------MultipartBoundary--e3agMvnmR7Yyt9liCX9xJTPy2VKtSB7lan12UFLgf4------
